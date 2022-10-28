@@ -1,30 +1,32 @@
-vim: set filetype=markdown.home.linked :
+vim: filetype=markdown.home.linked :
 
-					   (   )
-					  (    )
-					   (    )
-					  (    )
-					    )  )
-					   (  (                  /\
-					    (_)                 /  \  /\
-				    ________[_]________      /\/    \/  \
-			   /\      /\        ______    \    /   /\/\  /\/\
-			  /  \    //_\       \    /\    \  /\/\/    \/    \
-		   /\    / /\/\  //___\       \__/  \    \/
-		  /  \  /\/    \//_____\       \ |[]|     \
-		 /\/\/\/       //_______\       \|__|      \
-		/      \      /XXXXXXXXXX\                  \
-			\    /_I_II  I__I_\__________________\
-			       I_I|  I__I_____[]_|_[]_____I
-			       I_II  I__I_____[]_|_[]_____I
-			       I II__I  I     XXXXXXX     I
-			    ~~~~~"   "~~~~~~~~~~~~~~~~~~~~~~~~
+				   (   )
+				  (    )
+				   (    )
+				  (    )
+				    )  )
+				   (  (                  /\
+				    (_)                 /  \  /\
+			    ________[_]________      /\/    \/  \
+		   /\      /\        ______    \    /   /\/\  /\/
+		  /  \    //_\       \    /\    \  /\/\/    \/    \
+	   /\    / /\/\  //___\       \__/  \    \/
+	  /  \  /\/    \//_____\       \ |[]|     \
+	 /\/\/\/       //_______\       \|__|      \
+	/      \      /XXXXXXXXXX\                  \
+		\    /_I_II  I__I_\__________________\
+		       I_I|  I__I_____[]_|_[]_____I
+		       I_II  I__I_____[]_|_[]_____I
+		       I II__I  I     XXXXXXX     I
+		    ~~~~~"   "~~~~~~~~~~~~~~~~~~~~~~~~
 
  ## Currently Reading
 
- - [Convex Neural Networks]($P/stash/convex-neural-networks.md)
+ - [Input Convex Neural Networks]($P/stash/convex-neural-networks.md)
  - 
 
  ## Links
 
  - [Zettel](zettel.md)
+ - [Observatorium](observatorium.md)
+ - 
