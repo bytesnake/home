@@ -20,3 +20,6 @@ vim: filetype=markdown.home.linked :
 
 
  How to learn compilers: LLVM Edition - Low Level Bits |-| https://lowlevelbits.org/how-to-learn-compilers-llvm-edition/
+ GitHub - bytesnake/home: Home sweet home |-| https://github.com/bytesnake/home
+ Alphabetisch | EUROPA-Vinyl |-| https://europa-vinyl.de/alphabetisch
+ Cardinality Minimization, Constraints, and Regularization: A Survey Optimization Online |-| https://optimization-online.org/2021/06/8454/
