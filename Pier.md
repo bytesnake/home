@@ -23,10 +23,9 @@ vim: filetype=markdown.home.linked :
  ## Currently Reading
 
  - [Input Convex Neural Networks]($P/stash/convex-neural-networks.md)
- - [Note Taking]($P/stash/note-taking.marks.md)
+ - [Luhmann Zettel]($P/stash/luhmann1981.marks.md)
 
  ## Links
 
- - [Zettel](zettel.md)
  - [Observatorium](Observatorium.md)
  - [Zettel](Kasten.md)
