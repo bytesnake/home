@@ -22,7 +22,7 @@ vim: filetype=markdown.home.linked :
 
  ## Currently Reading
 
- - [Input Convex Neural Networks]($P/stash/convex-neural-networks.md)
+ - [Input Convex Neural Networks]($P/stash/input-convex-nn.marks.md)
  - [Luhmann Zettel]($P/stash/luhmann1981.marks.md)
 
  ## Links
