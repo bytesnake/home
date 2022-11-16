@@ -23,7 +23,7 @@ vim: filetype=markdown.home.linked :
  ## Currently Reading
 
  - [Luhmann Zettel]($P/stash/luhmann1981.marks.md)
- - [Bundle Methods](/home/lorenz/Note/papers/stash/bundle-methods.marks.md)
+ - [Constrained Optim](/home/losch/Note/papers/stash/constrained-opt-text.marks.md)
 
  ## Links
 
