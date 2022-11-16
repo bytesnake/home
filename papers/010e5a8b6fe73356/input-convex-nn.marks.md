@@ -68,7 +68,8 @@ We want to train a convex function, because it makes learning the estimation
 [guaranteed to be easy]($P/stash/input-convex-nn.pdf#optimization over the output is guaranteed) and global. The training does not capture probabilistic
 [semantics]($P/stash/input-convex-nn.pdf#probabilistic semantics at all) at all and only models the [input and output space]($P/stash/input-convex-nn.pdf#input and output example space).
 
-The [bundle method](./bundle-method.pdf) requires only a few [forward and backward]($P/stash/input-convex-nn.pdf#forward and backward passes) passes.
+The [bundle method]($P/66d1c7300a666945/bundle-methods.marks.md) requires only a few [forward and backward]($P/stash/input-convex-nn.pdf#forward and backward passes) passes. It can be 
+easily used with the [negative entropy](@4BxYyzpjltlz) function during [optimization]($P/66d1c7300a666945/bundle-methods.marks.md@YcAGvBRFiD6Y).
 
 # EuTzPF2b5iil - Convex functions
 
