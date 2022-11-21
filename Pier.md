@@ -23,7 +23,7 @@ vim: filetype=markdown.home.linked :
  ## Currently Reading
 
  - [Luhmann Zettel]($P/stash/luhmann1981.marks.md)
- - [Constrained Optim](/home/losch/Note/papers/stash/constrained-opt-text.marks.md)
+ - [Constrained Optim]($P/stash/constrained-opt-text.marks.md)
 
  ## Links
 

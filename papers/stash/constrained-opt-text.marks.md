@@ -1,3 +1,28 @@
 vim: filetype=markdown.linked :
 
  > confines of the constraint set. [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#confines of the constraint set.)
+ > reexamination of Lagrangian methods proposed [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#reexamination of Lagrangian methods proposed)
+ > corresponding maximum and minimum eigenvalues [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#corresponding maximum and minimum eigenvalues)
+ > with the quadratic method [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#with the quadratic method)
+ > [under](/home/losch/Note/papers/stash/constrained-opt-text.pdf#under)
+ > efficiently information obtained [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#efficiently information obtained)
+ > e an unbounded sequence {x;}. This will typically
+ > good mechanism to enforce convergence [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#t
+ > applied to convex programming [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#applied to convex programming)
+ > [mented Lagrangian](/home/losch/Note/papers/stash/constrained-opt-text.pdf#mented Lagrangian)
+ > [aug-](/home/losch/Note/papers/stash/constrained-opt-text.pdf#aug-)
+ > but rather to the Lagrangian function [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#but rather to the Lagrangian function)
+ > steepest ascent iteration for maxi- [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#steepest ascent iteration for maxi-)
+ > [fairly restrictive](/home/losch/Note/papers/stash/constrained-opt-text.pdf#fairly restrictive)
+ > rather only approximately. [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#rather only approximately.)
+ > only a finite number of approximate problems [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#only a finite number of approximate problems)
+ > this is the case in the method of multipliers [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#this is the case in the method of multipliers)
+ > slow convergence and ill-conditioning [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#slow convergence and ill-conditioning)
+ > detracted substantially from the appeal [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#detracted substantially from the appeal)
+ > very popular for problems with linear constraints. [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#very popular for problems with linear constraints.)
+ > handle problems with both [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#handle problems with both)
+ > local and global convergence properties. [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#local and global convergence properties.)
+ > to infinity thereby alleviating the ill-conditioning [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#to infinity thereby alleviating the ill-conditioning)
+ > solution of nondifferentiable and minimax [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#solution of nondifferentiable and minimax)
+ > equal basis with the vector [source](/home/losch/Note/papers/stash/constrained-opt-text.pdf#equal basis with the vector)
+ > [feasible direction](/home/losch/Note/papers/stash/constrained-opt-text.pdf#feasible direction)

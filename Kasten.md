@@ -97,4 +97,22 @@ Wenn die Zettel im Platz sind, muss ich mir überlegen wie diese zu den anderen
 Zetteln verbunden werden können. Da ich das bisher noch nicht machen musste, ist
 mir das noch nicht klar. 
 
+
 # QaDINlkiUZ92 - Zettelkasten als Einübungs System
+
+# FTHsefSEzApQ - Eckpunkt Papier
+
+Für sehr große Dokumente ist es häufig nicht zielstrebig alle Teile zu
+[phrasieren](@nmA9UfZmjzQR) und den Inhalt bis in die Tiefe zu verstehen. Man möchte zum Beispiel 
+nur die Verhältnisse verschiedener Themen erkennen und sich für ein bestimmtes
+Projekt auf ein Themenfeld konzentrieren. 
+
+Für solche Probleme kommt Eckpunkt Lesen in Frage. Anstatt eine komplette Angabe
+zu machen, skizziert man nur die wichtigsten Punkte. Dabei wird konzentriertes
+Lesen sehr viel wichtiger, weil man für jeden Paragraphen entscheiden muss, ob
+es sich lohnt diesen zu lesen oder nicht. Gleichzeitig ist diese Art des Lesens
+auch sehr viel anstrengender, da mehr Information mit weniger Verknüpfungspunkte
+sortiert werden muss. 
+
+ - was sind verschiedene Tiefen von Dokumenten, Aufgaben machen vs.
+     Konzeptionelles Verständnis
