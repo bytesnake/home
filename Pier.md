@@ -24,6 +24,7 @@ vim: filetype=markdown.home.linked :
 
  - [Luhmann Zettel]($P/stash/luhmann1981.marks.md)
  - [Constrained Optim]($P/stash/constrained-opt-text.marks.md)
+ - [Nonlinear Programming]($P/stash/nonlinear-programming.pdf) ([Solutions]($P/stash/nonlinear-programming-solutions.pdf))
 
  ## Links
 

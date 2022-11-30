@@ -25,3 +25,4 @@ vim: filetype=markdown.home.linked :
  Cardinality Minimization, Constraints, and Regularization: A Survey Optimization Online |-| https://optimization-online.org/2021/06/8454/
  Bertsekas Books |-| https://www.mit.edu/~dimitrib/books.htm
  Alexander J. Smola |-| https://alex.smola.org/
+ Statistical Learning with Sparsity: the Lasso and Generalizations |-| https://hastie.su.domains/StatLearnSparsity/index.html
