@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# assume that we have checkout the same commit on remote; for larger files (here only PDF)
+# we synchronize them to our local version, we don't put them in the public history
+echo "Pusing papers to remote"
+rsync -auvc --delete --prune-empty-dirs --info=progress --include '*.pdf' --include '*/' --exclude "*" papers/ arbeit:Note/papers/

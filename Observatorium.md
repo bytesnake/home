@@ -28,3 +28,6 @@ vim: filetype=markdown.home.linked :
  Statistical Learning with Sparsity: the Lasso and Generalizations |-| https://hastie.su.domains/StatLearnSparsity/index.html
  Google Online Security Blog: Memory Safe Languages in Android 13 |-| https://security.googleblog.com/2022/12/memory-safe-languages-in-android-13.html
  Show minimum distance to a convex set is a convex function. - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/3023357/show-minimum-distance-to-a-convex-set-is-a-convex-function
+ Post 43: Intentionally Making Close Friends &mdash; Neel Nanda |-| https://www.neelnanda.io/blog/43-making-friends
+ linear algebra - What background is required to understand Random Matrix Theory - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/830790/what-background-is-required-to-understand-random-matrix-theory
+ blackwiki! (nick black's wiki -- mankind's last hope?) |-| https://nick-black.com/dankwiki/index.php?title=Hack_on
