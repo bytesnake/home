@@ -26,3 +26,5 @@ vim: filetype=markdown.home.linked :
  Bertsekas Books |-| https://www.mit.edu/~dimitrib/books.htm
  Alexander J. Smola |-| https://alex.smola.org/
  Statistical Learning with Sparsity: the Lasso and Generalizations |-| https://hastie.su.domains/StatLearnSparsity/index.html
+ Google Online Security Blog: Memory Safe Languages in Android 13 |-| https://security.googleblog.com/2022/12/memory-safe-languages-in-android-13.html
+ Show minimum distance to a convex set is a convex function. - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/3023357/show-minimum-distance-to-a-convex-set-is-a-convex-function
