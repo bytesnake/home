@@ -31,3 +31,8 @@ vim: filetype=markdown.home.linked :
  Post 43: Intentionally Making Close Friends &mdash; Neel Nanda |-| https://www.neelnanda.io/blog/43-making-friends
  linear algebra - What background is required to understand Random Matrix Theory - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/830790/what-background-is-required-to-understand-random-matrix-theory
  blackwiki! (nick black's wiki -- mankind's last hope?) |-| https://nick-black.com/dankwiki/index.php?title=Hack_on
+ Type inference - Eli Bendersky's website |-| https://eli.thegreenplace.net/2018/type-inference/
+ functional programming - What is Hindley-Milner? - Stack Overflow |-| https://stackoverflow.com/questions/399312/what-is-hindley-milner
+ 
+            adventures in uncertainty: Home
+         |-| https://blog.sumtypeofway.com/
