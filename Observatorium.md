@@ -37,3 +37,5 @@ vim: filetype=markdown.home.linked :
  Book Basic Simple Type Theory |-| https://www.amazon.com/Simple-Cambridge-Theoretical-Computer-Science/dp/0521054222
  What are the core concepts in functional programming? - Stack Overflow |-| https://stackoverflow.com/questions/1112773/what-are-the-core-concepts-in-functional-programming?noredirect=1
  The HoTT Book | Homotopy Type Theory |-| https://homotopytypetheory.org/book/
+ Caleb Stanford |-| https://web.cs.ucdavis.edu/~cdstanford/
+ EDAN40: Functional Music (2014 version) | Computer Science |-| https://cs.lth.se/edan40/programming-assignments/functional-music/
