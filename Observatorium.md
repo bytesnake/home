@@ -33,6 +33,7 @@ vim: filetype=markdown.home.linked :
  blackwiki! (nick black's wiki -- mankind's last hope?) |-| https://nick-black.com/dankwiki/index.php?title=Hack_on
  Type inference - Eli Bendersky's website |-| https://eli.thegreenplace.net/2018/type-inference/
  functional programming - What is Hindley-Milner? - Stack Overflow |-| https://stackoverflow.com/questions/399312/what-is-hindley-milner
- 
-            adventures in uncertainty: Home
-         |-| https://blog.sumtypeofway.com/
+ adventures in uncertainty: Home |-| https://blog.sumtypeofway.com/
+ Book Basic Simple Type Theory |-| https://www.amazon.com/Simple-Cambridge-Theoretical-Computer-Science/dp/0521054222
+ What are the core concepts in functional programming? - Stack Overflow |-| https://stackoverflow.com/questions/1112773/what-are-the-core-concepts-in-functional-programming?noredirect=1
+ The HoTT Book | Homotopy Type Theory |-| https://homotopytypetheory.org/book/
