@@ -22,7 +22,7 @@ vim: filetype=markdown.home.linked :
 
  ## Currently Reading
 
- - [Luhmann Zettel]($P/stash/luhmann1981.marks.md)
+ - [Sprechendes Denken]($P/stash/sprechendes_denken.marks.md)
  - [Constrained Optim]($P/stash/constrained-opt-text.marks.md)
  - [Nonlinear Programming]($P/stash/nonlinear-programming.pdf) ([Solutions]($P/stash/nonlinear-programming-solutions.pdf))
 

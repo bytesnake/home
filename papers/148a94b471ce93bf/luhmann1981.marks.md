@@ -67,7 +67,7 @@ partner zu der eigenen Gedankenwelt [anzupassen]($P/stash/luhmann1981.pdf#der Ge
 von dem konkreten Quellen weg, hin zu Anknüpfpunkte im eigenem Verstädnis eine
 [hohe Komplexitat im Zettelkasten]($P/stash/luhmann1981.pdf#Aufbau hoher Komplexitat im Zettelkasten).
 
-#BsYY7ZrcggPZ - Strukturen eines Gedankensystems
+# BsYY7ZrcggPZ - Strukturen eines Gedankensystems
 
 Damit ein Zettelkasten seine Funktion als [Schreibmittel](@SprC94pFZg1W), [Vergleichsprozedur](@iQ35Pb1fUkxw) 
 und [Abstraktionssystem](@8OYY8BNf724e) erfüllen kann, sind mehrere Elemente essentiell. Die
