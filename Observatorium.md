@@ -39,3 +39,6 @@ vim: filetype=markdown.home.linked :
  The HoTT Book | Homotopy Type Theory |-| https://homotopytypetheory.org/book/
  Caleb Stanford |-| https://web.cs.ucdavis.edu/~cdstanford/
  EDAN40: Functional Music (2014 version) | Computer Science |-| https://cs.lth.se/edan40/programming-assignments/functional-music/
+ betaveros&#39;s site |-| https://beta.vero.site/
+ Programming Skills: Safe and Secure Sytems Programming in Rust Schedule |-| https://www.cs.rit.edu/~mtf/teaching/20215/psr/schedule.html
+ Contrapunctus I - The Art of Fugue Sheet music for Piano (Solo) | Musescore.com |-| https://musescore.com/user/162972/scores/1668391
