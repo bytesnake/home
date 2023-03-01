@@ -116,3 +116,19 @@ sortiert werden muss.
 
  - was sind verschiedene Tiefen von Dokumenten, Aufgaben machen vs.
      Konzeptionelles Verständnis
+
+# UoFEj4VvyNHq - Grashüpfermentalität und Nettoeffekt vom Internet
+
+Das Internet konfrontiert Menschen mit einer vielzahl (man könnte auch sagen
+grenzenloser Anzahl) an verschiedener Themen. Dieser Mechanismus wurde in den
+letzten Jahren durch die Aufmerksamkeitsindustry gezielt verstärkt, aktuell sind
+Plattformen wie Instagram und TikTok paradebeispiele für dieses verhalten. Auf
+der Negativseite resultiert ein fragmentierter Kontext in Verschlechterung der
+Merk- und Abstraktionsfähigkeit. Seymour Papert hat geschrieben "What's scary
+about the way kids jump around the Internet, [their] grasshopper mentality".
+
+Konkretes Denken und Reproduktion mittels [Zettelkästen](@QaDINlkiUZ92) ist ein
+Gegenmodell zur Aufmerksamkeitsindustrie. Das wird durch eine Verlangsamung und
+Verknüpfung des Gelesenen erzielt.
+
+

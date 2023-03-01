@@ -43,3 +43,8 @@ vim: filetype=markdown.home.linked :
  Programming Skills: Safe and Secure Sytems Programming in Rust Schedule |-| https://www.cs.rit.edu/~mtf/teaching/20215/psr/schedule.html
  Contrapunctus I - The Art of Fugue Sheet music for Piano (Solo) | Musescore.com |-| https://musescore.com/user/162972/scores/1668391
  Alternative Keyboard-Layouts |-| https://www.maximilian-schillinger.de/keyboard-layouts-neo-adnw-koy.html
+ Works by Seymour Papert |-| http://papert.org/works.html
+ Lambda calculus - Lambda Calculus |-| https://crypto.stanford.edu/~blynn/lambda/
+ Mike Swan |-| https://mikeswan.net/
+ Evaluating Derivatives |-| https://epubs.siam.org/doi/book/10.1137/1.9780898717761
+ Laurent Hascoet's web page  |-| http://www-sop.inria.fr/members/Laurent.Hascoet/

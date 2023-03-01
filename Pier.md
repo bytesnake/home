@@ -24,6 +24,7 @@ vim: filetype=markdown.home.linked :
 
  - [Sprechendes Denken]($P/stash/sprechendes_denken.marks.md)
  - [Constrained Optim]($P/stash/constrained-opt-text.marks.md)
+ - [PSD Recurrent Neural Networks]($P/stash/psd_recurrent_nn.pdf)
  - [Nonlinear Programming]($P/stash/nonlinear-programming.pdf) ([Solutions]($P/stash/nonlinear-programming-solutions.pdf))
 
  ## Links
