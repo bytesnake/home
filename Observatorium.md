@@ -48,3 +48,5 @@ vim: filetype=markdown.home.linked :
  Mike Swan |-| https://mikeswan.net/
  Evaluating Derivatives |-| https://epubs.siam.org/doi/book/10.1137/1.9780898717761
  Laurent Hascoet's web page  |-| http://www-sop.inria.fr/members/Laurent.Hascoet/
+ Introduction - Counterexamples in Type Systems |-| https://counterexamples.org/intro.html
+ Semantic Domain: The Golden Age of PL Research |-| https://semantic-domain.blogspot.com/2022/09/the-golden-age-of-pl-research.html
