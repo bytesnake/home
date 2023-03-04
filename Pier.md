@@ -22,8 +22,6 @@ vim: filetype=markdown.home.linked :
 
  ## Currently Reading
 
- - [Sprechendes Denken]($P/stash/sprechendes_denken.marks.md)
- - [Constrained Optim]($P/stash/constrained-opt-text.marks.md)
  - [PSD Recurrent Neural Networks]($P/stash/psd_recurrent_nn.pdf)
  - [Nonlinear Programming]($P/stash/nonlinear-programming.pdf) ([Solutions]($P/stash/nonlinear-programming-solutions.pdf))
 
@@ -31,3 +29,7 @@ vim: filetype=markdown.home.linked :
 
  - [Observatorium](Observatorium.md)
  - [Zettel](Kasten.md)
+
+ ## Reading Lists
+
+ - [Compiler & Languages]($P/8135c6bab44baebf/index.md)

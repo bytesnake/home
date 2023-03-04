@@ -1,11 +1,5 @@
 vim: filetype=markdown :
 
-# Book recommendations after reading “crafting interpreters”
-
-[Discussion](http://old.reddit.com/r/ProgrammingLanguages/search?q=flair_name%3A%22Discussion%22&restrict_sr=1)
-
-## Finished list
-
  - [Engineering a Compiler](./engineering_a_compiler.pdf)
  - [Crafting Interpreter](./crafting-interpreters.pdf)
  - [Modern Compiler Implementation in C](./modern_compiler_implementation.pdf)
@@ -25,7 +19,9 @@ vim: filetype=markdown :
  - UW CSE CSEP 501: Compilers - Hal Perkins (nice balanced introduction, including x86-64 assembly code generation, with the aforementioned "Engineering a Compiler" used as the course textbook).
  - Dragon Book - Compilers: Principles, Techniques, and Tools
 
-## Thread content
+# Book recommendations after reading “crafting interpreters”
+
+[Discussion](http://old.reddit.com/r/ProgrammingLanguages/search?q=flair_name%3A%22Discussion%22&restrict_sr=1)
 
 Hello, I finished the book crafting interpreters by Robert Nystrom. The book
 has helped me alot and felt like an amazing introduction to the field of
