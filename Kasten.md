@@ -131,4 +131,21 @@ Konkretes Denken und Reproduktion mittels [Zettelkästen](@QaDINlkiUZ92) ist ein
 Gegenmodell zur Aufmerksamkeitsindustrie. Das wird durch eine Verlangsamung und
 Verknüpfung des Gelesenen erzielt.
 
+# ApxvGG5vxhzH - Kommunikation in Wissenschaft
 
+Um die Aufmerksamkeit anderer Leute auf die eigene Arbeit zu lenken ist das
+__Networking__ in der Wissenschaft essentiell. Wichtige Ergebnisse erzielt man
+durch fundierte Forschung, welche innovative, gut strukturiert und wichtige
+Forschungsfragen angeht. Diese Ergebnisse in Journals mit hohem Ansehen zu
+bringen ist Ziel des Forschers.
+
+Als Einzelkämpfer kommt man häufig nicht weit und daher sollte man
+ - das Internet zum Vernetzen benutzen, Social Media, Mailing lists etc.
+ - Konferenzen besuchen um Ergebnisse zu teilen und zu diskutieren
+ - mit anderen Forschern zusammenarbeiten
+ - proaktiv auf andere Forscher zu gehen, heißt Ergebnisse zu teilen und deren
+     Rückmeldung diskutieren
+
+Insgesamt ist das Zusammenspiel von guter Forschung und effektiver Kommunikation
+wichtig, um eine stabile Verbindung zu der wissenschaftlichen Gemeinschaft
+aufzubauen.
