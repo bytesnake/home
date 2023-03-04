@@ -50,3 +50,6 @@ vim: filetype=markdown.home.linked :
  Laurent Hascoet's web page  |-| http://www-sop.inria.fr/members/Laurent.Hascoet/
  Introduction - Counterexamples in Type Systems |-| https://counterexamples.org/intro.html
  Semantic Domain: The Golden Age of PL Research |-| https://semantic-domain.blogspot.com/2022/09/the-golden-age-of-pl-research.html
+ WikiWikiWeb |-| https://wiki.c2.com/
+ Information Theory, Inference, and Learning Algorithms |-| https://inference.org.uk/itila/book.html
+ soft question - A book you would like to write - MathOverflow |-| https://mathoverflow.net/questions/54232/a-book-you-would-like-to-write?rq=1
