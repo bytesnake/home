@@ -149,3 +149,8 @@ Als Einzelkämpfer kommt man häufig nicht weit und daher sollte man
 Insgesamt ist das Zusammenspiel von guter Forschung und effektiver Kommunikation
 wichtig, um eine stabile Verbindung zu der wissenschaftlichen Gemeinschaft
 aufzubauen.
+
+# GPT7Tx71zFkm - Das Problem von Verknüpfungsschulden
+
+Ein häufiges Problem von Abwägungen zum Zeitaufwand ist die Schulden von
+Verknüpfungslücken abzuwägen. 

@@ -53,3 +53,7 @@ vim: filetype=markdown.home.linked :
  WikiWikiWeb |-| https://wiki.c2.com/
  Information Theory, Inference, and Learning Algorithms |-| https://inference.org.uk/itila/book.html
  soft question - A book you would like to write - MathOverflow |-| https://mathoverflow.net/questions/54232/a-book-you-would-like-to-write?rq=1
+ Anna Korba |-| https://akorba.github.io/Publications.html
+ convex analysis - Proximal Operator / Proximal Mapping for Composition of Functions - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/147987/proximal-operator-proximal-mapping-for-composition-of-functions
+ Scientist/Senior Scientist for Machine Learning (multiple vacancies) | ECMWF |-| https://jobs.ecmwf.int/displayjob.aspx?jobid=134
+ [Unix] Maildir, mutt and vim |-| https://yurichev.com/news/20220205_maildir/

@@ -23,6 +23,7 @@ vim: filetype=markdown.home.linked :
  ## Currently Reading
 
  - [PSD Recurrent Neural Networks]($P/stash/psd_recurrent_nn.pdf)
+ - [Nonconvex Majorization Minimization]($P/stash/nonconvex-mm.marks.md)
  - [Nonlinear Programming]($P/stash/nonlinear-programming.pdf) ([Solutions]($P/stash/nonlinear-programming-solutions.pdf))
 
  ## Links

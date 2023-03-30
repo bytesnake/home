@@ -1,0 +1,979 @@
+% vim : set tabstop=4 :
+
+\documentclass[11pt]{beamer}
+
+\PassOptionsToPackage{table}{xcolor}
+\usepackage{color, colortbl}
+\graphicspath{{figures/}{./}}
+\usepackage{booktabs}
+
+\usetheme{Madrid}
+\usefonttheme{default}
+
+\usepackage{palatino}
+\usepackage[default]{opensans}
+\usepackage[outputdir=build]{minted}
+\usepackage{wrapfig}
+\usepackage{eso-pic}
+\usepackage{tabularx}
+\usepackage{listings}
+\usepackage{mathtools}
+
+\makeatletter
+\newenvironment{tabminted}{%
+  \let\FV@ListVSpace\relax  
+  \minted
+}{%
+  \endminted
+  \unskip   
+  \aftergroup\@tabmintedend
+}
+\newcommand*{\tabminted@finalstrut}[1]{%
+  \ifdim\prevdepth>0pt
+    \ifdim\dp#1>\prevdepth
+      \vskip\dimexpr(\dp#1)-\prevdepth\relax
+    \fi
+  \else
+    \vskip\dimexpr(\dp#1)\relax
+  \fi
+}
+\newcommand*{\@tabmintedend}{%
+  \let\@finalstrut\tabminted@finalstrut
+}
+\makeatother
+
+\DeclareMathSymbol{\shortminus}{\mathbin}{AMSa}{"39}
+
+%\usepackage{array}   % for '\newcolumntype' directive
+
+\usepackage{tikz}
+\usetikzlibrary{external,shapes,calc,positioning, shapes.arrows,shadows.blur}
+\tikzexternalize[prefix=build/tikz_]
+
+\useinnertheme{circles}
+
+%\setminted[rust]{fontfamily=cmr}
+
+\title[AD]{Automatic Differentiation}
+\subtitle{Introduction, Abstractions and Applications}
+
+\author[Lorenz Schmidt]{Lorenz Schmidt}
+\institute[ALabs]{Internation Audio Laboratories}
+\date[\today]{Waischenfeld Retreat \\ \today}
+\setbeamercolor{author}{fg=white}
+\setbeamercolor{institute}{fg=white}
+\setbeamercolor{date}{fg=white}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+\newcommand{\dual}{\mathbf{\epsilon}}
+\newcommand{\iu}{{i\mkern1mu}}
+
+\begin{document}
+
+{
+\usebackgroundtemplate{\includegraphics[width=1.3\paperwidth]{figures/boulders.jpg}}
+\begin{frame}
+	\titlepage
+\end{frame}
+}
+
+\begin{frame}
+	\frametitle{Our Plan}
+
+	\begin{minipage}{0.45\textwidth}
+		Introduction
+
+		\only<1>{
+			\begin{itemize}
+				\item Compare differences and differentials
+				\item Clarify terms primal, tangent, duals, etc.
+				\item Understand complexity and memory tradeoff
+			\end{itemize}
+		}
+
+		Abstractions
+
+		\only<2>{
+			\begin{itemize}
+				\item Discuss three pitfalls
+				\item Importance of Abstraction Levels
+				\item Abstraction Representation
+			\end{itemize}
+		}
+
+		Application
+
+		\only<3>{
+			\begin{itemize}
+				\item Second-order Unconstrained Optimization
+				\item Inverse rendering
+				\item Black-hole Imaging
+			\end{itemize}
+		}
+
+		\only<4>{
+			\bigskip
+			\begin{block}{Tradeoffs}
+				Improve understanding of AD \\
+				Spark Interest for AD Appls. \\
+				A Travel Report \\
+			\end{block}
+		}
+	\end{minipage} \hfill
+	\begin{minipage}{0.48\textwidth}
+		\begin{figure}[b]
+			\includegraphics[width=0.8\linewidth]{toc_introduction.png}
+			\caption{\scriptsize Cover from book \cite{naumann_art_diff}}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+\section{Introduction}
+
+\subsection{The Quest for Computation}
+
+\begin{frame}
+	\begin{itemize}
+		\item Mechanized computation \( \implies \) modern computers
+			\only<2>{\item Mechanized differentiation \( \implies \) automatic differentiation \\ \quad No Calculus classes anymore?}
+	\end{itemize}
+
+	\begin{figure}
+		\includegraphics[width=0.6\linewidth]{leibniz_comp.png}
+		\caption{\scriptsize Leibniz's computation machine, appeared in Miscellanea Berolensia ad incrementum scientiarum (1710). This machine was supposed to be able to add, subtract, multiply and divide, but was never constructed.}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{EnzymeCon 2022}
+
+	\begin{figure}
+		\includegraphics[width=1.0\linewidth]{figures/team.jpg}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{AD and Friends - Signpost}
+
+	\input{figures/diff_overview.tex}
+\end{frame}
+
+\begin{frame}
+	\frametitle{AD and Friends - Manual}
+
+	\AddToShipoutPictureFG*{
+		\AtPageUpperLeft{\put(1,-45){\makebox[\paperwidth][r]{
+			\includegraphics[width=.2\linewidth]{figures/signpose_closed.png}
+		}}}
+	}%
+
+	For example from \cite{tesselation}:
+
+	\begin{center}
+		\small
+		"In this article a new objective function is defined, and \textbf{both this function and its gradient are derived in closed-form} for surfaces and volumes. This method opens a wide range of possibilities, also described in the paper, such as [\dots]"
+	\end{center}
+
+	\begin{figure}
+		\includegraphics[width=0.9\linewidth]{figures/tesselation_pages.png}
+	\end{figure}
+
+	\begin{itemize}
+		\item Closed-form derivatives are useful for theoretical insight
+		\item Hard to derive, human error possible
+		\item \textbf{Unecessary when we compose known atomics} for optimization
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{AD and Friends - Symbolic Differentiation}
+
+	\AddToShipoutPictureFG*{
+		\AtPageUpperLeft{\put(1,-45){\makebox[\paperwidth][r]{
+			\includegraphics[width=.2\linewidth]{figures/signpose_symbolic.png}
+		}}}
+	}%
+	\begin{figure}
+		\includegraphics[width=1.0\linewidth]{figures/symbolic_terms.png}
+	\end{figure}
+
+	\begin{itemize}
+		\item For example: Mathematica, Maxima, and Theano
+		\item Some optimization are possible, but no branching and recursion based on input
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{AD and Friends - Finite Differences}
+
+	\AddToShipoutPictureFG*{
+		\AtPageUpperLeft{\put(1,-45){\makebox[\paperwidth][r]{
+			\includegraphics[width=.2\linewidth]{figures/signpose_finite.png}
+		}}}
+	}%
+	\begin{minipage}{.45\linewidth}
+		Finite difference approximation 
+		\begin{align}
+			\mathbf{J}\mathbf{v} \approx \frac{f(\mathbf{x}+h\mathbf{v}) - f(\mathbf{x})}{h}, 0 < h \ll 1 \nonumber
+		\end{align}
+
+		\only<2>{
+			Jacobian \( \mathbf{J} \in \mathbb{R}^{n\times m} \)
+			$$
+			\mathbf{J}=\left[\begin{array}{ccc}
+			\dfrac{\partial f_{1}(\mathbf{x})}{\partial x_{1}} & \cdots & \dfrac{\partial f_{1}(\mathbf{x})}{\partial x_{n}} \\
+			\vdots & \ddots & \vdots \\
+			\dfrac{\partial f_{m}(\mathbf{x})}{\partial x_{1}} & \cdots & \dfrac{\partial f_{m}(\mathbf{x})}{\partial x_{n}}
+			\end{array}\right]
+			$$
+			Evaluating Jacobian
+			\begin{align}
+				(\mathbb{R}^n\to\mathbb{R}^m)\to (\mathbb{R}^n \to \mathbb{R}^{n\times m}) \nonumber
+			\end{align}
+		}
+		\only<3>{
+			\begin{itemize}
+				\item \textbf{Issue}: evaluate $n$ times, once with each standard basis vector \( \mathbf{e}_i\in\mathbb{R}^n \)
+				\item \textbf{Issue}: difference \( h\) another parameter we may need to account for for each input variable
+			\end{itemize}
+		}
+	\end{minipage}
+	\begin{minipage}{0.52\linewidth}
+		\begin{figure}
+			\includegraphics[width=1.0\linewidth]{figures/autodiff_err.png}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Computational Graph}
+
+	\begin{itemize}
+		\item Computation graphs are analytic 
+		\item But act on a different abstraction level
+	\end{itemize}
+
+	\begin{figure}
+		\input{figures/trace.tex}
+	\end{figure}
+
+	\only<2>{
+		\begin{minipage}{.48\linewidth}
+			\begin{itemize}
+				\item Function \( \text{F: }\mathbb{R}^4 \to \mathbb{R}^2 \)
+				\item Coordinates of light spot
+					\begin{align}
+						y = (\frac{\nu\tan(\omega t)}{\gamma - \tan(\omega t)}, \gamma y_1) \nonumber
+					\end{align}
+				\item Treat sub-expressions as intermediate variables
+			\end{itemize}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{.50\linewidth}
+			\begin{figure}
+				\includegraphics[width=1.0\linewidth]{lighthouse.png}
+				\caption{\scriptsize Lighthouse example from \cite{griewank}}
+			\end{figure}
+		\end{minipage}
+	}
+
+	\begin{onlyenv}<3>
+		\begin{minipage}{.45\linewidth}
+			\begin{itemize}
+				\item Function \( \text{F: }\mathbb{R}^4 \to \mathbb{R}^2 \)
+				\item Type parameter inside rectangle brackets
+				\item Runtime parameters inside round brackets
+			\end{itemize}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{.50\linewidth}
+			\tiny
+			\begin{minted}[autogobble,linenos=true]{rust}
+				use num::Float;
+
+				fn hit<F: Float>(nu: F, gamma: F, omega: F, t: F) 
+					-> (F, F)
+				{
+					let tmp = (nu * (omega * t).tan()) 
+						    / (gamma - (omega * t).tan());
+
+					(tmp, gamma * tmp)
+				}
+			\end{minted}
+		\end{minipage}
+	\end{onlyenv}
+
+	\begin{onlyenv}<4>
+		\begin{minipage}{.45\linewidth}
+			\begin{itemize}
+				\item Concrete: All operations map to machine instructions
+				\item But control flow (recursion and branching)
+				\item What happens for F=f32 and F=f16?
+			\end{itemize}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{.48\linewidth}
+			\tiny
+			\begin{minted}[autogobble,linenos=true]{llvm}
+			define { double, double } @hit() unnamed_addr #0 {
+			start:
+			  ; initialize arguments ...
+
+			  %0 = fmul double %omega3, %t4
+			  %1 = call noundef double @tan(double noundef %0)
+			  %2 = fmul double %nu1, %1
+			  %3 = call noundef double @tan(double noundef %0)
+			  %4 = fsub double %gamma2, %3
+			  %5 = fdiv double %2, %4
+			  %6 = fmul double %gamma2, %5
+			  %7 = insertvalue { double, double } undef, double %5, 0
+			  %8 = insertvalue { double, double } %7, double %6, 1
+			  ret { double, double } %8
+			}
+			\end{minted}
+		\end{minipage}
+	\end{onlyenv}
+
+	\begin{onlyenv}<5>
+		\begin{minipage}{.45\linewidth}
+			\begin{itemize}
+				\item Atomic operations, scalar operations, tangent
+				\item Next slide we will discuss trace generation
+				\item AD augments primal to fill trace valid for all parameter arguments
+			\end{itemize}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{.45\linewidth}
+			\scriptsize
+			\[
+			\begin{array}{ rll }
+				v_{\shortminus 3} &= x_1 &= \nu \\
+				v_{\shortminus 2} &= x_2 &= \gamma \\
+				v_{\shortminus 1} &= x_3 &= \omega \\
+				v_0 &= x_4 &= t \\
+				\cline{1-3}
+				v_1 &= v_{\shortminus 1}*v_0 \\
+				v_2 &= \tan(v_1) &  \\
+				v_3 &= v_{\shortminus 2} - v_2 \\
+				v_4 &= v_{\shortminus 3} * v_2 \\
+				v_5 &= v_4 / v_3 \\
+				v_6 &= v_5 \\
+				v_7 &= v_5 * v_{\shortminus 2} \\
+				\cline{1-3}
+				y_1 &= v_6 \\
+				y_2 &= v_7
+			\end{array}
+			\]
+		\end{minipage}
+	\end{onlyenv}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Computational Graph}
+
+	\begin{figure}
+		\input{figures/trace.tex}
+	\end{figure}
+
+	\begin{minipage}{.45\linewidth}
+		\begin{figure}
+			\input{figures/comp_graph.tex}
+		\end{figure}
+	\end{minipage}
+	\begin{minipage}{.45\linewidth}
+		\scriptsize
+		\[
+		\begin{array}{ rll }
+			\color{blue}v_1 &= v_{\shortminus 1}*v_0 \\
+			\only<2->{\color{red}dv_1 &= \color{red}dv_{\shortminus 1} \color{blue}v_{\shortminus 1} + \color{red}dv_0 \color{blue}v_0} \\
+			\color{blue}v_2 &= \tan(v_1) &  \\
+			\only<3->{\color{red}dv_2 &= \textcolor{red}{dv_1}\sec^2(\textcolor{blue}{v_1})} \\
+			\color{blue}v_3 &= v_{\shortminus 2} - v_2 \\
+			\only<4->{\color{red}dv_3 &= \color{red}dv_{\shortminus 2} - dv_2} \\
+			\color{blue}v_4 &= v_{\shortminus 3} * v_2 \\
+			\only<4->{\color{red}dv_4 &= \color{red}dv_{\shortminus 3}\color{blue}dv_{\shortminus 3} + \color{red} dv_2 \color{blue} v_2} \\
+			\color{blue}v_5 &= v_4 / v_3 \\
+			\only<4->{\color{red}dv_5 &= \frac{\textcolor{red}{dv_4}}{\textcolor{blue}{v_3}} - \frac{\textcolor{blue}{v_4}\textcolor{red}{dv_3}}{\textcolor{blue}{v_3^2}}} \\
+			\color{blue}v_6 &= v_5 \\
+			\only<4->{\color{red}dv_6 &= \color{red}dv_5} \\
+			\color{blue}v_7 &= v_5 * v_{\shortminus 2} \\
+			\only<4->{\color{red}dv_7 &= \textcolor{red}{dv_5}\textcolor{blue}{v_5} + \textcolor{red}{dv_{\shortminus 2}}\textcolor{blue}{v_{\shortminus 2}}} \\
+		\end{array}
+		\]
+
+		\only<5->{
+		\begin{itemize}
+			\item Augmented primal trace contains \textcolor{blue}{$v_i$} and tangents \textcolor{red}{$dv_i$}
+		\end{itemize}
+		}
+	\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Forward Mode AD - Example}
+
+	\begin{itemize}
+		\item Extend algebra with dual number \( a+b\mathbf{\epsilon} \), property \( \mathbf{\epsilon}^2 = 0\)
+			\only<1->{
+				\begin{align}
+								&(a + b\dual)(c+d\dual) = ac &&+ (ad + bc)\dual \\
+					\only<2->{\text{compare to \quad }& (a + b\iu)(c+d\iu) = (ac - bd) &&+ (ad + cb)\iu}
+				\end{align}
+			}
+			\only<3->{
+			\item Taylor series expansion filters
+				\only<3-4>{
+					\begin{align}
+						&f(a + b\dual) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}b^n\dual^n 
+						\only<4->{
+							= f(a) + bf^{(1)}(a)\dual \\
+						\text{as } &\dual^n = 0 \text{ for } n \geq 2
+					}
+				\end{align}
+		}}
+		\only<5>{
+		\item Works addition?
+			\begin{align}
+				f(a+\dual) + g(a+\dual) = f(a) + g(a) + (f^{(1)}(a) + g^{(1)}(a))\dual
+			\end{align}
+		}
+		\only<6>{
+		\item Works addition \checkmark, multiplication?
+			\begin{align}
+				f(a+\dual) g(a+\dual) = f(a)g(a) + (f^{(1)}(a)g(a) + g^{(1)}(a) f(a))\dual
+			\end{align}
+		}
+		\only<7>{
+		\item Works addition \checkmark, multiplication \checkmark, chaining?
+			\begin{align}
+				(f \circ g)(a+\dual) = (f \circ g)(a) + (f^{(1)} \circ g)(a)~g^{(1)}(a)~\dual
+			\end{align}
+		}
+		\begin{onlyenv}<8->
+		\item Works addition \checkmark, multiplication \checkmark, chaining \checkmark
+		\item We just need to define algebra 
+		\begin{onlyenv}<8>
+		\scriptsize
+
+		\begin{minted}[autogobble, linenos=true]{rust}
+			struct DualScalar { v: f32, dv: f32 }
+			impl Float for DualScalar { 
+				fn tan(self) -> Self {
+					DualScalar { v: self.v.tan(), 
+						dv: self.v.sec().square() * self.dv }
+				}
+				...
+			}
+		\end{minted}
+		\end{onlyenv}
+		\begin{onlyenv}<9->
+		\item And can just reuse earlier function with F=DualScalar
+		\end{onlyenv}
+		\end{onlyenv}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tangent $dy$ contains a projection}
+
+	\begin{itemize}
+		\item \( \mathbf{\dot{y}} = \mathbf{J} \mathbf{\dot{x}} \) computed at point $\mathbf{x}_0 \)
+			\begin{itemize}
+				\item Called the Jacobian-Vector product (JVP)
+				\item Tangent along we evaluate gradient
+			\end{itemize}
+
+		\pause
+
+		\item for example for \( (\dot{\nu}, \dot{\gamma}, \dot{\omega}, \dot{t}) = (1, 0, 0, 0 ) \)
+	\end{itemize}
+
+	\begin{minipage}{.48\linewidth}
+		\begin{figure}
+			\input{figures/comp_graph.tex}
+		\end{figure}
+	\end{minipage}
+	\begin{minipage}{.48\linewidth}
+		\begin{itemize}
+			\item Function \( F: \mathbb{R}^4 \to \mathbb{R}^2 \)
+			\item Yields column of Jacobian (single input, all output)
+			\pause
+			\item \textbf{But} machine learning loss in setting \( \mathcal{L}: \mathbb{R}^n \to \mathbb{R} \)
+				\begin{align}
+					\mathcal{L}_\mathbf{\theta}(\mathbf{x}) = \sum_i \mathcal{L}(\mathbf{x}_i; \mathbf{\theta})
+				\end{align}
+		\end{itemize}
+	\end{minipage}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Reverse mode with adjoints}
+
+	\begin{itemize}
+		\item Want to set some output active and evaluate for all inputs
+			\begin{itemize}
+				\item Linear combination of Jacobian rows \( \mathbf{\hat{y}} = \mathbf{\hat{x}}^T \mathbf{J} \)
+				\item This is called the Vector-Jacobian product (VJP)
+			\end{itemize}
+
+		\pause
+		\item Construct \textbf{adjoint} function with reversed \textbf{primal}'s control-flow 
+		\pause
+		\item Why do we still need primal trace?
+			\begin{align}
+				\color{red}(f \circ g)'(x) &= \color{red}f'(\textcolor{blue}{g(x)})g'(x) \\
+				\color{red}(f(x) g(x))' &= \textcolor{red}{f(x)'}\textcolor{blue}{g(x)} + \textcolor{blue}{f(x)}\textcolor{red}{g(x)'}
+			\end{align}
+		\item Automatic Differentiation: Construct concrete adjoint function taking correct branches and recursions for primal's input
+		%\item Autodiff field calls forward - \textcal{tangent linear} - and reverse - \textcal{adjoint} mode
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Checkpointing}
+
+	\begin{itemize}
+		\item Storing primal trace takes \( \mathcal{O}(n) \) memory 
+	\end{itemize}
+
+	\begin{figure}%
+		\only<2>{\includegraphics[width=.9\linewidth]{figures/checkpoints/Auswahl_002.png}}%
+		\only<3>{\includegraphics[width=.9\linewidth]{figures/checkpoints/Auswahl_003.png}}%
+		\only<4>{\includegraphics[width=.9\linewidth]{figures/checkpoints/Auswahl_004.png}}%
+		\only<5>{\includegraphics[width=.9\linewidth]{figures/checkpoints/Auswahl_005.png}}%
+		\only<6>{\includegraphics[width=.9\linewidth]{figures/checkpoints/Auswahl_006.png}}%
+		\only<7>{\includegraphics[width=.9\linewidth]{figures/checkpoints/Auswahl_007.png}}%
+		\only<8>{\includegraphics[width=.9\linewidth]{figures/checkpoints/Auswahl_008.png}}%
+		\only<9>{\includegraphics[width=.9\linewidth]{figures/checkpoints/Auswahl_009.png}}%
+		\only<10>{\includegraphics[width=.9\linewidth]{figures/checkpoints/Auswahl_010.png}}%
+		\only<11>{\includegraphics[width=.9\linewidth]{figures/checkpoints/Auswahl_011.png}}%
+		\only<12>{\includegraphics[width=.9\linewidth]{figures/checkpoints/Auswahl_012.png}}%
+		\only<13>{\includegraphics[width=.9\linewidth]{figures/checkpoints/Auswahl_013.png}}%
+		\only<14>{\includegraphics[width=.9\linewidth]{figures/checkpoints/Auswahl_014.png}}%
+		\only<15>{\includegraphics[width=.9\linewidth]{figures/checkpoints/Auswahl_015.png}}%
+	\end{figure}
+
+	\only<2->{
+	\begin{itemize}
+		\item 11 iterations \only<3->{memory limited to storing one \textcolor{blue}{Jacobian}} \only<4->{\& three checkpoints}
+		\only<3->{\item run \textcolor{green}{forward}, \textcolor{blue}{store} last step, and \textcolor{red}{adjoint}}
+		\only<5->{\item restore checkpoints and recompute}\only<6->{(2 levels here)}
+		\only<6->{\item reuse checkpoint space once it becomes available for new checkpoints}
+		\only<15>{\item Optimal binomial scheme implemented in Enzyme}
+	\end{itemize}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{What is about Enzyme? What brings it on table?}
+
+	\begin{itemize}
+		\item Source-rewriting AD plugin for statically analyzable LLVM IR
+			\begin{itemize}
+				\item Implemented once proper, supports many languages
+				\item Inter-language compability
+				\item<2-> Can do post-optimization AD, makes it asymptotical faster
+			\end{itemize}
+	\end{itemize}
+
+	\only<1>{
+	\begin{figure}
+		\includegraphics[width=\linewidth]{figures/enzyme.jpg}
+	\end{figure}
+	}
+	\only<2>{
+	\begin{figure}
+		\includegraphics[width=\linewidth]{figures/enzyme2.jpg}
+
+		\caption{Performance comparison of Enzyme to other AD tools. \cite{enzymeNeurips}}
+	\end{figure}
+
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Abstractions and Semantics of AD}
+
+	\begin{itemize}
+		\item Presentation by Jan Hückelheim from Argonna National Laboratory
+		\item So: AD differentiates programs. Unlike symbolic differentiation, it can handle large computations with loops and branches. Unlike finite differences it is exact.
+		\item<2-> Except when you using parametric integrals
+		\item<3-> Or linear solvers
+		\item<4-> Or fixed point iterations
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Pitfall 1 - Abstractions}
+
+	\begin{center}
+		\only<1>{Do you actually want to differentiate at \textbf{that} level of abstraction?}
+		\only<2>{"AD differentiates what you implement! [\dots] Which occasionally differs from what you think you implement" \cite{naumann_art_diff}}
+
+		\only<3->{
+			\begin{figure}
+				\input{figures/abstractions.tex}
+			\end{figure}
+		}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Pitfall 1 - Abstractions}
+
+	AD differentiates what \textcolor{red}{is implemented at the abstraction to which you apply AD}! Which occasionally differs from what you think you implement.
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Pitfall 2 - Branches}
+
+	\begin{center}
+		Do you actually want to differentiate at \textbf{that} branch?
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Pitfall 2 - Branches have wrong derivatives}
+
+	\small
+	\begin{tabular}{l|p{0.3\linewidth}|p{0.5\linewidth}}
+		Definition & Code with fast path & Code with modified path \\
+		\toprule
+		Function: \\
+		$f(x) = \begin{cases}
+		      0, & \text{if}\ x=0 \\
+		      x, & \text{else}
+	      \end{cases}$ & \begin{tabminted}{python}
+f(x):
+   if x == 0:
+      return 0.0
+   else:
+      return x
+		\end{tabminted}
+		& 
+		\begin{tabminted}{python}
+f(x):
+  if x == 0:
+     return sin(x)
+  else:
+     return x
+		\end{tabminted} 
+		\\
+		\hline
+		Derivative: \\
+		$f'(x) = \begin{cases}
+			\hat{x}, &\text{if}\ x=0 \\
+			\hat{x}, &\text{else}
+		\end{cases}
+		$ & \begin{tabminted}{python}
+f(x, dx=1.0):
+   if x == 0:
+      return 0 
+   else:
+      return dx
+      		\end{tabminted}
+		  &
+		  \begin{tabminted}{python}
+f(x, dx=1.0):
+  if x == 0:
+    return cos(x)*dx # should be dx
+  else:
+    return dx
+		\end{tabminted}
+		\\
+	\end{tabular}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Pitfall 2 - Branches}
+
+	AD differentiates what \textcolor{red}{is implemented at the abstraction to which you apply AD, \textbf{and in the branch that gets executed}}! Which occasionally differs from what you think you implement
+\end{frame}
+
+\begin{frame}
+	\frametitle{Pitfall 3 - Approximation}
+
+	\begin{center}
+		Do you actually have \textbf{exact} operators for your problem?
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Pitfall 3 - Approximation}
+
+	\begin{figure}
+		\only<1-3>{
+		\input{figures/approximation.tex}
+		}
+	\end{figure}
+
+	\only<3>{
+		\begin{itemize}
+			\item Same initial point $\mathbf{x}_0$ valid for tangents/adjoints?
+			\item Tangents/adjoints same condition number?
+		\end{itemize}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Pitfall 3 - Diff. CG applied to Hilbert Matrix}
+
+	\begin{figure}
+		\includegraphics[width=0.7\linewidth]{figures/hilbertsolver.png}
+
+		\caption{The Hilbert matrix has a condition number $\mathcal{O}((1+\sqrt{2})^{4n} / \sqrt{n}$ for matrix size $n\times n$. \cite{diffcg}}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Pitfall 3 - Approximation}
+
+	AD differentiates what \textcolor{red}{is implemented at the abstraction to which you apply AD, in the branch that gets executed, \textbf{and assuming that the operators used at that abstraction level are exact.}}! Which occasionally differs from what you think you implement
+\end{frame}
+
+\section{Applications}
+
+\begin{frame}
+	\frametitle{Physics-Based Differentiable Rendering Using Enzyme}
+
+	\begin{minipage}{0.53\linewidth}
+		\begin{itemize}
+			\item[aff] Shuang Zhao - University of California
+			\item[app] Physics-based computer graphics
+		\end{itemize}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.40\linewidth}
+		\begin{figure}
+			\includegraphics[width=0.85\linewidth]{zhao_wcloud.png}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Inverse Rendering}
+
+	\begin{itemize}
+		\item Infer shape and appearance of object from images
+		\item<2-> Parametrize boundary as level set
+			\only<2>{
+				\begin{align}
+					M(\theta_\text{g}) = \Bigg\{ x \in \mathbb{R}^3~~\text{:}~~\Phi(x;\theta_\text{g}) = 0 \Bigg\} 
+				\end{align}
+			}
+		\item<3-> Forward pass with render function \( \mathcal{R}: (\theta_\text{g}, \theta_\text{a}, \theta_\text{s}) \to \mathcal{I} \)
+			\only<3>{
+				\vspace{1em}
+				\begin{figure}
+					\hspace*{-0.4in}
+					\includegraphics[width=1.1\linewidth]{inverse_rendering.png}
+					\caption{\scriptsize Render pipeline during training of the implicit geometry. \cite{Cai_2022}}
+				\end{figure}
+			}
+		\item<4-> Optimize loss wrt. \( (\theta_\text{g}, \theta_\text{a}) \) through differentiable \( \mathcal{R}(\dots) \)
+			\begin{align}
+				\mathcal{L}_\text{img}(\theta_\text{g}, \theta_\text{a})=\sum_{j=1}^{n}\lVert\mathcal{R}(\theta_\text{g}, \theta_\text{a}, \theta_\text{s}^j) - \mathcal{I}_j\rVert_1
+			\end{align}
+	\end{itemize}
+	\AddToShipoutPictureFG*{
+		\AtPageLowerLeft{\put(0,50){\makebox[\paperwidth][r]{
+			\color{gray}\scriptsize
+			$\begin{aligned}
+				&\theta_\text{g}\text{: geometry parameters} \\
+				&\theta_\text{a}\text{: optical parameters} \\
+				&\theta_\text{s}\text{: viewing conditions} \\
+				&\mathcal{I}_j\text{: image from jth perspective} \\
+			\end{aligned}$
+		}}}
+	}%
+			%Test
+\end{frame}
+
+\begin{frame}
+	\frametitle{Inverse Rendering - Example}
+
+	\begin{figure}
+		\href{run: /usr/bin/vlc ../figures/inverse_rendering.mp4}{\includegraphics[width=\linewidth]{inverse_rendering_title.jpg}}
+		\caption{\scriptsize Two examples for inverse modeling of geometry based on images. \cite{Cai_2022}}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Inverse Rendering - Further}
+
+	\begin{itemize}
+		\item Caveats
+		\begin{itemize}
+			\item Requires two stages, implicit then explicit representation
+			\item Simulated environment
+		\end{itemize}
+		\pause
+		\item Transfer to audio domain
+			\begin{itemize}
+				\item Geometry Parameter \( \theta_\text{g} \) - tonal representation
+				\item Geometry Parameter \( \theta_\text{a} \) - rendering properties
+				\item Different instances \( \mathcal{I}_j \)? Estimate multiple performance interpretation \( \theta_\text{s} \)
+			\end{itemize}
+
+			\begin{figure}
+				\input{figures/inverse_music.tex}
+
+			\end{figure}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Accelerating Black Hole Imaging with Enzyme}
+
+	\begin{minipage}{0.47\linewidth}
+		\begin{itemize}
+			\item[aff] Paul Tiede - Center for Astrophysics Harvard
+			\item[app] Astrophyics
+		\end{itemize}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.50\linewidth}
+		\begin{figure}
+			\includegraphics[width=0.85\linewidth]{paul_wcloud.png}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Accelerating Black Hole Imaging with Enzyme}
+
+	\begin{minipage}{0.45\linewidth}
+	\begin{itemize}
+		\item Event horizon telescope (in 2017 8 dishes)
+		\item Linked to construct telescope size of earth
+		\item<2-> Problem: Size of earth limits resolution
+		\item<2-> Problem: Site positions undersample image
+		\item<3-> And atmosphere of earth are blurrying image
+	\end{itemize}
+	\end{minipage}
+	\begin{minipage}{0.45\linewidth}
+		\only<1>{
+		\begin{figure}
+			\includegraphics[width=.9\linewidth]{figures/blackhole/sensors.jpg}
+		\end{figure}
+		}
+		\only<2->{
+		\begin{figure}
+			\includegraphics[width=.9\linewidth]{figures/blackhole/samples_spaces.jpg}
+		\end{figure}
+		}
+	\end{minipage}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Accelerating Black Hole Imaging with Enzyme}
+	\only<1>{
+	\begin{figure}
+		\includegraphics[width=\linewidth]{figures/blackhole/blackhole1.jpg}
+	\end{figure}
+	}
+	\only<2>{
+	\begin{figure}
+		\includegraphics[width=\linewidth]{figures/blackhole/blackhole2.jpg}
+	\end{figure}
+	}
+	\only<3>{
+	\begin{figure}
+		\includegraphics[width=\linewidth]{figures/blackhole/blackhole3.jpg}
+	\end{figure}
+	}
+	\only<4>{
+	\begin{figure}
+		\includegraphics[width=\linewidth]{figures/blackhole/blackhole4.jpg}
+	\end{figure}
+
+	\small
+	\begin{minipage}{.40\linewidth}
+		Regularized Maximum Likelihood:
+		$$
+		\arg\max_{I, g} \mathcal{L}(V|I,g) + \lambda\mathcal{R}(I)
+		$$
+	\end{minipage}
+	\hfill
+	\begin{minipage}{.49\linewidth}
+		Bayesian Inverse Method:
+		$$
+		P(I, g|V) = \frac{P(V|I,g)P(I,g)}{P(V)}
+		$$
+	\end{minipage}
+
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Accelerating Black Hole Imaging with Enzyme}
+
+	\begin{figure}
+		\includegraphics[width=.9\linewidth]{figures/blackhole/result.jpg}
+	\end{figure}
+
+	\href{https://github.com/ptiede/Comrade.jl}{\textcolor{blue}{github.com/ptiede/Comrade.jl}}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Automatic Differentiation in Solid Mechanics}
+
+	\begin{minipage}{0.48\linewidth}
+		\begin{itemize}
+			\item[aff] Jed Brown - Boulder university
+			\item[app] Solid mechanics simulations
+		\end{itemize}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.50\linewidth}
+		\begin{figure}
+			\includegraphics[width=0.85\linewidth]{jed_wcloud.png}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Other Presentations}
+
+	\scriptsize
+	\begin{description}[font=\normalfont\scshape\color{red!50!black}]
+	\item [Julian Andrej] Differentiating Large-Scale Finite Element Applications with MFEM
+	\item [Tim Gymnich, Ludger Paehler] A Cross-Language Probabilistic Programming Protocol for Physics and Beyond
+	\item [Ludger Paehler] Numba-Enzyme: A Differentiable JIT-ed Python
+	\item [Laurent Hascoet] A survey of Tapenade in contrast with Enzyme
+	\item [Gordian Edenhofer] NIFTy: The Why and How of Building AD from Scratch
+	\item [Jesse Michel] AD with Integrals
+	\item [Sarah Williamson, Patrick Heimbach] DJ4Earth: Oceans, ice sheets, adjoints, and AD
+	\item [Tim Gymnich] Compilation Augmentation Enables High-Performance Batch Differentiation 
+	\item [Joe Greener] Differentiable molecular simulation with Molly.jl 
+	\item[Michael Schanen] Adjoint Checkpointing using Custom Differentiation Rules
+	\item[Martin Eppert, Jacob Mai Peng] Hackable Autodiff: Extending Enzyme to MLIR for Reverse Mode Gradients
+
+	\end{description}
+
+	\href{https://pretalx.enzyme.csail.mit.edu/enzymecon-2023/schedule/}{\textcolor{blue}{pretalx.enzyme.csail.mit.edu/enzymecon-2023/schedule/}}
+
+	%\item Extend to multivariate function \( f: \mathbb{R}^n \to \mathbb{R} \)
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+        \frametitle{References}
+        \bibliographystyle{amsalpha}
+        \bibliography{presentation.bib}
+\end{frame}
+
+\begin{frame}[plain] % The optional argument 'plain' hides the headline and footline
+	\begin{center}
+		{\Huge The End}
+
+		\bigskip\bigskip % Vertical whitespace
+
+		{\LARGE Questions? Comments?}
+	\end{center}
+\end{frame}
+
+\end{document}
+
