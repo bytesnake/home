@@ -57,3 +57,10 @@ vim: filetype=markdown.home.linked :
  convex analysis - Proximal Operator / Proximal Mapping for Composition of Functions - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/147987/proximal-operator-proximal-mapping-for-composition-of-functions
  Scientist/Senior Scientist for Machine Learning (multiple vacancies) | ECMWF |-| https://jobs.ecmwf.int/displayjob.aspx?jobid=134
  [Unix] Maildir, mutt and vim |-| https://yurichev.com/news/20220205_maildir/
+ A Quick Primer &mdash; Mapping High Level Constructs to LLVM IR  documentation |-| https://mapping-high-level-constructs-to-llvm-ir.readthedocs.io/en/latest/a-quick-primer/index.html
+  |-| https://book.sciml.ai/
+ 
+    
+      Archive &middot; Discrete notes
+    
+   |-| https://discrete-notes.github.io/archive/
