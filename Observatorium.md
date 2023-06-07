@@ -64,3 +64,7 @@ vim: filetype=markdown.home.linked :
       Archive &middot; Discrete notes
     
    |-| https://discrete-notes.github.io/archive/
+ ECE/CS/ME 532: Matrix Methods in Machine Learning - Laurent Lessard |-| https://laurentlessard.com/teaching/532-matrix-methods/
+ Large-Scale Convex Optimization: Algorithms &amp; Analyses via Monotone Operators |-| https://large-scale-book.mathopt.com/
+ Frank NIELSEN | Information geometry & Information sciences | Machine Learning & AI | Geometric Science of Information (GSI) | High Performance Computing |-| https://franknielsen.github.io/
+ How to Optimize a CUDA Matmul Kernel for CuBLAS-Like Performance: A Worklog | Hacker News |-| https://news.ycombinator.com/item?id=34256392

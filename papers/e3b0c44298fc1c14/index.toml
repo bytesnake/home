@@ -1,5 +1,8 @@
 title = ""
-description = ""
+description = """
+More links
+ - https://www.reddit.com/r/vulkan/comments/rw0oga/where_to_learn_vulkan_for_parallel_computation/
+"""
 doi = "Data and Computation Parallelism"
 progress = "I"
 tags = []
