@@ -70,7 +70,7 @@ daher eine ganz natürliche Strategie das Wissen besser zu kodieren.
 ## VUCtWouzY8Yc - Sprache
 
 Ich schreibe langzeit Zettel in Deutsch, aber lese die meisten Quellen in
-Englisch. Das macht es beim Einpflegen und [Skizieren](@Wgj0ZZ7gZR6w) von Zetteln nötig diese
+Englisch. Das macht es beim Einpflegen und [Skizzieren](@Wgj0ZZ7gZR6w) von Zetteln nötig diese
 zu übersetzen. Das gibt beim Planen mehr Spielraum, weil beide Quelle und Senke
 getrennt voneinander sind und kein Kopieren möglich ist. Außerdem ist es für
 mich denken in Deutsch präziser und wörtlicher als auf Englisch.

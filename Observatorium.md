@@ -58,22 +58,20 @@ vim: filetype=markdown.home.linked :
  Scientist/Senior Scientist for Machine Learning (multiple vacancies) | ECMWF |-| https://jobs.ecmwf.int/displayjob.aspx?jobid=134
  [Unix] Maildir, mutt and vim |-| https://yurichev.com/news/20220205_maildir/
  A Quick Primer &mdash; Mapping High Level Constructs to LLVM IR  documentation |-| https://mapping-high-level-constructs-to-llvm-ir.readthedocs.io/en/latest/a-quick-primer/index.html
-  |-| https://book.sciml.ai/
- 
-    
-      Archive &middot; Discrete notes
-    
-   |-| https://discrete-notes.github.io/archive/
+ Parallel Computing and Scientific ML |-| https://book.sciml.ai/
+ Archive &middot; Discrete notes |-| https://discrete-notes.github.io/archive/
  ECE/CS/ME 532: Matrix Methods in Machine Learning - Laurent Lessard |-| https://laurentlessard.com/teaching/532-matrix-methods/
  Large-Scale Convex Optimization: Algorithms &amp; Analyses via Monotone Operators |-| https://large-scale-book.mathopt.com/
  Frank NIELSEN | Information geometry & Information sciences | Machine Learning & AI | Geometric Science of Information (GSI) | High Performance Computing |-| https://franknielsen.github.io/
  How to Optimize a CUDA Matmul Kernel for CuBLAS-Like Performance: A Worklog | Hacker News |-| https://news.ycombinator.com/item?id=34256392
  TeX-nical Stuff: Zettelkasten workflow |-| https://texnicalstuff.blogspot.com/2022/04/zettelkasten-workflow.html
-  |-| https://www.math.uwaterloo.ca/~snburris/htdocs/ualg.html
+ A Course in Universal Algebra |-| https://www.math.uwaterloo.ca/~snburris/htdocs/ualg.html
  Introduction | Welcome to Mozilla Science Lab&#39;s Study Group Orientation! |-| https://mozillascience.github.io/study-group-orientation/index.html
-  |-| https://www.philipzucker.com/convolution-tensor-product/
+ Convolution and Tensor Products |-| https://www.philipzucker.com/convolution-tensor-product/
  linear algebra - What is the inverse of the $\mbox{vec}$ operator? - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/805565/what-is-the-inverse-of-the-mboxvec-operator
  Old and New Matrix Algebra Useful for Statistics |-| https://tminka.github.io/papers/matrix/
  Anschauliche Geometrie | SpringerLink |-| https://link.springer.com/book/10.1007/978-3-642-19948-6
  Blog &#8211; Nick Higham |-| https://nhigham.com/blog/
  Prox Repository |-| http://proximity-operator.net/bibliography.html
+ The N=1 Guide to Grad School |-| http://marcua.net/writing/gradschool-guide/
+ Welcome to Heinz Bauschke's Research Page |-| https://cmps-people.ok.ubc.ca/bauschke/research.html
