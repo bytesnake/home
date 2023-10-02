@@ -2,7 +2,7 @@ vim: filetype=markdown.home.linked spell spelllang=de :
 
 # nmA9UfZmjzQR - Zerlegung von Material
 
-Beim Einarbeiten von Quellen in den Zettelkasten kann man grob in drei Schritten
+Das Einarbeiten von Quellen in den Zettelkasten kann man grob in drei Schritten
 unterteilen. Zuerst liest man die Quelle, dann drückt man [diese neu aus](@qyXdJR17nBMT) und
 schließlich skizziert man eine sinnvolle Struktur und [pflegt die Zettel](@Wgj0ZZ7gZR6w) ein.
 
@@ -154,3 +154,28 @@ aufzubauen.
 
 Ein häufiges Problem von Abwägungen zum Zeitaufwand ist die Schulden von
 Verknüpfungslücken abzuwägen. 
+
+# Dontl61KgH5L - Structure vs. Doing
+
+In any long-term taks the structural-planing phase tends to stuck for the actual
+doing. Having too many tasks in parallel often ends in doing mainly structured
+anticipation. An effect is planing exhaustion, as new tasks can be fulfilled
+while existing remain in state of equilibrium. A common avoidance strategy is
+then planning even more. This is not effective and instead one should take a
+step back and try to do few steps as thouroughly as possible.
+
+One example is the need to do sport. You can plan all exercises in minutia and
+create a perfect routine, but without implementing them there is nothing to be
+gained. Another is writing a blog post, where the [thought is looped](@9etTCtNPHCw4) until
+exhaustion.
+
+The best approach is being as social as possible for the task. Find buddys to go
+doing sport, talk with friends about your ideas, get help from online
+communities.
+
+Another is to implement low-effort continuous maintenance, similar to the
+[Triturnus system](@rrASFXOh0Aji).
+
+# 9etTCtNPHCw4 - Putting something off the mind
+
+# rrASFXOh0Aji - Triturnus System
