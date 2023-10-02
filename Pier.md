@@ -23,6 +23,7 @@ vim: filetype=markdown.home.linked :
  ## Currently Reading
 
  - [PSD Recurrent Neural Networks]($P/stash/psd_recurrent_nn.pdf)
+ - [Overcoming]($P/stash/overcoming_gravity.marks.md)
 
  ## Links
 
@@ -32,3 +33,7 @@ vim: filetype=markdown.home.linked :
  ## Reading Lists
 
  - [Compiler & Languages]($P/8135c6bab44baebf/index.md)
+
+ ## More
+
+ - [Ideas for note taking]($P/stash/ideas_notes.md)
