@@ -22,6 +22,19 @@ need for someone to translate this automatically.
     - bring the whole document up to the CodiMD instance
     - sync PDFs behind password-wall (can we also use SVG for that?)
 
+Putting things for rehearsel into calendar. With a specific reference to commit,
+file and range for a document, we can rehearse a specific object in text.
+Rehearsing mainly means embroidering, taking second look at notes and continue
+reading sources. Classical rehearsal with recitation can be difficult to be
+effective, as typical question-answer structure is not easy to achieve. **But**
+it can serve as an important tool, when inline QAs are written for the future
+self to read.
+
+ - add `:{range}Rehearse {+time}` command putting `date, SHA, file, range` into
+     a special file
+ - calling `:Rehearse` in main file brings up a quickfix list with today's
+     rehearsel objects
+
 ### Not so important
 
  - writing mathematical notation
