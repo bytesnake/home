@@ -2,24 +2,29 @@ vim: filetype=markdown.home.linked spell spelllang=de :
 
 # nmA9UfZmjzQR - Zerlegung von Material
 
-Beim Einarbeiten von Quellen in den Zettelkasten kann man grob in drei Schritten
-unterteilen. Zuerst liest man die Quelle, dann drückt man [diese neu aus](@qyXdJR17nBMT) und
+Das Einarbeiten von Quellen in den Zettelkasten kann grob in drei Schritten
+unterteilt werden. Zuerst liest man die Quelle, dann drückt man [diese neu aus](@qyXdJR17nBMT) und
 schließlich skizziert man eine sinnvolle Struktur und [pflegt die Zettel](@Wgj0ZZ7gZR6w) ein.
 
 Der letzte Schritt ist erst möglich, wenn man sich mit dem Material vertraut
-gemacht hat und im Arbeitsgedächtnis skizzieren kann.
+gemacht hat und im [Arbeitsgedächtnis](@GFs9AelMfbbW) skizzieren kann. Nach dem Zurückkehren
+zu einer Zettelsammlung ergeben sich neue Verbindungen und Ausschmückungen.
+
+Eine weitergehende Taktik ist zu einer existierenden Frage oder Zettelsammlung
+mehrere Quellen miteinander zu vergleichen. Das macht häufig mehr Spaß und
+ergibt mehr Bezüge, da ein Problem für mehrere Zwecke beschrieben wird.
 
 ## huiiuqxTz05S - Markierungen
 
 Lesen eines Textes hält erst nach, wenn dieser in eigenen Worten ausgedrückt
-und [persönlich gemacht](@qyXdJR17nBMT) wird. Die Struktur ist vom persönlichen Wissenstand und 
-von Ideen für die Weiterverwendung abhängig. Daher markiert man beim Lesen 
-wichtige Phrasen, um deren Weiterverwendung festzuhalten.
+und [persönlich gemacht](@qyXdJR17nBMT) wird. Die Struktur hängt vom persönlichen Wissenstand und 
+vom Lese-Zweck abhängig. Daher markiert man beim Lesen wichtige Phrasen, um 
+deren Weiterverwendung festzuhalten.
 
-Dieser Schritt trennt Wichtiges vom Unwichtigen und macht Zerlegung in Zetteln
-einfach. Beim Ausdrücken vom Text werden nur die markierten Wörter als
-Stichpunkte benutzt und das Gelernte in eigenen Worten wiedergegeben. Die
-Notizen werden so [persönlich gemacht](@qyXdJR17nBMT) und zum eigenen Wissen vertikutiert.
+Dieser Schritt trennt Wichtiges vom Unwichtigen und hebt wichtige Stichpunkte 
+zum Textverständnis hervor. Beim Ausdrücken vom Text werden nur die markierten 
+Wörter als Stichpunkte benutzt und das Gelernte in eigenen Worten wiedergegeben. 
+Die Notizen werden so [persönlich gemacht](@qyXdJR17nBMT) und zum eigenen Wissen vertikutiert.
 
 Im Gegensatz zu [Fragestellungen](@4CZdBSak4dqg) sind Markierungen ambivalent und nur abhängig
 von dem was wichtig oder interessant erscheint. Es gibt keine Stufen und
@@ -154,3 +159,39 @@ aufzubauen.
 
 Ein häufiges Problem von Abwägungen zum Zeitaufwand ist die Schulden von
 Verknüpfungslücken abzuwägen. 
+
+# Dontl61KgH5L - Structure vs. Doing
+
+In any long-term taks the structural-planing phase tends to stuck for the actual
+doing. Having too many tasks in parallel often ends in doing mainly structured
+anticipation. An effect is planing exhaustion, as new tasks can be fulfilled
+while existing remain in state of equilibrium. A common avoidance strategy is
+then planning even more. This is not effective and instead one should take a
+step back and try to do few steps as thouroughly as possible.
+
+One example is the need to do sport. You can plan all exercises in minutia and
+create a perfect routine, but without implementing them there is nothing to be
+gained. Another is writing a blog post, where the [thought is looped](@9etTCtNPHCw4) until
+exhaustion.
+
+The best approach is being as social as possible for the task. Find buddys to go
+doing sport, talk with friends about your ideas, get help from online
+communities.
+
+Another is to implement low-effort continuous maintenance, similar to the
+[Triturnus system](@rrASFXOh0Aji).
+
+# 9etTCtNPHCw4 - Putting something off the mind
+
+# rrASFXOh0Aji - Triturnus System
+
+# TE0roLYui0iN - Taktiken im Lernen
+
+In higher learning we often need to repeat an action many times to actually see
+a benefit. For example in training weights we repeat slightly adjusted sessions
+many times, until a cycle is complete.
+
+Damit dieses anknüpfbar sind, werden Taktiken aufs Lernen angewandt. 
+
+# GFs9AelMfbbW - Das Arbeitsgedächtnis
+

@@ -89,4 +89,4 @@ originalen Quellen wegfällt. (häufig sind Quellen konkrete Beispiele eines
 abstrakteren Gebilde) Ein zweiter Grund ist die Separierung von Quelle und
 eigenen Gedanken. Trotzdem sollte man [Festhalten]($P/148a94b471ce93bf/luhmann1981.pdf#festhalten, wo man Notizen festgehalten hat) auf welche Notizen man sich
 konkret bezieht mit dem Eintrag. Das hat den Vorteil bei Suchen über
-[Authorennamen]($P/148a94b471ce93bf/luhmann1981.pdf#zum Teil mit Autorennamen) stehts Anknüpfpunkte zu finden.
+[Authorennamen]($P/148a94b471ce93bf/luhmann1981.pdf#zum Teil mit Autorennamen) stehts Anknüpfpunkte zu finden und existieren Text zu erweitern.
