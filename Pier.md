@@ -22,6 +22,7 @@ vim: filetype=markdown.home.linked :
 
  ## Currently Reading
 
+ - [Fourier and Wavelet Analysis]($P/894109d503718c67/index.md)
  - [PSD Recurrent Neural Networks]($P/stash/psd_recurrent_nn.pdf)
  - [Overcoming]($P/stash/overcoming_gravity.marks.md)
 
@@ -37,3 +38,4 @@ vim: filetype=markdown.home.linked :
  ## More
 
  - [Ideas for note taking]($P/stash/ideas_notes.md)
+ - [Ideas for Git mail client]($P/stash/mails.md)
