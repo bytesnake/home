@@ -20,7 +20,20 @@ we simply need to [apply series development]($P/894109d503718c67/index.pdf#FOURI
 [functions]($P/894109d503718c67/index.pdf#Find the Fourier series of the). Exponentials Fourier series in [exercise 6.]($P/894109d503718c67/index.pdf#Find the exponential Fourier) are derived with the
 the [Fourier series]($P/894109d503718c67/index.pdf#FOURIER SERIES AND COEFFICIENTS). For (a) we can simply use the periodicity of integral. 
 Both are terms of `integrate xe^x`. The [derivative]($P/894109d503718c67/index.pdf#is differentiable, must the derivative) of a periodic function is 
-periodic. The [derivative]($P/894109d503718c67/index.pdf#is integrable over all closed intervals) only if the function is odd in period (see condition).
+periodic. The [integral]($P/894109d503718c67/index.pdf#is integrable over all closed intervals) only if the function is odd in period (see condition).
+
+For coefficients `1/sqrt(n)` [there is not function]($P/894109d503718c67/index.pdf#Does there exist an) as the energy is not bounded. 
+For coefficients `1/n` a Log function clamps between 0/2pi boundaries, as can be
+seen in this [Stack Exchange](https://math.stackexchange.com/questions/3310746/fourier-series-with-all-coefficients-frac1n).
+
+For Parseval theorem of [function products]($P/894109d503718c67/index.pdf#13. PRODUCTS Let) substituting the complex definition 
+with [trigonometric coefficients]($P/894109d503718c67/index.pdf#of the trigonometric series into exponential form) yields the required identity. The sine 
+[orthonormal basis]($P/894109d503718c67/index.pdf#14. Show that) exercise can be solved by using sine law, integrating over
+cosine terms and recognizing the resulting sinc function.
+
+
+
+
 
 
 [source]($P/894109d503718c6u7/index.pdf)
