@@ -75,3 +75,4 @@ vim: filetype=markdown.home.linked :
  Prox Repository |-| http://proximity-operator.net/bibliography.html
  The N=1 Guide to Grad School |-| http://marcua.net/writing/gradschool-guide/
  Welcome to Heinz Bauschke's Research Page |-| https://cmps-people.ok.ubc.ca/bauschke/research.html
+ Eberhard Freitag Bücher |-| https://www.mathi.uni-heidelberg.de/~freitag/buecher.html

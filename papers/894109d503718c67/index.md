@@ -31,6 +31,10 @@ with [trigonometric coefficients]($P/894109d503718c67/index.pdf#of the trigonome
 [orthonormal basis]($P/894109d503718c67/index.pdf#14. Show that) exercise can be solved by using sine law, integrating over
 cosine terms and recognizing the resulting sinc function.
 
+For every smooth function there exists also a [Fourier Sine and Cosine]($P/894109d503718c67/index.pdf#Fourier Sine Series and Cosine Series) series.
+Actually three strategies exist for function in half-intervals, we can either
+extend [odd]($P/894109d503718c67/index.pdf#Fourier sine series.) to the second half, [even]($P/894109d503718c67/index.pdf#Fourier cosine series) or periodic with the [scaling]($P/894109d503718c67/index.pdf#Remark PERIOD 2p INSTEAD) defined in 
+previous section.
 
 
 
