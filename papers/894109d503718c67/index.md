@@ -36,10 +36,20 @@ Actually three strategies exist for function in half-intervals, we can either
 extend [odd]($P/894109d503718c67/index.pdf#Fourier sine series.) to the second half, [even]($P/894109d503718c67/index.pdf#Fourier cosine series) or periodic with the [scaling]($P/894109d503718c67/index.pdf#Remark PERIOD 2p INSTEAD) defined in 
 previous section.
 
+To understand the [exercises](papers/894109d503718c67/index.pdf#4.3) of section 4.3, I started to recap some analysis 
+of previous chapter. The example for continuity of [one point vs. other points](papers/894109d503718c67/index.pdf#has nothing to do with continuity at other points)
+is a really interesting example, making sense because `pi + x` still irrational
+and the in-between reciprocal for denominator of rational number cannot be
+filled. They then discuss [convergence in the mean](papers/894109d503718c67/index.pdf#CONVERGENCE IN THE MEAN) and point out that this 
+doesn't implies point-wise convergence, affecting the Dirichlet function and
+leading to Gibbs phenomenon. [Uniform convergence](papers/894109d503718c67/index.pdf#UNIFORM CONVERGENCE) on the other hand measures 
+in inf-norm and implies therefore pointwise-convergence. 
 
+Read [proof of Riemann-Lebesgue](papers/894109d503718c67/index.pdf#If a or b is finite, define)
 
 
 
 [source]($P/894109d503718c6u7/index.pdf)
+[source]($P/894109d503718c67/time_freq_analysis.pdf)
 
 [source]($P/894109d503718c67/index.pdf#classical subject of Fourier)

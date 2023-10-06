@@ -76,3 +76,5 @@ vim: filetype=markdown.home.linked :
  The N=1 Guide to Grad School |-| http://marcua.net/writing/gradschool-guide/
  Welcome to Heinz Bauschke's Research Page |-| https://cmps-people.ok.ubc.ca/bauschke/research.html
  Eberhard Freitag Bücher |-| https://www.mathi.uni-heidelberg.de/~freitag/buecher.html
+ AMS 467/667: Deep Learning in Discrete Optimization |-| https://www.math.uwaterloo.ca/~bico/co759/2020/index.html
+ Mathematix | Mathematix is the mathematician of Erquy &#8211; the village of Asterix |-| https://mathematix.wordpress.com/
