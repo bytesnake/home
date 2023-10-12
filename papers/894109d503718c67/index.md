@@ -45,8 +45,9 @@ doesn't implies point-wise convergence, affecting the Dirichlet function and
 leading to Gibbs phenomenon. [Uniform convergence](papers/894109d503718c67/index.pdf#UNIFORM CONVERGENCE) on the other hand measures 
 in inf-norm and implies therefore pointwise-convergence. 
 
-Read [proof of Riemann-Lebesgue](papers/894109d503718c67/index.pdf#If a or b is finite, define)
+Read [proof of Riemann-Lebesgue]($P/894109d503718c67/index.pdf#If a or b is finite, define)
 
+Read [Gibbs Pehnomenon]($P/894109d503718c67/index.pdf#The Gibbs Phenomenon)
 
 
 [source]($P/894109d503718c6u7/index.pdf)
