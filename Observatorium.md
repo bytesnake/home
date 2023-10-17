@@ -78,3 +78,8 @@ vim: filetype=markdown.home.linked :
  Eberhard Freitag Bücher |-| https://www.mathi.uni-heidelberg.de/~freitag/buecher.html
  AMS 467/667: Deep Learning in Discrete Optimization |-| https://www.math.uwaterloo.ca/~bico/co759/2020/index.html
  Mathematix | Mathematix is the mathematician of Erquy &#8211; the village of Asterix |-| https://mathematix.wordpress.com/
+ reference request - Kolmogorov &amp; Fomin Textbooks - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/590054/kolmogorov-fomin-textbooks
+ Publications &#8211; Boris Mordukhovich |-| https://borismordukhovich.com/publications/
+ Append ticket number for commit hooks |-| https://stackoverflow.com/questions/5823772/append-ticket-number-using-git-commit-hooks
+ Wotao Yin |-| https://wotaoyin.mathopt.com/
+ Keep the gradient flowing |-| https://fa.bianp.net/
