@@ -83,3 +83,5 @@ vim: filetype=markdown.home.linked :
  Append ticket number for commit hooks |-| https://stackoverflow.com/questions/5823772/append-ticket-number-using-git-commit-hooks
  Wotao Yin |-| https://wotaoyin.mathopt.com/
  Keep the gradient flowing |-| https://fa.bianp.net/
+ macros - Suggestions for nested proofs - TeX - LaTeX Stack Exchange |-| https://tex.stackexchange.com/questions/223948/suggestions-for-nested-proofs
+ Linux Containers |-| https://linuxcontainers.org/

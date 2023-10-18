@@ -1,0 +1,28 @@
+\documentclass[varwidth=15cm, border=.5cm]{standalone}
+\usepackage{amsthm, hyperref, mdframed, thmtools}
+
+\mdfsetup{linewidth=1.5pt, topline=false, rightline=false, bottomline=false, leftline=true}
+\declaretheoremstyle[ notebraces={}{}, headpunct=, headformat=\NAME{} --\NOTE, postheadhook=\leavevmode\begin{mdframed}, prefoothook=\end{mdframed}, ]{foostyle}
+\declaretheorem[ name=Satz, style=foostyle, ]{theorem}
+
+\begin{document}
+
+\begin{theorem}[label=pb8y7i3e, name=Boundedness of operators]
+	All odd numbers are prime. 
+
+	\begin{theorem}[A side note]
+		Blub
+	\end{theorem}
+\end{theorem}
+
+\begin{theorem}[Blub]
+	All odd numbers are prime. \hyperref[pb8y7i3e]{Important theorem} \nameref{pb8y7i3e}
+
+\end{theorem}
+
+The proof of this is left as an exercise.
+Of course, some may prefer to see this as follows.
+
+Nonetheless, the proof remains trivial.
+
+\end{document}

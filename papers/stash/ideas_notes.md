@@ -1,4 +1,3 @@
-
 # Ideas for note taking extensions
 
 ### Important
@@ -34,6 +33,17 @@ self to read.
      a special file
  - calling `:Rehearse` in main file brings up a quickfix list with today's
      rehearsel objects
+
+### Mathematics
+
+We can render math to MathML and publish atomics as individual HTML fragments.
+Convert the document to HTML with pandoc and separate notes by their IDs seems
+to be the simples and most effective strategy. Question remain how to
+effectively preview equation blocks while writing them.
+
+Actually writing them in LaTeX and converting to HTML still seems like the best
+approach. A good CTAN package is [Thmtools](https://ctan.org/pkg/thmtools?lang=en) providing excellent customization and 
+referencing tools.
 
 ### Not so important
 

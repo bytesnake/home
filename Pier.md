@@ -20,16 +20,18 @@ vim: filetype=markdown.home.linked :
 		       I II__I  I     XXXXXXX     I
 		    ~~~~~"   "~~~~~~~~~~~~~~~~~~~~~~~~
 
- ## Currently Reading
-
- - [Fourier and Wavelet Analysis]($P/894109d503718c67/index.md)
- - [PSD Recurrent Neural Networks]($P/stash/psd_recurrent_nn.pdf)
- - [Overcoming]($P/stash/overcoming_gravity.marks.md)
-
  ## Links
 
  - [Observatorium](Observatorium.md)
  - [Zettel](Kasten.md)
+ - [Theorem Tavern](thmtav.tex)
+
+ ## Currently Reading
+
+ - [Large Scale Convex]($P/0a03cf36d5546d0f/lscomo.pdf.md)
+ - [Fourier and Wavelet Analysis]($P/894109d503718c67/index.md)
+ - [PSD Recurrent Neural Networks]($P/stash/psd_recurrent_nn.pdf)
+ - [Overcoming]($P/stash/overcoming_gravity.marks.md)
 
  ## Reading Lists
 
