@@ -85,3 +85,6 @@ vim: filetype=markdown.home.linked :
  Keep the gradient flowing |-| https://fa.bianp.net/
  macros - Suggestions for nested proofs - TeX - LaTeX Stack Exchange |-| https://tex.stackexchange.com/questions/223948/suggestions-for-nested-proofs
  Linux Containers |-| https://linuxcontainers.org/
+ Foundations of Optimization | SpringerLink |-| https://link.springer.com/book/10.1007/978-0-387-68407-9
+ optimization - Prove that gradient descent is a contraction for strongly convex smooth functions - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/3995833/prove-that-gradient-descent-is-a-contraction-for-strongly-convex-smooth-function
+ Automatic Control - Large-Scale Convex Optimization |-| http://archive.control.lth.se/ls-convex-2015/

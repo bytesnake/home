@@ -1,9 +1,20 @@
+% vim : set tabstop=4 shiftwidth=4 expandtab:
+
 \documentclass[varwidth=15cm, border=.5cm]{standalone}
-\usepackage{amsthm, hyperref, mdframed, thmtools}
+\usepackage{amsmath, amsfonts, amsthm, hyperref, mdframed, thmtools}
 
 \mdfsetup{linewidth=1.5pt, topline=false, rightline=false, bottomline=false, leftline=true}
-\declaretheoremstyle[ notebraces={}{}, headpunct=, headformat=\NAME{} --\NOTE, postheadhook=\leavevmode\begin{mdframed}, prefoothook=\end{mdframed}, ]{foostyle}
-\declaretheorem[ name=Satz, style=foostyle, ]{theorem}
+\declaretheoremstyle[ notebraces={}{}, headpunct=, headformat=\NAME{} --\NOTE, postheadhook=\leavevmode\begin{mdframed}, prefoothook=\end{mdframed}, ]{default}
+\declaretheorem[ name=Satz, style=default,]{theorem}
+\declaretheorem[ name=Definition, style=default,]{definition}
+\declaretheorem[ name=Remark, style=default,]{remark}
+\declaretheorem[ name=Proposition, style=default,]{proposition}
+
+\DeclareMathOperator{\prox}{prox}
+\DeclareMathOperator{\argmin}{argmin}
+\DeclareMathOperator{\id}{Id}
+
+\newcommand{\innerp}[2]{\left\langle #1 \vert #2 \right\rangle}
 
 \begin{document}
 
@@ -15,14 +26,58 @@
 	\end{theorem}
 \end{theorem}
 
-\begin{theorem}[Blub]
-	All odd numbers are prime. \hyperref[pb8y7i3e]{Important theorem} \nameref{pb8y7i3e}
+\begin{definition}[label=f6izn8iw, name=Proximal Operator]
+	The proximal operator (also see resolvant for CCP case) is given by 
 
-\end{theorem}
+	\[
+        \prox_{\lambda f}(x) = \argmin_y \{ \Theta(y; x) = \lambda f(y) +
+        \frac{1}{2}\lVert y - x\rVert_2^2\}
+	\]
 
-The proof of this is left as an exercise.
-Of course, some may prefer to see this as follows.
+    \begin{theorem}[label=78req5r7, name=Convergence with Lyapunov Analysis]
+        Let \( f\in\mathcal{F}_{0,\infty} \). For any \( k\in\mathbb{N}, A_k, \lambda_k > 0\) and any \( x_k \), the inequality
+        \begin{alignat*}{6}
+            &A_{k+1}&&(f(x_{k+1}) &&- f(x^\star)) &&+ &&\frac{1}{2}\lVert x_{k+1} &&- x_\star\rVert^2_2  \\
+            \leq &A_k&&(f(x_k)   &&- f(x^\star)) &&+ &&\frac{1}{2}\lVert x_k   &&- x^\star\rVert_2^2
+        \end{alignat*}
 
-Nonetheless, the proof remains trivial.
+        holds for iteration \( x_{k+1} = \prox_{\lambda_kf}(x_k) \) and number \(A_{k+1}= A_k + \lambda_k\).
+    \end{theorem}
+
+    \begin{remark}[label=hnns6j86, name=Computation complexity]
+        Proximal operations are in general expensive, sometimes as expensive as
+        minimizing the function itself. There are however many instances of
+        function \( f \) for which an analytic solution exists. For composite
+        problems, those parts are isolated and solved separately by a
+        conceptional proximal operator.
+    \end{remark}
+\end{definition}
+
+\begin{definition}[label=m2qlq7ne, name=Cocoercive Operators]
+	An operator \( \mathcal{T} \) is \textit{\( \mu \)-stronly monotone} or \textit{\( \mu \)-cocoercive}  if there exists 
+	a \( \beta > 0 \), for which the following inequality holds globally
+	\[
+		\innerp{x - y}{\mathcal{T}x - \mathcal{T}y} \geq \beta\lVert\mathcal{T}x - \mathcal{T}y\rVert^2 \quad \forall (x, y).
+	\]
+	\begin{proposition}[label=wk4xp5i4, name=Cocoerciveness of nonexpansive operators]
+		Let \( \mathcal{T} \) be a proper operator, then (\( \mathcal{T} \) is non-expansive) 
+		\( \iff \) (\( \id - \mathcal{T} \) is \( 1/2\)-cocoercive).
+	\end{proposition}
+
+	\begin{proposition}[label=fgebss0l, name=Sum of cocoercive operators
+		under transformation]
+		Let \( \mathcal{T}_i \) a family of \( \beta_i \)-cocoercive operators with \( L_i \in \mathcal{B}(\mathcal{H}, \mathcal{K}_i) \)
+		and \( \beta_i > 0 \). Set
+
+		\[
+			T = \sum_i L_i^\star\mathcal{T}_iL_i \quad \beta^{-1} = \sum_i \frac{\lVert L_i\rVert^2}{\beta_i}
+		\]
+
+		then \( \mathcal{T} \) is \( \beta \)-cocoercive.
+	\end{proposition}
+
+	%\begin{remark}[label=xno_2i29, name=Connection to Lipschitz continuous]
+	%\end{remark}
+\end{definition}
 
 \end{document}
