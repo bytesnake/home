@@ -9,12 +9,20 @@
 \declaretheorem[ name=Definition, style=default,]{definition}
 \declaretheorem[ name=Remark, style=default,]{remark}
 \declaretheorem[ name=Proposition, style=default,]{proposition}
+\declaretheorem[ name=Beispiel, style=default,]{example}
 
 \DeclareMathOperator{\prox}{prox}
-\DeclareMathOperator{\argmin}{argmin}
+\DeclareMathOperator*{\argmin}{argmin}
 \DeclareMathOperator{\id}{Id}
+\DeclareMathOperator{\jacobian}{D}
+\DeclareMathOperator{\proj}{\Pi}
+\DeclareMathOperator{\indicator}{I}
+\DeclareMathOperator{\diff}{d}
+\DeclareMathOperator{\dist}{dist}
 
+\newcommand*\from{\colon}
 \newcommand{\innerp}[2]{\left\langle #1 \vert #2 \right\rangle}
+\newcommand{\optimal}[1]{{#1^{\scriptscriptstyle\bullet}}}
 
 \begin{document}
 
@@ -80,4 +88,70 @@
 	%\end{remark}
 \end{definition}
 
+\begin{definition}[label=5nalj3hx, name=Lipschitz Regularity]
+	For \( L > 0 \), we say that a mapping \( \mathcal T\from\mathbb
+	R^n\to\mathbb R^m \) is L-Lipschitz if globally
+	\[
+		\lVert \mathcal T(x) - \mathcal T(y) \rVert \leq L\lVert x - y\rVert \qquad \forall x,y\in\mathbb R^n.
+	\]
+	If a mapping is Lipschitz, it is a continuous mapping because for every
+	\( \lVert x - y \rVert < \delta \) exists \( \epsilon < L \delta \). The composition of \( \mathcal T_1 \) and \( \mathcal T_2 \), 
+	\( \mathcal T_1 \circ \mathcal T_2 \), is \( L_1L_2 \)-Lipschitz (\textit{hint} apply Lipschitz inequality twice).
+	The sum of two mappings, \( \alpha_1\mathcal T_1 + \alpha_2\mathcal T_2 \) is \((|\alpha_1|L_1 + |\alpha_2|L_2)\)-Lipschitz.
+
+	\begin{example}[label=17vzrkyq, name=Affine Function]
+		An affine function \(F(x) = Ax + b\) has Lipschitz constant \(L=\lVert A\rVert_2\), 
+		the spectral norm or maximum singular value of \(A\).
+	\end{example}
+
+	\begin{example}[label=jydhwyqa, name=Differentiable Function]
+		Let \( \mathcal T\from\mathcal R^n\to\mathcal R^n\) be a differentiable function, then 
+		\[
+			\text{L-Lipschitz} \quad \leftrightarrow \quad \lVert\jacobian f(x)\rVert_2 \leq L
+		\]
+
+		\begin{tabular}{rl}
+			For a proof & (\( \implies \)) bound definition of differentials \\
+				    & (\( \impliedby \)) apply mean value
+				    theorem and Cauchy-Schwartz inequality to \\
+				    &\quad\(g(t) = (\mathcal Tx - \mathcal Ty)^T\mathcal T(tx + (1-t) y) \)\\
+				    &\quad(with \(\lVert\mathcal Tx - \mathcal Ty\rVert^2_2 = g(1) - g(0)\))
+		\end{tabular}
+	\end{example}
+
+	\begin{example}[label=5pxh2ufj, name=Projections]
+		The projection of \(x\) onto a non-empty closed convex set \(
+		\mathcal C\) is defined as 
+		\[
+			\proj_\mathcal{C}(z) = \argmin_{x\in\mathcal C}\lVert z
+			-x\rVert_2 = \prox_{\indicator(x\in\mathcal C)}(z)
+		\]
+
+		and a \hyperref[2s6tfa1j]{non-expansive} operator with unique
+		closest point in \( \mathcal C\).
+
+		For a proof see that the closest projection of \(x\) is a
+		fixed-point \(\proj_{\mathcal C}\optimal{x} = \optimal{x}\) and
+		the differential \( \diff_\optimal{x}\proj_{\mathcal C}x =
+		\diff_\optimal{x}(x - \dist_{\mathcal C}x) = (\proj_{\mathcal C}x
+		- \optimal{x})\diff\optimal{x} \). Apply the optimality
+		condition 
+
+		\begin{alignat*}{2}
+			(\jacobian\proj_{\mathcal C})(\optimal{x})^T&(y - \optimal{x}) &&\geq 0 \\
+			(\proj_{\mathcal C}u - u)^T&(y - \proj_{\mathcal C}(u)) &&\geq 0
+		\end{alignat*}
+		at two points \(x,y\in\mathbb R^n\). Adding both, apply
+		Cauchy-Schwartz inequality to conclude
+		\[
+			\lVert\proj_{\mathcal C}x - \proj_{\mathcal C}y\rVert_2 \leq \rVert x - y\rVert_2.
+		\]
+		
+	\end{example}
+
+	\begin{remark}[label=2s6tfa1j, name=Nonexpansive and Contractive Mappings]
+		A mapping is called nonexpansive for \( L \leq 1 \), contractive
+		for \( L < 1 \).
+	\end{remark}
+\end{definition}
 \end{document}

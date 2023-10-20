@@ -88,3 +88,6 @@ vim: filetype=markdown.home.linked :
  Foundations of Optimization | SpringerLink |-| https://link.springer.com/book/10.1007/978-0-387-68407-9
  optimization - Prove that gradient descent is a contraction for strongly convex smooth functions - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/3995833/prove-that-gradient-descent-is-a-contraction-for-strongly-convex-smooth-function
  Automatic Control - Large-Scale Convex Optimization |-| http://archive.control.lth.se/ls-convex-2015/
+ Jinming Xu &ndash; Publications |-| https://jinmingxu.github.io/publications.html
+ bibliographies - Bibliography with page numbers - TeX - LaTeX Stack Exchange |-| https://tex.stackexchange.com/questions/15971/bibliography-with-page-numbers?noredirect=1
+ Installation and Usage (coc-ltex) | LTeX |-| https://valentjn.github.io/ltex/vscode-ltex/installation-usage-coc-ltex.html

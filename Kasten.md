@@ -194,4 +194,3 @@ many times, until a cycle is complete.
 Damit dieses anknüpfbar sind, werden Taktiken aufs Lernen angewandt. 
 
 # GFs9AelMfbbW - Das Arbeitsgedächtnis
-

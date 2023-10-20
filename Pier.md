@@ -22,9 +22,10 @@ vim: filetype=markdown.home.linked :
 
  ## Links
 
- - [Observatorium](Observatorium.md)
  - [Zettel](Kasten.md)
  - [Theorem Tavern](thmtav.tex)
+ - [Working Paper](~/Paper/main.tex)
+ - [Observatorium](Observatorium.md)
 
  ## Currently Reading
 
