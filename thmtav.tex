@@ -1,7 +1,7 @@
 % vim : set tabstop=4 shiftwidth=4 expandtab:
 
 \documentclass[varwidth=15cm, border=.5cm]{standalone}
-\usepackage{amsmath, amsfonts, amsthm, hyperref, mdframed, thmtools}
+\usepackage{amsmath, amsfonts, amsthm, hyperref, mdframed, thmtools, enumitem}
 
 \mdfsetup{linewidth=1.5pt, topline=false, rightline=false, bottomline=false, leftline=true}
 \declaretheoremstyle[ notebraces={}{}, headpunct=, headformat=\NAME{} --\NOTE, postheadhook=\leavevmode\begin{mdframed}, prefoothook=\end{mdframed}, ]{default}
@@ -89,8 +89,7 @@
 \end{definition}
 
 \begin{definition}[label=5nalj3hx, name=Lipschitz Regularity]
-	For \( L > 0 \), we say that a mapping \( \mathcal T\from\mathbb
-	R^n\to\mathbb R^m \) is L-Lipschitz if globally
+	For \( L > 0 \), we say that a mapping \( \mathcal T\from\mathbb R^n\to\mathbb R^m \) is L-Lipschitz if globally
 	\[
 		\lVert \mathcal T(x) - \mathcal T(y) \rVert \leq L\lVert x - y\rVert \qquad \forall x,y\in\mathbb R^n.
 	\]
@@ -152,6 +151,38 @@
 	\begin{remark}[label=2s6tfa1j, name=Nonexpansive and Contractive Mappings]
 		A mapping is called nonexpansive for \( L \leq 1 \), contractive
 		for \( L < 1 \).
+	\end{remark}
+\end{definition}
+
+\begin{definition}[label=3rjrllrr, name=Strong Convexity Regularity]
+	For \(\mu > 0\), we say that a mapping \( f\from\mathbb
+	R^n\to\mathbb R^m \) is strongly convex if one of the following
+	equivalent conditions hold \(\forall x,y\in\mathbb R^n\)
+
+	\begin{enumerate}[label=\roman*\quad]
+		\item \(f(y) - f(x) \geq \nabla f(x)^T(y-x) + \frac{\mu}{2}\lVert y - x\rVert^2\)
+		\item \(g(x) = f(x) - \frac{\mu}{2}\lVert y-x\rVert^2_2\) is convex 
+		\item \((\nabla f(y) - \nabla f(x))^T(y-x)\geq \mu\lVert x-y\rVert^2\)
+		\item \(f(\alpha x+ (1-\alpha) y) \le \alpha f(x) + (1-\alpha) f(y) - \frac{\alpha (1-\alpha)\mu}{2}\Vert x-y\rVert^2,~\alpha \in [0,1].\)
+	\end{enumerate}
+
+	Strong convexity regularity implies that the function has a unique
+	minimizer as the gradient difference of two points is bounded below and
+	therefore can't vanish.
+
+	\begin{remark}[label=dj4thzqo, name=Implications of Strong Convexity]
+		The following conditions are implied by \(\mu>0\) strong
+		convexity of a function $f$
+
+		\begin{enumerate}[label=\roman*\quad,ref=(\roman*)]
+			\item \label{dj4thzqo:pl} inequality \(\frac{1}{2}\lVert\nabla f(x)\rVert^2\ge \mu (f(x)-f^*),~\forall x.\) 
+			\item \(\lVert\nabla f(x) - \nabla f(y)\rVert \ge \mu \lVert x-y\rVert\)
+			\item \(f(y)\le f(x)+\nabla f(x)^T(y-x)+\frac{1}{2\mu}\lVert\nabla f(y)- \nabla f(x)\rVert^2\)
+			\item \((\nabla f(x) - \nabla f(y)^T(x-y) \le \frac{1}{\mu} \lVert\nabla f(x)-\nabla f(y)\rVert^2\)
+		\end{enumerate}
+
+		The condition \ref{dj4thzqo:pl} is also called the 
+		Polyak-Lojasiewicz (PL) inequality. 
 	\end{remark}
 \end{definition}
 \end{document}
