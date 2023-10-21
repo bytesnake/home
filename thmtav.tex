@@ -19,10 +19,13 @@
 \DeclareMathOperator{\indicator}{I}
 \DeclareMathOperator{\diff}{d}
 \DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\domain}{dom}
+
 
 \newcommand*\from{\colon}
 \newcommand{\innerp}[2]{\left\langle #1 \vert #2 \right\rangle}
 \newcommand{\optimal}[1]{{#1^{\scriptscriptstyle\bullet}}}
+\renewcommand*{\emptyset}{\text{\O}}
 
 \begin{document}
 
@@ -175,7 +178,7 @@
 		convexity of a function $f$
 
 		\begin{enumerate}[label=\roman*\quad,ref=(\roman*)]
-			\item \label{dj4thzqo:pl} inequality \(\frac{1}{2}\lVert\nabla f(x)\rVert^2\ge \mu (f(x)-f^*),~\forall x.\) 
+			\item \label{dj4thzqo:pl} \(\frac{1}{2}\lVert\nabla f(x)\rVert^2\ge \mu (f(x)-f^*),~\forall x.\) 
 			\item \(\lVert\nabla f(x) - \nabla f(y)\rVert \ge \mu \lVert x-y\rVert\)
 			\item \(f(y)\le f(x)+\nabla f(x)^T(y-x)+\frac{1}{2\mu}\lVert\nabla f(y)- \nabla f(x)\rVert^2\)
 			\item \((\nabla f(x) - \nabla f(y)^T(x-y) \le \frac{1}{\mu} \lVert\nabla f(x)-\nabla f(y)\rVert^2\)
@@ -184,5 +187,107 @@
 		The condition \ref{dj4thzqo:pl} is also called the 
 		Polyak-Lojasiewicz (PL) inequality. 
 	\end{remark}
+
+	\begin{remark}[label=_7nd1yv2, name=Strong Monotonicity of Subdifferentials]
+		If the subdifferential of a convex mapping \(\partial\mathcal
+		T\) is \hyperref[1_xd5vw5]{m-strongly} monotone, then the mapping 
+		\(\mathcal T\) is m strong convex.
+	\end{remark}
+
+	\begin{remark}[label=4nciih04, name=Strong Convexity in Practice]
+		For a strongly-convex, Lipschitz continuous function Gradient
+		Descent converges in linear-time. In practice however, many
+		applications (e.g., least square, logistic regression) do not
+		fulfill strong convexity regularity. If they are only convex,
+		then gradient descent can only be attested with sub-linear
+		rate.
+
+		This leads to weaker conditions, with which linear rate can
+		still be attained, and are applicable to least square, logistic
+		regression.
+	\end{remark}
+\end{definition}
+
+\begin{definition}[label=xt9s0uma, name=Polyak-Lojasiewicz Regularity]
+	For \(\mu > 0\) a mapping is Polyak-Lojasiewicz (PL) regular if the following 
+	inequality holds
+	\[
+		\frac{1}{2\mu}\lVert v\rVert^2 \geq \mathcal T u - \mathcal T\optimal{u} \qquad \forall u\in\domain{\mathcal T}, v \in \partial\mathcal T(u).
+	\]
+	The condition requires that the gradient grows larger than a linear
+	function when we move away from the optimal function value. 
+
+	\begin{example}[label=ckhagcj4, name=Example for a quadratic function]
+		Set \(f(x) = x^TAx, x\geq0\), we have from PL that,
+		\(\lVert A^Tx\rVert^2 \geq 2\mu x^TAx\), and hence bounding with
+		the maximum/minimum singular-value (assuming \(A\) is symmetric)
+		\[
+			\sigma_\text{max}(A)^2 \geq 2\mu\sigma_\text{min}(A)
+		\]
+		from which we can find a minimal upper bound for \(\mu\).
+	\end{example}
+
+	\begin{theorem}[label=zs9zsqoh, name=Convergence of Gradient Descent]
+		Let \(f\) be L-Lipschitz continuous gradient, be PL regular and
+		has a non-empty solution set. Then the gradient method with a
+		step-size of \(1/L\)
+		\[
+			x_{k+1}=x_k-\frac{1}{L}\nabla f(x_k),
+		\]
+		has a global convergence rate depending on the function condition
+		number \(\kappa = L/\mu\)
+		\[
+			f(x_k) - \optimal{f}\leq\left(\frac{\kappa-1}{\kappa}\right)^k(f(x_0) - \optimal{f}).
+		\]
+
+		For a proof substitute the forward step
+		\(x_{k+1}-x_k=-\alpha\nabla f(x_k)\) into the Lipschitz
+		continuous gradient conditions to upper-bound the gradient.
+		Combine with PL inequality
+		\[
+			f(x_{k+1})-f(x_k) \leq -\frac{\mu}{L}(f(x_k) - \optimal{f})
+		\]
+		Reordering and applying recursivly until \(x\to x_0\) gives
+		convergence inequality.
+	\end{theorem}
+	\begin{example}[label=jab2zae3, name=Strongly-convex composed with linear]
+		Let \(f = g(Ax + b)\) be a function composed of strongly-convex 
+		function \(g\) and some matrix \(A\). This has PL regularity and
+		frequently arises in machine learning tasks, such as
+		least-square or logistic regression.
+	\end{example}
+\end{definition}
+
+\begin{remark}[label=9wm37o_t, name=Relationship between optimality bounds]
+	Several lower bounds on the growth of a function give rise to
+	convergence theorems. With the condition \(\mu>0\) and \(f(\optimal{x}) = 
+	\optimal{f}\) we have the relation
+	\begin{alignat}{3}
+		&\text{SC}\to\text{ESC}\to\text{WSC}\to&\text{RSI}\to\text{EB}\equiv\text{PL}\to\text{QC} \\
+		\text{for } f \text{ convex}~&&\text{RSI}\equiv\text{EB}\equiv\text{PL}\equiv\text{QC}.
+	\end{alignat}
+
+	\begin{enumerate}
+		\item[SC --] Strong Convexity: \(f(y) \geq f(x) + \innerp{\nabla f(x)}{y-x} + \frac{\mu}{2}\lVert y-x\rVert^2\)
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}[label=1_xd5vw5, name=Monotone Operators and Coercivity]
+	An operator \(\mathcal T\) on \(\mathbb R^n\) is called \textit{monotone} if it satisfies
+	\[
+		\innerp{u-v}{x-y} \geq 0\qquad\forall(x,u), (y,v)\in\mathcal T.
+	\]
+	Furthermore it is said to be \textit{stronly} monotone or \textit{coercive} with
+	parameter \( m > 0\) if it holds
+	\[
+		\innerp{\mathcal T x- \mathcal T y}{x-y}\geq m\lVert x -
+		y\rVert^2_2 \qquad \forall x,y\in\domain\mathcal T.
+	\]
+
+	If two operators \(\mathcal T\) and \(\mathcal S\) are monotone or maximal monotone (and 
+	\(\domain\mathcal T\cap\domain\mathcal S \neq \emptyset \)), then so is \(\mathcal T + \mathcal S\). If in addition \(\mathcal T\) is coercive
+	with parameter \(m\) and \(\mathcal S\) with parameter \(\hat{m}\), then \(\mathcal S + \mathcal T\) is coercive 
+	(strongly monotone) with parameter \(m+\hat{m}\). For \(\alpha>0\), \(\alpha\mathcal T\) is coercive 
+	with parameter \(\alpha m\).
 \end{definition}
 \end{document}
