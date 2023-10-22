@@ -157,6 +157,29 @@
 	\end{remark}
 \end{definition}
 
+\begin{definition}[label=ceh4aors, name=L-Lipschitz Continuous Gradient or L-Smootheness]
+	Lipschitz regularity for the gradient of a function is called a 
+	L-Lipschitz continuous gradient (or L-smooth) function with \( L > 0\)
+	\[
+		\lVert\nabla f(x) - \nabla f(y)\rVert\leq L\lVert x - y\rVert.
+	\]
+
+	\begin{remark}[label=5vsiv5i2, name=Cocoerciveness of L-Smooth functions]
+		For a convex function (L-Smootheness \( \Longleftrightarrow \)
+		1/L-cocoerciveness of gradients).
+
+		\textit{Proof sketch} Use inequality \(f(y)-f(x)-\innerp{\nabla
+		f(x)}{y-x} \leq \frac{1}{2L}\lVert\nabla f(x) - \nabla
+		f(y)\rVert^2\) (which is implied by L-smootheness when function
+		convex). Evaluate function at two points
+		\[
+			f_x(z)= f(z) - \innerp{\nabla f(x)}{z} \quad \text{and}
+			\quad f_y(z) = f(z) - \innerp{\nabla f(y)}{z}
+		\]
+		and combine both inequalities to show co-coerciveness.
+	\end{remark}
+\end{definition}
+
 \begin{definition}[label=3rjrllrr, name=Strong Convexity Regularity]
 	For \(\mu > 0\), we say that a mapping \( f\from\mathbb
 	R^n\to\mathbb R^m \) is strongly convex if one of the following
