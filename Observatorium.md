@@ -91,3 +91,4 @@ vim: filetype=markdown.home.linked :
  Jinming Xu &ndash; Publications |-| https://jinmingxu.github.io/publications.html
  bibliographies - Bibliography with page numbers - TeX - LaTeX Stack Exchange |-| https://tex.stackexchange.com/questions/15971/bibliography-with-page-numbers?noredirect=1
  Installation and Usage (coc-ltex) | LTeX |-| https://valentjn.github.io/ltex/vscode-ltex/installation-usage-coc-ltex.html
+ Interesting papers to invexity theory |-| https://scholar.google.com/scholar?cites=5804816895140719644

@@ -1,7 +1,9 @@
 % vim : set tabstop=4 shiftwidth=4 expandtab:
 
 \documentclass[varwidth=15cm, border=.5cm]{standalone}
-\usepackage{amsmath, amsfonts, amsthm, hyperref, mdframed, thmtools, enumitem}
+\usepackage{amsmath, amsfonts, amsthm, hyperref, mdframed, thmtools, enumitem, biblatex}
+
+\addbibresource{thmtav.bib}
 
 \mdfsetup{linewidth=1.5pt, topline=false, rightline=false, bottomline=false, leftline=true}
 \declaretheoremstyle[ notebraces={}{}, headpunct=, headformat=\NAME{} --\NOTE, postheadhook=\leavevmode\begin{mdframed}, prefoothook=\end{mdframed}, ]{default}
@@ -21,11 +23,11 @@
 \DeclareMathOperator{\dist}{dist}
 \DeclareMathOperator{\domain}{dom}
 
-
 \newcommand*\from{\colon}
 \newcommand{\innerp}[2]{\left\langle #1 \vert #2 \right\rangle}
 \newcommand{\optimal}[1]{{#1^{\scriptscriptstyle\bullet}}}
 \renewcommand*{\emptyset}{\text{\O}}
+\renewcommand*{\cite}{\footfullcite}
 
 \begin{document}
 
@@ -279,6 +281,16 @@
 		frequently arises in machine learning tasks, such as
 		least-square or logistic regression.
 	\end{example}
+
+	\begin{remark}[label=z8v9vnod, name=Invexity]
+		Every L-smooth function, satisfying the PL condition is
+		\(\eta\)-invex. It has therefore linear convergence and a global 
+		saddle point \cite{barik2023invex}. The invexity is provided by
+
+		\[
+			\eta(x,y) = \frac{1}{\mu}(\nabla f(y)+L\frac{\lVert y - x\rVert}{\lVert\nabla f(x)\rVert}\nabla f(x).
+		\]
+	\end{remark}
 \end{definition}
 
 \begin{remark}[label=9wm37o_t, name=Relationship between optimality bounds]
