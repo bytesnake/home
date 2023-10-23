@@ -1,7 +1,8 @@
 % vim : set tabstop=4 shiftwidth=4 expandtab:
 
 \documentclass[varwidth=15cm, border=.5cm]{standalone}
-\usepackage{amsmath, amsfonts, amsthm, hyperref, mdframed, thmtools, enumitem, biblatex}
+\usepackage{amsmath, amsfonts, amsthm, hyperref, mdframed, thmtools, enumitem}
+\usepackage[style=authoryear-icomp,]{biblatex}
 
 \addbibresource{thmtav.bib}
 
@@ -28,6 +29,8 @@
 \newcommand{\optimal}[1]{{#1^{\scriptscriptstyle\bullet}}}
 \renewcommand*{\emptyset}{\text{\O}}
 \renewcommand*{\cite}{\footfullcite}
+
+\DeclareFieldFormat{postnote}{ \href{\thefield{url}\##1}{#1} }
 
 \begin{document}
 
@@ -285,8 +288,8 @@
 	\begin{remark}[label=z8v9vnod, name=Invexity]
 		Every L-smooth function, satisfying the PL condition is
 		\(\eta\)-invex. It has therefore linear convergence and a global 
-		saddle point \cite{barik2023invex}. The invexity is provided by
-
+		saddle point \footcite[appendix.A]{barik2023invex}. The invexity is 
+		provided by
 		\[
 			\eta(x,y) = \frac{1}{\mu}(\nabla f(y)+L\frac{\lVert y - x\rVert}{\lVert\nabla f(x)\rVert}\nabla f(x).
 		\]
@@ -392,4 +395,5 @@
 		\]
 	\end{example}
 \end{definition}
+\printbibliography
 \end{document}
