@@ -9,6 +9,9 @@
 \usepackage{amsmath, amsfonts, amsthm, mdframed, thmtools, enumitem}
 \usepackage[style=alphabetic,backend=biber]{biblatex}
 
+% add a bit of margin for bibliography in notes
+\emergencystretch=1em
+% add bib file
 \addbibresource{thmtav.bib}
 
 \declaretheoremstyle[notebraces={}{}, headpunct=, headformat=\NAME{} --\NOTE, preheadhook=\printbibliography\newrefsection, postheadspace = \newline, postfoothook=\printbibliography\newrefsection]{default}
