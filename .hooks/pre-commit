@@ -1,8 +1,12 @@
+#!/bin/bash
+set -e 
+set -o pipefail
+
 cd thmtav/
 rm build/*
 /usr/bin/make4ht -c thmtav.cfg -ue thmtav.mk4 thmtav.tex -d build/
 source env/bin/activate
 /usr/bin/env python parser.py
 mv build/thmtav.html thmtav.html
-git add build/thmtav.html relations.json
+git add thmtav.html relations.json
 cd -
