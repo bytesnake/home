@@ -8,3 +8,4 @@ First problem [recovering primal form dual]($P/0a03cf36d5546d0f/lscomo.pdf#Recov
 [source]($P/0a03cf36d5546d0f/lscomo.pdf)
 
 New session came till [quasi-nonexpansive operators]($P/0a03cf36d5546d0f/lscomo.pdf#FPI with quasi-nonexpansive operators)
+Now till [quasi-nonexpansive operators]($P/0a03cf36d5546d0f/lscomo.pdf#Convergence of dual ascent)

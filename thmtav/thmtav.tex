@@ -1,0 +1,241 @@
+% vim : set tabstop=4 shiftwidth=4 expandtab :
+
+% /usr/bin/make4ht -c thmtav.cfg -m draft -ue mybuild.mk4 thmtav.tex
+
+%\documentclass[varwidth=15cm, border=.5cm]{standalone}
+\documentclass{article}
+\usepackage[paperwidth=15cm,paperheight=50cm,margin=0.2in]{geometry}
+\usepackage[destlabel=true, backref=false]{hyperref}
+\usepackage{amsmath, amsfonts, amsthm, mdframed, thmtools, enumitem}
+\usepackage[style=alphabetic,backend=biber]{biblatex}
+
+\addbibresource{thmtav.bib}
+
+\declaretheoremstyle[notebraces={}{}, headpunct=, headformat=\NAME{} --\NOTE, preheadhook=\printbibliography\newrefsection, postheadspace = \newline, postfoothook=\printbibliography\newrefsection]{default}
+\declaretheorem[name=Satz, style=default,]{theorem}
+\declaretheorem[name=Definition, style=default,]{definition}
+\declaretheorem[name=Remark, style=default,]{remark}
+\declaretheorem[name=Proposition, style=default,]{proposition}
+\declaretheorem[name=Beispiel, style=default,]{example}
+\declaretheorem[name=Literature, style=default,]{literature}
+%%
+\defbibheading{bibliography}[\bibname]{}
+
+\DeclareMathOperator{\prox}{prox}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator{\id}{Id}
+\DeclareMathOperator{\jacobian}{D}
+\DeclareMathOperator{\proj}{\Pi}
+\DeclareMathOperator{\indicator}{I}
+\DeclareMathOperator{\diff}{d}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\domain}{dom}
+
+\newcommand*\from{\colon}
+\newcommand{\innerp}[2]{\left\langle #1 \vert #2 \right\rangle}
+\newcommand{\optimal}[1]{{#1^{\scriptscriptstyle\bullet}}}
+\renewcommand*{\emptyset}{\text{\O}}
+
+\DeclareFieldFormat{prenote}{}
+\DeclareFieldFormat{postnote}{ \href{\thefield{url}\##1}{\thefield{prenote}} }
+
+\makeatletter                    %[!]
+\let\abx@aux@fnpage\@gobbletwo   %[!]
+\def\blx@warn@bibempty{}
+\makeatother                     %[!]
+
+\begin{document}
+\begin{definition}[label=f6izn8iw, name=Proximal Operator]
+	The proximal operator (also called proximal mapping), also see resolvant for CCP case, is given by 
+
+	\[
+		\prox_{\lambda f}(x) = \argmin_y \left\{ \Theta(y; x) = \lambda f(y) + \frac{1}{2}\lVert y - x\rVert_2^2\right\}
+	\]
+
+    \begin{theorem}[label=78req5r7, name=Convergence with Lyapunov Analysis]
+        Let \( f\in\mathcal{F}_{0,\infty} \). For any \( k\in\mathbb{N}, A_k, \lambda_k > 0\) and any \( x_k \), the inequality
+        \begin{alignat*}{6}
+            &A_{k+1}&&(f(x_{k+1}) &&- f(x^\star)) &&+ &&\frac{1}{2}\lVert x_{k+1} &&- x_\star\rVert^2_2  \\
+            \leq &A_k&&(f(x_k)   &&- f(x^\star)) &&+ &&\frac{1}{2}\lVert x_k   &&- x^\star\rVert_2^2
+        \end{alignat*}
+        holds for iteration \( x_{k+1} = \prox_{\lambda_kf}(x_k) \) and number \(A_{k+1}= A_k + \lambda_k\).
+    \end{theorem}
+
+    \begin{remark}[label=hnns6j86, name=Computation complexity]
+	\hyperref[f6izn8iw]{Proximal operations} are in general expensive, sometimes as expensive as
+        minimizing the function itself. There are however many instances of
+        function \( f \) for which an analytic solution exists. For composite
+        problems, those parts are isolated and solved separately by a
+        conceptional proximal operator.
+    \end{remark}
+\end{definition}
+\begin{definition}[label=g87jzem_, name=Closed Convex Proper]
+		A collective term for functions which are closed, convex and proper. This family includes most function encountered in application and excludes special cases found in analysis.
+\end{definition}
+\begin{definition}[label=5nalj3hx, name=Lipschitz Regularity]
+	For \( L > 0 \), we say that a mapping \( \mathcal T\from\mathbb R^n\to\mathbb R^m \) is L-Lipschitz if globally
+	\[
+		\lVert \mathcal T(x) - \mathcal T(y) \rVert \leq L\lVert x - y\rVert \qquad \forall x,y\in\mathbb R^n.
+	\]
+	If a mapping is Lipschitz, it is a continuous mapping because for every
+	\( \lVert x - y \rVert < \delta \) exists \( \epsilon < L \delta \). The composition of \( \mathcal T_1 \) and \( \mathcal T_2 \), 
+	\( \mathcal T_1 \circ \mathcal T_2 \), is \( L_1L_2 \)-Lipschitz (\textit{hint} apply Lipschitz inequality twice).
+	The sum of two mappings, \( \alpha_1\mathcal T_1 + \alpha_2\mathcal T_2 \) is \((|\alpha_1|L_1 + |\alpha_2|L_2)\)-Lipschitz.
+
+	\begin{example}[label=17vzrkyq, name=Affine Function]
+		An affine function \(F(x) = Ax + b\) has Lipschitz constant \(L=\lVert A\rVert_2\), 
+		the spectral norm or maximum singular value of \(A\).
+	\end{example}
+
+	\begin{example}[label=jydhwyqa, name=Differentiable Function]
+		Let \( \mathcal T\from\mathcal R^n\to\mathcal R^n\) be a differentiable function, then 
+		\[
+			\text{L-Lipschitz} \quad \leftrightarrow \quad \lVert\jacobian f(x)\rVert_2 \leq L
+		\]
+
+		\begin{tabular}{rl}
+			For a proof & (\( \implies \)) bound definition of differentials \\
+				    & (\( \impliedby \)) apply mean value
+				    theorem and Cauchy-Schwartz inequality to \\
+				    &\quad\(g(t) = (\mathcal Tx - \mathcal Ty)^T\mathcal T(tx + (1-t) y) \)\\
+				    &\quad(with \(\lVert\mathcal Tx - \mathcal Ty\rVert^2_2 = g(1) - g(0)\))
+		\end{tabular}
+	\end{example}
+
+	\begin{example}[label=5pxh2ufj, name=Projections]
+		The projection of \(x\) onto a non-empty closed convex set \(
+		\mathcal C\) is defined as 
+		\[
+			\proj_{\mathcal C}(z) = \argmin_{x\in\mathcal C}\lVert z
+			-x\rVert_2 = \prox_{\indicator(x\in\mathcal C)}(z)
+		\]
+		and a \hyperref[2s6tfa1j]{non-expansive} operator with unique
+		closest point in \( \mathcal C\).
+
+		For a proof see that the closest projection of \(x\) is a
+		fixed-point \(\proj_{\mathcal C}\optimal{x} = \optimal{x}\) and
+		the differential \( \diff_{\optimal{x}}\proj_{\mathcal C}x =
+		\diff_{\optimal{x}}(x - \dist_{\mathcal C}x) = (\proj_{\mathcal C}x
+		- \optimal{x})\diff\optimal{x} \). Apply the optimality
+		condition 
+
+		\begin{alignat*}{2}
+			(\jacobian\proj_{\mathcal C})(\optimal{x})^T&(y - \optimal{x}) &&\geq 0 \\
+			(\proj_{\mathcal C}u - u)^T&(y - \proj_{\mathcal C}(u)) &&\geq 0
+		\end{alignat*}
+		at two points \(x,y\in\mathbb R^n\). Adding both, apply
+		Cauchy-Schwartz inequality to conclude
+		\[
+			\lVert\proj_{\mathcal C}x - \proj_{\mathcal C}y\rVert_2 \leq \rVert x - y\rVert_2.
+		\]
+		
+	\end{example}
+
+	\begin{remark}[label=2s6tfa1j, name=Nonexpansive and Contractive Mappings]
+		A mapping is called nonexpansive for \( L \leq 1 \), contractive
+		for \( L < 1 \).
+	\end{remark}
+\end{definition}
+\begin{definition}[label=ceh4aors, name=L-Smooth ({\textit or L-Lipschitz Continuous Gradient})]
+	Lipschitz regularity for the gradient of a function is called a 
+	L-Lipschitz continuous gradient (or L-smooth) function with \( L > 0\)
+	\[
+		\lVert\nabla f(x) - \nabla f(y)\rVert\leq L\lVert x - y\rVert.
+	\]
+
+	\begin{remark}[label=5vsiv5i2, name=Cocoerciveness of L-Smooth functions]
+		For a convex function (L-Smootheness \( \Longleftrightarrow \)
+		1/L-cocoerciveness of gradients).
+
+		\textit{Proof sketch} Use inequality \(f(y)-f(x)-\innerp{\nabla
+		f(x)}{y-x} \leq \frac{1}{2L}\lVert\nabla f(x) - \nabla
+		f(y)\rVert^2\) (which is implied by L-smootheness when function
+		convex). Evaluate function at two points
+		\[
+			f_x(z)= f(z) - \innerp{\nabla f(x)}{z} \quad \text{and}
+			\quad f_y(z) = f(z) - \innerp{\nabla f(y)}{z}
+		\]
+		and combine both inequalities to show co-coerciveness. This can
+		also be seen from the relation \( (\partial f)^{-1} = \partial f^\star\)
+		for CCP functions.
+	\end{remark}
+
+	\begin{literature}[label=2tz2l_0t]
+		A good overview of continuous gradient under various conditions can be found at the blog post \cite{zhou_continuous_gradient}, also see \cite[Appendix A][theorem.A.1.1]{acceleration_methods}. Further \cite[connections][theorem.3.4]{structured_nonconvex_functions} of smoothness to \cite[expected-smoothness][equation.3.13]{structured_nonconvex_functions} and \cite[expected residual][assumption.3.1]{structured_nonconvex_functions} exist. Also the \cite[Section 2.5][subsection.2.5]{garrigos2023handbook} lists a number of compact proofs for smoothness and smoothness under convexity.
+
+	\end{literature}
+\end{definition}
+\begin{definition}[label=3m5jm_az, name=Quasar Convex]
+	Let \( \zeta\in(0,1] \) and \( x^\star\in\mathcal X^\star\). We say that \( f \) \( \zeta \)-quasar-convex with respect to \( x^\star \) if for all \( x\in\mathbb R^n \),
+	\[
+		f(x^\star) \geq f(x) + \frac{1}{\zeta}\innerp{\nabla f(x)}{x^\star - x}.
+	\]
+
+	\begin{literature}[label=c9swuw97]
+		Convergence analysis of quasar-convex functions exists with \cite[constant and decreasing][subsection.4.1]{structured_nonconvex_functions} step-sizes. Evaluation of star-convexity for NMF can be found in \cite{star_convexity_nmf}. For variance transfer under non-convexity see \cite[Example 2.2][example.2.2]{sgd_arbitrary_sampling}.
+	\end{literature}
+\end{definition}
+\begin{definition}[label=v_o4l6wn, name=Asymptotic Convergence Rates]
+	Notions of sub-linear, linear and super-linear (esp. quadratic) convergence rates are important taxonomy to discuss the efficiency of optimization algorithms.
+
+	A sequence of vectors \( \{ x^{(t)} \} \) is said to converge to a limit point \( \optimal{x} \)
+	\begin{itemize}
+		\item \emph{sub-linear} if for some \( p < 1 \) we have \( \Gamma^p(\{x^{(t)} \}) < \infty \), each new correct digit takes approximately the same amount of total work already done for previous digits
+		\item \emph{linearly} if for some \( 0 < \rho < 1 \) we have \(\Gamma^1(\{x^{(t)} \}) \to \rho\), each new correct digit takes the \emph{same amount} of time
+		\item \emph{super-linear} if \( \Gamma^1(\{x^{(t)} \}) \to 0 \)
+		\item \emph{quadratic} if for some \( 0 < \rho < 1 \) we have \( \Gamma^2(\{x^{(t)} \}) \to \rho \), every iteration the correct number of digits approximately doubles
+		\item \emph{linear-quadratic} if for some \( 0 < \rho_1 < 1 \) and \( 0 < \rho_2 \) the inequality holds:
+			\[
+				\lVert x^{t+1} - \optimal{x}\rVert \leq \rho_1\lVert x^t - \optimal{x}\rVert + \rho_2\lVert x^t - \optimal{x}\rVert^2
+			\]
+	\end{itemize}
+	where we define the rate of convergence as
+	\[
+		\Gamma^p(\{x^{(t)} \}) = \lim_{t\to\infty}\sup\frac{\lVert x^{t+1} - \optimal{x}\rVert}{\lVert x^t - \optimal{x}\rVert^p}.
+	\]
+
+	Clearly quadratic convergence is an instance of super-linear convergence.
+
+	\begin{example}[label=ok2t_031, name=Sublinear Convergence in First-Order Methods]
+		Asymptotic rates discusses the case when \( x^t \) approaches \( \optimal{x} \). For many first-order methods, this is not really relevant, as only a small number of iterations are possible \cite{sublinear_rate}.
+	\end{example}
+
+\end{definition}
+
+\begin{definition}[label=h9xvj58r, name=Newton Method]
+	Consider the finite-sum minimization problem 
+	\[
+		\min_{x\in\mathbb R^d}f(x):=\frac{1}{n}\sum_{i=1}^{n}f_i(x)
+	\]
+	applying Newton's method to the zero inclusion problem of the monotone gradient operator yields the following update rule
+	\[
+		x^{k+1}=x^k - [\nabla^2 f(x^k)]^{-1}\nabla f(x^k)
+	\]
+	which is also a solution to the quadratic approximation
+	\[
+		\phi(x) = f(x^k) + \innerp{\nabla f(x)}{x-x^k}+\frac{1}{2}\innerp{\nabla^2 f(x^k)(x-x^k)}{x-x^k}.
+	\]
+
+	A classical extension is the cubic-regularized Newton Method weighting by \( r^k = \lVert x^{k+1} - x^k\rVert \) a regularization term
+	\[
+		x^{k+1}=x^k - [\nabla^2 f(x^k) + L_2r^k]^{-1}\nabla f(x^k).
+	\]
+
+	Choosing the right method depends crucially on the amount of data used and their dimensionality (i.e., on the parameters \(n\) and \(p\)). Newton Methods are important in the regime of intermediate \( p \) and \( n \). Approximative methods are important where evaluating the whole Hessian \( \mathcal O(np^2) \) and evaluating its (pseudo-)inverse \( \mathcal O(p^3) \) is infeasible.
+
+	\begin{definition}[label=pd12rq4h, name=Approximate Newton Methods]
+		Methods constructing approximation of the Hessian at a point \( x \) satisfying the inequality
+		\[
+			(1-\epsilon)H^k \preceq \nabla^2 f(x) \preceq (1+\epsilon)H^k \quad \text{with}\quad\epsilon\in[0,1)
+		\]
+		are called \emph{approximative newton methods}. They exhibit a \hyperref[v_o4l6wn]{linear-quadratic} rate of convergence and include Hessian subsampling and sketching.
+		\begin{example}[label=vx9hm059, name=NewSamp]
+			See \cite{newsamp}
+		\end{example}
+
+		\begin{literature}[label=zcwoa_s7, name=Unified Analysis Framework]
+			See \cite{approximate_newton_method} for a unifying framework of global and local convergence behaviour. Also see \cite{unified_convergence_cubic_newton} for analysis of Cubic Newton Method. A short overview can be found at \cite{approximate_newton_liu}.
+		\end{literature}
+	\end{definition}
+\end{definition}
+\end{document}

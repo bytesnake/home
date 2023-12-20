@@ -1,4 +1,6 @@
 *.vim
 *.epub
 *.pdf
-thmtav.*
+thmtav/build/*
+thmtav/*secret
+thmtav/env/

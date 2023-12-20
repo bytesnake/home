@@ -1,0 +1,82 @@
+local filter = require "make4ht-filter"
+
+-- add command for parsing the aux file for labels and corresponding id
+-- aux file contains records similar to:
+-- \newlabel{first_section}{{\rEfLiNK{x1-40000.1}
+local labels = {} 
+
+--Make:add("parseaux", function(params)
+--  local auxname = params.input .. ".aux"
+--  for line in io.lines(auxname) do
+--    line:gsub("newlabel%{([^%}]+)%}%{%{.rEfLiNK%{([^%}]+)", function(label,link)
+--      -- insert links to table so we can search for labels
+--      labels[link] = label
+--    end )
+--  end
+--end)
+
+local filter = require "make4ht-filter"
+
+-- add command for parsing the aux file for labels and corresponding id
+-- aux file contains records similar to:
+-- \newlabel{first_section}{{\rEfLiNK{x1-40000.1}
+local labels = {} 
+
+Make:add("parseaux", function(params)
+  local auxname = params.input .. ".aux"
+  for line in io.lines(auxname) do
+    line:gsub("newlabel%{([^%}]+)%}%{%{.rEfLiNK%{([^%}]+)", function(label,link)
+      -- insert links to table so we can search for labels
+      -- ignore refsection, we want to target the note ID
+      if not string.find(label, "refsection") then
+	      labels[link] = label
+      end
+    end )
+  end
+end)
+
+Make:add("biber","biber ${input}")
+if mode=="draft" then
+  Make:htlatex {}
+else
+  Make:htlatex {}
+  Make:biber {}
+  Make:htlatex {}
+  Make:htlatex {}
+  Make:htlatex {}
+end
+
+-- if mode=="draft" then
+--   Make:htlatex()
+-- else
+--   Make:htlatex()
+--   Make:htlatex()
+--   Make:htlatex()
+-- end
+
+
+Make:parseaux {}
+
+local function replace_labels(html)
+  -- match element start
+  html = html:gsub("<([a-z0-9A-Z]+)(%s+[^%>]-)>", function(element, attr)
+    -- process attributes
+    local attr = attr:gsub('([a-z]+)%s*=%s*"([^%"]-)"', function(k,v)
+       -- process only id or href attributes
+       if k=="id" or k == "href" then
+         -- support for links with filenames, we are interested only in the part after '#'
+         v = v:gsub("([^%#]+)$", function(link)
+	   -- print(link)
+           local x = labels[link] or link
+           return x
+         end)
+       end
+      return string.format('%s="%s"',k,v)
+    end)
+    return string.format('<%s %s>', element,  attr)
+  end)
+  return html
+end
+local process = filter{replace_labels}
+
+Make:match("html$", process)

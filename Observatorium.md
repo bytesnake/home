@@ -92,3 +92,22 @@ vim: filetype=markdown.home.linked :
  bibliographies - Bibliography with page numbers - TeX - LaTeX Stack Exchange |-| https://tex.stackexchange.com/questions/15971/bibliography-with-page-numbers?noredirect=1
  Installation and Usage (coc-ltex) | LTeX |-| https://valentjn.github.io/ltex/vscode-ltex/installation-usage-coc-ltex.html
  Interesting papers to invexity theory |-| https://scholar.google.com/scholar?cites=5804816895140719644
+  |-| https://scholar.google.com/scholar?start=0
+ How to Teach Recorder Fingerings &laquo; Walter Bitner |-| https://walterbitner.com/2015/10/18/how-to-teach-recorder-fingerings/
+  |-| https://arxiv.org/abs/2002.08676
+ Teaching and Learning the Double Bass: My Favorite Resources |-| https://contrabassconversations.com/teaching/
+ Publikationen — Professur für Mathematische Optimierung — TU Dresden |-| https://tu-dresden.de/mn/math/numerik/schwartz/forschung/publikationen
+ Sorry! Something went wrong! |-| https://www.amazon.com/dp/0486434796
+ Damien Scieur |-| https://damienscieur.com/sections/paper.html
+  |-| https://scholar.google.com/scholar?cites=6303124694688314230
+  |-| https://arxiv.org/abs/math/9404236
+ How to Read a Book: The Ultimate Guide by Mortimer Adler |-| https://fs.blog/how-to-read-a-book/
+ How To Make A Linen Scrunchie Tutorial &#8211; the thread |-| https://blog.fabrics-store.com/2019/03/12/how-to-make-a-scrunchie-tutorial/
+ the thread &#8211; the thread is the FS online editorial embracing our sewing community and providing weekly inspiration |-| https://blog.fabrics-store.com/
+ Courtney
+ Paquette |-| https://cypaquette.github.io/
+ big list - Showcase of beautiful typography done in TeX &amp; friends - TeX - LaTeX Stack Exchange |-| https://tex.stackexchange.com/questions/1319/showcase-of-beautiful-typography-done-in-tex-friends?noredirect=1
+ Annual planner, breadcrumbs header for 2023, 2024 · kudrykv/latex-yearly-planner · Discussion #8 · GitHub |-| https://github.com/kudrykv/latex-yearly-planner/discussions/8
+ Workflows | VocabSieve Manual |-| https://docs.freelanguagetools.org/workflows.html
+ rust - Link time error with ndarray-linalg with mkl-stats on Windows - Stack Overflow |-| https://stackoverflow.com/questions/77028044/link-time-error-with-ndarray-linalg-with-mkl-stats-on-windows
+ Google Scholar Citations |-| https://scholar.google.com/citations?hl=en
