@@ -28,6 +28,7 @@
 \DeclareMathOperator*{\argmin}{argmin}
 \DeclareMathOperator{\id}{Id}
 \DeclareMathOperator{\jacobian}{D}
+\DeclareMathOperator{\hessian}{H}
 \DeclareMathOperator{\proj}{\Pi}
 \DeclareMathOperator{\indicator}{I}
 \DeclareMathOperator{\diff}{d}
@@ -70,6 +71,22 @@
         function \( f \) for which an analytic solution exists. For composite
         problems, those parts are isolated and solved separately by a
         conceptional proximal operator.
+    \end{remark}
+
+    \begin{remark}[label=sbkmp32j, name=Differentials of Proximals]
+	The differential of a proximal operator with respect to its scaling
+	factor \( \lambda \) is given by
+	\[
+		\diff{\prox_{\lambda f(u)}{(x)}} = -[\lambda \hessian f(\optimal{u}) +
+		\id]^{-1}\diff{f(\optimal{u}, \diff\lambda)}.
+	\]
+
+	This result illustrates the smoothing effect of Moreau envelope for
+	non-smooth functions (or functions under bad conditions). When
+	\(\lambda \to 0\) we limit at equivalence to the Jacobian at optimal point.
+
+	This is a special case of bi-level optimization, see \cite[Lemma
+	3.2][lemma.3.2]{bilevel_diff} with \( f(\lambda, u) = \lambda f(u) - \frac{1}{2}\lVert u-x\rVert^2_2 \)
     \end{remark}
 \end{definition}
 \begin{definition}[label=g87jzem_, name=Closed Convex Proper]
@@ -204,7 +221,6 @@
 	\end{example}
 
 \end{definition}
-
 \begin{definition}[label=h9xvj58r, name=Newton Method]
 	Consider the finite-sum minimization problem 
 	\[

@@ -104,10 +104,8 @@ vim: filetype=markdown.home.linked :
  How to Read a Book: The Ultimate Guide by Mortimer Adler |-| https://fs.blog/how-to-read-a-book/
  How To Make A Linen Scrunchie Tutorial &#8211; the thread |-| https://blog.fabrics-store.com/2019/03/12/how-to-make-a-scrunchie-tutorial/
  the thread &#8211; the thread is the FS online editorial embracing our sewing community and providing weekly inspiration |-| https://blog.fabrics-store.com/
- Courtney
- Paquette |-| https://cypaquette.github.io/
+ Courtney Paquette |-| https://cypaquette.github.io/
  big list - Showcase of beautiful typography done in TeX &amp; friends - TeX - LaTeX Stack Exchange |-| https://tex.stackexchange.com/questions/1319/showcase-of-beautiful-typography-done-in-tex-friends?noredirect=1
  Annual planner, breadcrumbs header for 2023, 2024 · kudrykv/latex-yearly-planner · Discussion #8 · GitHub |-| https://github.com/kudrykv/latex-yearly-planner/discussions/8
  Workflows | VocabSieve Manual |-| https://docs.freelanguagetools.org/workflows.html
  rust - Link time error with ndarray-linalg with mkl-stats on Windows - Stack Overflow |-| https://stackoverflow.com/questions/77028044/link-time-error-with-ndarray-linalg-with-mkl-stats-on-windows
- Google Scholar Citations |-| https://scholar.google.com/citations?hl=en
