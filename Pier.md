@@ -40,5 +40,6 @@ vim: filetype=markdown.home.linked :
 
  ## More
 
- - [Ideas for note taking]($P/stash/ideas_notes.md)
+ - [Scientific Notetaking Blog Post](~/Downloads/blog/content/notes.md)
+ - [Rust School of Music](rustmusic/main.tex)
  - [Ideas for Git mail client]($P/stash/mails.md)

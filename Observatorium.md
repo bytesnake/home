@@ -109,3 +109,7 @@ vim: filetype=markdown.home.linked :
  Annual planner, breadcrumbs header for 2023, 2024 · kudrykv/latex-yearly-planner · Discussion #8 · GitHub |-| https://github.com/kudrykv/latex-yearly-planner/discussions/8
  Workflows | VocabSieve Manual |-| https://docs.freelanguagetools.org/workflows.html
  rust - Link time error with ndarray-linalg with mkl-stats on Windows - Stack Overflow |-| https://stackoverflow.com/questions/77028044/link-time-error-with-ndarray-linalg-with-mkl-stats-on-windows
+ 
+            ICERM - Acceleration and Extrapolation Methods         |-| https://icerm.brown.edu/topical_workshops/tw-23-aem/
+ 
+            ICERM - Acceleration and Extrapolation Methods         |-| https://icerm.brown.edu/topical_workshops/tw-23-aem/

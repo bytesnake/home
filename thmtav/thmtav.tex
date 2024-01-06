@@ -257,4 +257,34 @@
 		\end{literature}
 	\end{definition}
 \end{definition}
+\begin{definition}[label=18x0c7vo, name=Orthogonal Polynomials]
+	An orthonormal set of functions \( \phi_0(x), \phi_1(x), \dots,
+	\phi_n(x) \) with \( n \) finite or infinite, is characterized by the
+	relations
+
+	\[
+		\innerp{\phi_n}{\phi_m} =
+		\int_a^b\phi_n(x)\phi_m(x)\diff\alpha(x) = \delta_{nm}
+	\]
+
+	If the support \( \tau(x) \) only has a finite number \( N \) of points
+	of increase, \( l \) is necessary finite and \( l \leq N \). Furthermore
+	functions of this kind are necessarily linearly independent.
+
+	\begin{theorem}[label=g__9ue2i, name=Reparametrization]
+		Let the set of real-valued functions \( f_0(x), \dots, f_n(x) \)
+		be of class \( \mathbb{L}_\alpha^2(a,b) \) and linearly
+		independent. Then an orthonormal set \( \phi_0(x), \dots,
+		\phi_n(x)\) such that 
+
+		\[
+			\phi_n(x) = \lambda_{n,0}f_0(x) + \dots +
+			\lambda_{n,n}f_n(x)\quad\forall
+			n=0,1,\dots,l\quad\lambda_{n,n} > 0.
+		\]
+
+		Furthermore this set is \emph{uniquely determined}.
+	\end{theorem}
+
+\end{definition}
 \end{document}
