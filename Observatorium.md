@@ -113,3 +113,8 @@ vim: filetype=markdown.home.linked :
             ICERM - Acceleration and Extrapolation Methods         |-| https://icerm.brown.edu/topical_workshops/tw-23-aem/
  
             ICERM - Acceleration and Extrapolation Methods         |-| https://icerm.brown.edu/topical_workshops/tw-23-aem/
+ Combinatorics book recommendation? : math |-| https://old.reddit.com/r/math/comments/15pdwbu/combinatorics_book_recommendation/
+ reference request - Good resource/exercises for learning asymptotic analysis? - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/1017380/good-resource-exercises-for-learning-asymptotic-analysis
+ Clarinet sheet music PDF archive, Vol. 1 |-| https://www.clarinetinstitute.com/store/p113/Clarinet_Sheet_Music%2C_Vol._1.html
+ reference request - Book Recommendations and Proofs for a First Course in Real Analysis - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/317753/book-recommendations-and-proofs-for-a-first-course-in-real-analysis
+ reference request - Self-studying real analysis —&#160;Tao or Rudin? - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/373401/self-studying-real-analysis-tao-or-rudin?rq=1
