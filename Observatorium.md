@@ -118,3 +118,8 @@ vim: filetype=markdown.home.linked :
  Clarinet sheet music PDF archive, Vol. 1 |-| https://www.clarinetinstitute.com/store/p113/Clarinet_Sheet_Music%2C_Vol._1.html
  reference request - Book Recommendations and Proofs for a First Course in Real Analysis - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/317753/book-recommendations-and-proofs-for-a-first-course-in-real-analysis
  reference request - Self-studying real analysis —&#160;Tao or Rudin? - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/373401/self-studying-real-analysis-tao-or-rudin?rq=1
+ soft question - Getting better at proofs - Mathematics Stack Exchange |-| https://math.stackexchange.com/questions/7743/getting-better-at-proofs
+ A Periodic Table of Visualization Methods |-| https://www.visual-literacy.org/periodic_table/periodic_table.html
+ A Mathematician's Lament - Wikipedia |-| https://en.wikipedia.org/wiki/A_Mathematician%27s_Lament
+ ePub y Más |-| https://epubymas.xyz/
+ group theory - Proof of form of 4D rotation matrices - Physics Stack Exchange |-| https://physics.stackexchange.com/questions/652658/proof-of-form-of-4d-rotation-matrices
