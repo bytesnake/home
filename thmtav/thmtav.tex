@@ -1,12 +1,11 @@
 % vim : set tabstop=4 shiftwidth=4 expandtab :
 
 % /usr/bin/make4ht -c thmtav.cfg -m draft -ue mybuild.mk4 thmtav.tex
-
 %\documentclass[varwidth=15cm, border=.5cm]{standalone}
-\documentclass{article}
-\usepackage[paperwidth=15cm,paperheight=50cm,margin=0.2in]{geometry}
+\documentclass[preview, multi={definition, remark, theorem, proposition, example, literature}, border=0.2in]{standalone}
+%\usepackage[paperwidth=15cm,paperheight=50cm,margin=0.2in]{geometry}
 \usepackage[destlabel=true, backref=false]{hyperref}
-\usepackage{amsmath, amsfonts, amsthm, mdframed, thmtools, enumitem}
+\usepackage{amsmath, amsfonts, amsthm, thmtools, enumitem, mdframed}
 \usepackage[style=alphabetic,backend=biber]{biblatex}
 
 % add a bit of margin for bibliography in notes
@@ -14,6 +13,7 @@
 % add bib file
 \addbibresource{thmtav.bib}
 
+\newenvironment{wrapper}{}{}
 \declaretheoremstyle[notebraces={}{}, headpunct=, headformat=\NAME{} --\NOTE, preheadhook=\printbibliography\newrefsection, postheadspace = \newline, postfoothook=\printbibliography\newrefsection]{default}
 \declaretheorem[name=Satz, style=default,]{theorem}
 \declaretheorem[name=Definition, style=default,]{definition}
@@ -50,11 +50,13 @@
 
 \begin{document}
 \begin{definition}[label=f6izn8iw, name=Proximal Operator]
-	The proximal operator (also called proximal mapping), also see resolvant for CCP case, is given by 
+	The proximal operator (also called proximal mapping), also see resolvant for CCP case, is defined as a smoothed version of the original function $f(\cdot)$
 
 	\[
-		\prox_{\lambda f}(x) = \argmin_y \left\{ \Theta(y; x) = \lambda f(y) + \frac{1}{2}\lVert y - x\rVert_2^2\right\}
+		\prox_{\lambda f}(x) = \argmin_y \left\{ \Theta(y; x) = \lambda f(y) + \frac{1}{2}\lVert y - x\rVert_2^2\right\}.
 	\]
+ 
+	They may have more than one solution. 
 
     \begin{theorem}[label=78req5r7, name=Convergence with Lyapunov Analysis]
         Let \( f\in\mathcal{F}_{0,\infty} \). For any \( k\in\mathbb{N}, A_k, \lambda_k > 0\) and any \( x_k \), the inequality
@@ -329,4 +331,14 @@
 		\end{itemize}
 	\end{example}
 \end{definition}
+
+\begin{definition}[label=p1f9h5bp, name=Structured Matrices]
+	A structured matrix represents a linear operation \( T: \mathbb R^n \to \mathbb R^m\)
+	without the required operation and parameter count of \( mn \) for
+	storage and matrix-vector multiplication.
+
+	\begin{example}[label=9v_h8bhy, name=Low Rank]
+	\end{example}
+\end{definition}
+
 \end{document}

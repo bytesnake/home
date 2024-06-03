@@ -36,8 +36,9 @@ with open("build/thmtav.html") as file:
         idd = details[2]['id']
         thm_ids.append(idd)
 
-        head = c.find('span', {'class': 'cmbx-10'})
-        head.replaceWith("#{} {} - ".format(idd, head.string.split(" ")[0]))
+        head = c.find('span', {'class': 'head'})
+        print(head.text.strip())
+        head.replaceWith("#{} {} - ".format(idd, head.text.strip().split(" ")[0]))
 
         c['id'] = idd
 
@@ -126,8 +127,3 @@ with open("build/thmtav.html") as file:
 
     with open("relations.json", "w") as file:
         file.write(json.dumps(relations))
-    
-
-    #print(detailsoup.prettify())
-
-    print(len(thms))

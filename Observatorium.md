@@ -123,3 +123,12 @@ vim: filetype=markdown.home.linked :
  A Mathematician's Lament - Wikipedia |-| https://en.wikipedia.org/wiki/A_Mathematician%27s_Lament
  ePub y Más |-| https://epubymas.xyz/
  group theory - Proof of form of 4D rotation matrices - Physics Stack Exchange |-| https://physics.stackexchange.com/questions/652658/proof-of-form-of-4d-rotation-matrices
+  |-| https://www.math.uni-rostock.de/~tasche/
+  |-| https://github.com/KhronosGroup/Vulkan-Docs/blob/main/proposals/VK_AMDX_shader_enqueue.adoc
+ utterances |-| https://utteranc.es/
+ I’m confused | Max Bernstein |-| https://bernsteinbear.com/blog/im-confused/
+ Matt Might's blog |-| https://matt.might.net/articles/
+ DuckDuckGo — Privacy, simplified. |-| http://www.topology.org/tex/conc/differential_geometry_books.html
+ DuckDuckGo — Privacy, simplified. |-| http://www.topology.org/tex/conc/mathlearn.html
+ About us - Oh my sweet Greece |-| https://ohmysweetgreece.com/about-us/
+  |-| 2

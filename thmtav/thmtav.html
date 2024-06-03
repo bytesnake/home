@@ -1,3053 +1,1870 @@
-<!DOCTYPE html> 
-<html  lang="en-US" xml:lang="en-US" > 
-<head> <title>Theorem Tavern</title> 
-<meta   charset="utf-8" /> 
-<meta  name="generator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
-<meta  name="viewport" content="width=device-width,initial-scale=1" /> 
-<link  rel="stylesheet" type="text/css" href="thmtav.css" /> 
-<meta  name="src" content="thmtav.tex"> 
-</head><body  
->
-<!--l. 52--><p  class="noindent" ><a  
+<a  
  id="refsection:1"></a><a  
  id="x1-1doc"></a><a  
  id="x1-2r1"></a>
-   <div  class="newtheorem">
-<!--l. 52--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<span  class="head">
 <a  
  id="f6izn8iw"></a>
-<span  
-class="cmbx-10">Definition – </span>Proximal Operator<br  
+Definition – Proximal Operator<br  
 class="newline" /> </span><a  
  id="x1-4"></a><a  
- id="f6izn8iw"></a>The  proximal  operator  (also  called  proximal  mapping),
-also see resolvant for CCP case, is given by
-   <table  class="equation-star"><tr><td>
+ id="f6izn8iw"></a>The proximal operator (also called proximal
+mapping), also see resolvant for CCP case, is defined as a smoothed version of
+the                                       original                                       function
+<!--l. 53--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" >f(⋅)</math>
+<table  class="equation-star"><tr><td>
 <!--l. 55--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-                <msub><mrow  
+           <msub><mrow  
 ><mi  class="qopname">prox</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
-><mi  
->λ</mi><mi  
->f</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo><munder  class="msub"><mrow  
+>λf</mrow></msub 
+>(x) =<munder  class="msub"><mrow  
 ><mi  class="qopname"> argmin</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo></mrow><mrow  
-><mi  
->y</mi></mrow></munder 
-> <mrow><mo  fence="true" form="prefix"> {</mo><mrow><mi  
->Θ</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->y</mi><mo  
-class="MathClass-punc" stretchy="false">;</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mi  
->λ</mi><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->y</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow  
-><mn>1</mn></mrow> 
+>y</mrow></munder 
+> <mrow><mo  fence="true" form="prefix"> {</mo><mrow>Θ(y;x) = λf(y) + <mfrac><mrow  
+>1</mrow> 
 <mrow  
-><mn>2</mn></mrow></mfrac><mo  
-class="MathClass-rel" stretchy="false">∥</mo><mi  
->y</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->x</mi><msubsup><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow><mrow  
-><mn>2</mn></mrow><mrow  
-><mn>2</mn></mrow></msubsup 
-></mrow><mo  fence="true" form="postfix">}</mo></mrow>
+>2</mrow></mfrac>∥y − x<msubsup><mrow  
+>∥</mrow><mrow  
+>2</mrow><mrow  
+>2</mrow></msubsup 
+></mrow><mo  fence="true" form="postfix">}</mo></mrow> .
 </math></td></tr></table>
-<!--l. 59--><p  class="indent" >   <a  
+<!--l. 59--><p  class="noindent" >They may have more than one solution.
+<!--l. 61--><p  class="noindent" ><a  
  id="refsection:2"></a><a  
  id="x1-5r2"></a>
-   <div  class="newtheorem">
-<!--l. 59--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<!--l. 61--><p  class="noindent" ><span  class="head">
 <a  
  id="78req5r7"></a>
-<span  
-class="cmbx-10">Satz – </span>Convergence with Lyapunov Analysis<br  
+Satz – Convergence with Lyapunov Analysis<br  
 class="newline" /> </span><a  
  id="x1-7"></a><a  
  id="78req5r7"></a>Let
-<!--l. 60--><math  
+<!--l. 62--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->f</mi> <mo  
-class="MathClass-rel" stretchy="false">∈</mo><msub><mrow  
+>f ∈<msub><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->F</mi></mstyle></mrow><mrow  
-><mn>0</mn><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->∞</mi></mrow></msub 
+mathvariant="script">F</mstyle></mrow><mrow  
+>0,∞</mrow></msub 
 ></mrow></math>. For any
-<!--l. 60--><math  
+<!--l. 62--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->k</mi> <mo  
-class="MathClass-rel" stretchy="false">∈</mo> <mi  
->ℕ</mi><mo  
-class="MathClass-punc" stretchy="false">,</mo><msub><mrow  
-><mi  
->A</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msub 
-><mo  
-class="MathClass-punc" stretchy="false">,</mo><msub><mrow  
-><mi  
->λ</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msub 
-> <mo  
-class="MathClass-rel" stretchy="false">&#x003E;</mo> <mn>0</mn></mrow></math> and
-any <!--l. 60--><math  
+>k ∈ ℕ,<msub><mrow  
+>A</mrow><mrow  
+>k</mrow></msub 
+>,<msub><mrow  
+>λ</mrow><mrow  
+>k</mrow></msub 
+> &#x003E; 0</mrow></math> and
+any <!--l. 62--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msub 
+>x</mrow><mrow  
+>k</mrow></msub 
 ></mrow></math>,
 the inequality
-<!--tex4ht:inline--><!--l. 64--><math  
+<!--tex4ht:inline--><!--l. 66--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" ><mtable  
 displaystyle="true" columnalign="left" class="alignat-star">
-                     <mtr><mtd  
-columnalign="right" class="align-odd"></mtd>                       <mtd  
+                <mtr><mtd  
+columnalign="right" class="align-odd"></mtd>                  <mtd  
 class="align-even"><msub><mrow  
-><mi  
->A</mi></mrow><mrow  
-><mi  
->k</mi><mo  
-class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow></msub 
-><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-odd"></mtd>                     <mtd  
-class="align-even"><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><msub><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi><mo  
-class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow></msub 
-><mo  
-class="MathClass-close" stretchy="false">)</mo><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-odd"></mtd>                     <mtd  
-class="align-even"> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">⋆</mo></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-close" stretchy="false">)</mo><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-odd"></mtd>                     <mtd  
-class="align-even"><mo  
-class="MathClass-bin" stretchy="false">+</mo><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-odd"></mtd>                     <mtd  
+>A</mrow><mrow  
+>k+1</mrow></msub 
+><mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-odd"></mtd>                <mtd  
+class="align-even">(f(<msub><mrow  
+>x</mrow><mrow  
+>k+1</mrow></msub 
+>)<mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-odd"></mtd>                <mtd  
+class="align-even"> − f(<msup><mrow  
+>x</mrow><mrow  
+>⋆</mrow></msup 
+>))<mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-odd"></mtd>                <mtd  
+class="align-even">+<mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-odd"></mtd>                <mtd  
 class="align-even"><mfrac><mrow  
-><mn>1</mn></mrow>
+>1</mrow>
 <mrow  
-><mn>2</mn></mrow></mfrac><mo  
-class="MathClass-rel" stretchy="false">∥</mo><msub><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi><mo  
-class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow></msub 
-><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-odd"></mtd>                     <mtd  
-class="align-even"> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <msub><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">⋆</mo></mrow></msub 
+>2</mrow></mfrac>∥<msub><mrow  
+>x</mrow><mrow  
+>k+1</mrow></msub 
+><mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-odd"></mtd>                <mtd  
+class="align-even"> − <msub><mrow  
+>x</mrow><mrow  
+>⋆</mrow></msub 
 ><msubsup><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow><mrow  
-><mn>2</mn></mrow><mrow  
-><mn>2</mn></mrow></msubsup 
-><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-label"></mtd>                     <mtd  
-class="align-label"><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-label"></mtd>                     <mtd  
-class="align-label"><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-label"></mtd>                     <mtd  
-class="align-label"><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-label"></mtd>                     <mtd  
-class="align-label"><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-label"></mtd>                     <mtd  
-class="align-label"><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-label"></mtd>                     <mtd  
+>∥</mrow><mrow  
+>2</mrow><mrow  
+>2</mrow></msubsup 
+><mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-label"></mtd>                <mtd  
+class="align-label"><mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-label"></mtd>                <mtd  
+class="align-label"><mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-label"></mtd>                <mtd  
+class="align-label"><mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-label"></mtd>                <mtd  
+class="align-label"><mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-label"></mtd>                <mtd  
+class="align-label"><mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-label"></mtd>                <mtd  
 class="align-label">
-                     <mspace  width="2em"/></mtd></mtr><mtr><mtd  
-columnalign="right" class="align-odd"> <mo  
-class="MathClass-rel" stretchy="false">≤</mo></mtd>                     <mtd  
+                <mspace  width="2em"/></mtd></mtr><mtr><mtd  
+columnalign="right" class="align-odd"> ≤</mtd>                <mtd  
 class="align-even"><msub><mrow  
-><mi  
->A</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msub 
-><mspace  width="2em"/></mtd>                       <mtd  
-columnalign="right" class="align-odd"></mtd>                     <mtd  
-class="align-even"><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><msub><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msub 
-><mo  
-class="MathClass-close" stretchy="false">)</mo><mspace  width="2em"/></mtd>                       <mtd  
-columnalign="right" class="align-odd"></mtd>                     <mtd  
-class="align-even"> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">⋆</mo></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-close" stretchy="false">)</mo><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-odd"></mtd>                     <mtd  
-class="align-even"><mo  
-class="MathClass-bin" stretchy="false">+</mo><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-odd"></mtd>                     <mtd  
+>A</mrow><mrow  
+>k</mrow></msub 
+><mspace  width="2em"/></mtd>                 <mtd  
+columnalign="right" class="align-odd"></mtd>                <mtd  
+class="align-even">(f(<msub><mrow  
+>x</mrow><mrow  
+>k</mrow></msub 
+>)<mspace  width="2em"/></mtd>                 <mtd  
+columnalign="right" class="align-odd"></mtd>                <mtd  
+class="align-even"> − f(<msup><mrow  
+>x</mrow><mrow  
+>⋆</mrow></msup 
+>))<mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-odd"></mtd>                <mtd  
+class="align-even">+<mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-odd"></mtd>                <mtd  
 class="align-even"><mfrac><mrow  
-><mn>1</mn></mrow>
+>1</mrow>
 <mrow  
-><mn>2</mn></mrow></mfrac><mo  
-class="MathClass-rel" stretchy="false">∥</mo><msub><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msub 
-><mspace  width="2em"/></mtd>                       <mtd  
-columnalign="right" class="align-odd"></mtd>                     <mtd  
-class="align-even"> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">⋆</mo></mrow></msup 
+>2</mrow></mfrac>∥<msub><mrow  
+>x</mrow><mrow  
+>k</mrow></msub 
+><mspace  width="2em"/></mtd>                 <mtd  
+columnalign="right" class="align-odd"></mtd>                <mtd  
+class="align-even"> − <msup><mrow  
+>x</mrow><mrow  
+>⋆</mrow></msup 
 ><msubsup><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow><mrow  
+>∥</mrow><mrow  
 >
-<mn>2</mn></mrow><mrow  
-><mn>2</mn></mrow></msubsup 
-><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-label"></mtd>                     <mtd  
-class="align-label"><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-label"></mtd>                     <mtd  
-class="align-label"><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-label"></mtd>                     <mtd  
-class="align-label"><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-label"></mtd>                     <mtd  
-class="align-label"><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-label"></mtd>                     <mtd  
-class="align-label"><mspace  width="2em"/></mtd>                     <mtd  
-columnalign="right" class="align-label"></mtd>                     <mtd  
+2</mrow><mrow  
+>2</mrow></msubsup 
+><mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-label"></mtd>                <mtd  
+class="align-label"><mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-label"></mtd>                <mtd  
+class="align-label"><mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-label"></mtd>                <mtd  
+class="align-label"><mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-label"></mtd>                <mtd  
+class="align-label"><mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-label"></mtd>                <mtd  
+class="align-label"><mspace  width="2em"/></mtd>                <mtd  
+columnalign="right" class="align-label"></mtd>                <mtd  
 class="align-label">
-   <mspace  width="2em"/></mtd></mtr></mtable></math>
-<!--l. 65--><p  class="noindent" >holds for iteration <!--l. 65--><math  
+<mspace  width="2em"/></mtd></mtr></mtable></math>
+<!--l. 67--><p  class="noindent" >holds for iteration <!--l. 67--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi><mo  
-class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow></msub 
-> <mo  
-class="MathClass-rel" stretchy="false">=</mo><msub><mrow  
+>x</mrow><mrow  
+>k+1</mrow></msub 
+> =<msub><mrow  
 ><mi  class="qopname"> prox</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
 ><msub><mrow  
-><mi  
->λ</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msub 
-><mi  
->f</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><msub><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msub 
-><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>
-and number <!--l. 65--><math  
+>λ</mrow><mrow  
+>k</mrow></msub 
+>f</mrow></msub 
+>(<msub><mrow  
+>x</mrow><mrow  
+>k</mrow></msub 
+>)</mrow></math>
+and number <!--l. 67--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
-><mi  
->A</mi></mrow><mrow  
-><mi  
->k</mi><mo  
-class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow></msub 
-> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <msub><mrow  
-><mi  
->A</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msub 
-> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <msub><mrow  
-><mi  
->λ</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msub 
+>A</mrow><mrow  
+>k+1</mrow></msub 
+> = <msub><mrow  
+>A</mrow><mrow  
+>k</mrow></msub 
+> + <msub><mrow  
+>λ</mrow><mrow  
+>k</mrow></msub 
 ></mrow></math>.
-<!--l. 66--><p  class="indent" >   <a  
+<!--l. 68--><p  class="noindent" ><a  
  id="refsection:3"></a></div>
-<!--l. 66--><p  class="indent" >
-<!--l. 68--><p  class="indent" >   <a  
+<!--l. 68--><p  class="noindent" >
+<!--l. 70--><p  class="noindent" ><a  
  id="refsection:4"></a><a  
  id="x1-8r3"></a>
-   <div  class="newtheorem">
-<!--l. 68--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<!--l. 70--><p  class="noindent" ><span  class="head">
 <a  
  id="hnns6j86"></a>
-<span  
-class="cmbx-10">Remark – </span>Computation complexity<br  
-class="newline" /> </span><a  
+Remark – Computation complexity<br  
+class="newline" />
+</span><a  
  id="x1-10"></a><a  
  id="hnns6j86"></a><a  
-href="#f6izn8iw">Proximal   operations</a>   are   in   general   expensive,
-sometimes                                                                                                       as
-expensive as minimizing the function itself. There are however many instances of function
-<!--l. 71--><math  
+href="#f6izn8iw">Proximal  operations</a>  are  in  general  expensive,  sometimes  as  expensive  as
+minimizing the function itself. There are however many instances of function
+<!--l. 73--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->f</mi></mrow></math>
-for which an analytic solution exists. For composite problems, those parts are isolated and
-solved separately by a conceptional proximal operator.
-<!--l. 74--><p  class="indent" >   <a  
+>f</mrow></math>
+for which an analytic solution exists. For composite problems, those parts are
+isolated and solved separately by a conceptional proximal operator.
+<!--l. 76--><p  class="noindent" ><a  
  id="refsection:5"></a></div>
-<!--l. 74--><p  class="indent" >
-<!--l. 76--><p  class="indent" >   <a  
+<!--l. 76--><p  class="noindent" >
+<!--l. 78--><p  class="noindent" ><a  
  id="refsection:6"></a><a  
  id="x1-11r4"></a>
-   <div  class="newtheorem">
-<!--l. 76--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<!--l. 78--><p  class="noindent" ><span  class="head">
 <a  
  id="sbkmp32j"></a>
-<span  
-class="cmbx-10">Remark – </span>Differentials of Proximals<br  
+Remark – Differentials of Proximals<br  
 class="newline" /> </span><a  
  id="x1-13"></a><a  
- id="sbkmp32j"></a>The differential of a proximal operator with respect to its scaling
-factor <!--l. 78--><math  
+ id="sbkmp32j"></a>The differential of a proximal operator with respect to its
+scaling factor <!--l. 80--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->λ</mi></mrow></math>
+>λ</mrow></math>
 is given by <table  class="equation-star"><tr><td>
-<!--l. 79--><math  
+<!--l. 81--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-                 <mi  class="qopname">d</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--><msub><mrow  
+            <mi  class="qopname">d</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--><msub><mrow  
 ><mi  class="qopname">prox</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
-><mi  
->λ</mi><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->u</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mo  
-class="MathClass-bin" stretchy="false">−</mo><msup><mrow  
-><mo  
-class="MathClass-open" stretchy="false">[</mo><mi  
->λ</mi><mi  class="qopname">H</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->u</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo>
-  <mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">+</mo><mi  class="qopname"> Id</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--><mo  
-class="MathClass-close" stretchy="false">]</mo></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup 
-><mi  class="qopname"> d</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->u</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo>
-  <mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  class="qopname">d</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--><mi  
->λ</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-punc" stretchy="false">.</mo>
+>λf(u)</mrow></msub 
+>(x) = −[λ<mi  class="qopname">H</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits-->f(u∙
+  ) +<mi  class="qopname"> Id</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--><msup><mrow  
+>]</mrow><mrow  
+>−1</mrow></msup 
+><mi  class="qopname"> d</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits-->f(u∙
+  ,<mi  class="qopname">d</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits-->λ).
 </math></td></tr></table>
-<!--l. 84--><p  class="indent" >   This result illustrates the smoothing effect of Moreau envelope for non-smooth functions
-(or              functions              under              bad              conditions).              When
-<!--l. 86--><math  
+<!--l. 86--><p  class="noindent" >This result illustrates the smoothing effect of Moreau envelope for non-smooth
+functions       (or       functions       under       bad       conditions).       When
+<!--l. 88--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->λ</mi> <mo  
-class="MathClass-rel" stretchy="false">→</mo> <mn>0</mn></mrow></math>
+>λ → 0</mrow></math>
 we limit at equivalence to the Jacobian at optimal point.
-<!--l. 88--><p  class="indent" >   This  is  a  special  case  of  bi-level  optimization,  see  [<a  
- id="x1-14"></a>  <a  
-href="#cite.6@bilevel_diff">Gou+16</a>,   <a  
-href="http://rfsantacruz.github.io/files/pdfs/TR2016_argmin.pdf#lemma.3.2" >Lemma  3.2</a>  ]  with
-<!--l. 89--><math  
+<!--l. 90--><p  class="noindent" >This is a special case of bi-level optimization, see [<a  
+ id="x1-14"></a> <a  
+href="#cite.6@bilevel_diff">Gou+16</a>,  <a  
+href="http://rfsantacruz.github.io/files/pdfs/TR2016_argmin.pdf#lemma.3.2" >Lemma 3.2</a> ] with
+<!--l. 91--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->λ</mi><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->u</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mi  
->λ</mi><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->u</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow  
-><mn>1</mn></mrow> 
+>f(λ,u) = λf(u) −<mfrac><mrow  
+>1</mrow> 
 <mrow  
-><mn>2</mn></mrow></mfrac><mo  
-class="MathClass-rel" stretchy="false">∥</mo><mi  
->u</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->x</mi><msubsup><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow><mrow  
-><mn>2</mn></mrow><mrow  
-><mn>2</mn></mrow></msubsup 
+>2</mrow></mfrac>∥u − x<msubsup><mrow  
+>∥</mrow><mrow  
+>2</mrow><mrow  
+>2</mrow></msubsup 
 ></mrow></math>
           <dl  class="thebibliography"><dt  id="X6-bilevel_diff" class="thebibliography">
 [Gou+16]  </dt><dd  
 id="bib-1" class="thebibliography">
-          <!--l. 90--><p  class="noindent" ><a  
- id="cite.6@bilevel_diff"></a>Stephen Gould et al. “On Differentiating Parameterized Argmin and Argmax
-          Problems                       with                       Application                       to
-          Bi-level Optimization”. In: <span  
-class="cmti-10">CoRR </span>abs/1607.05447 (2016). arXiv: <a  
-href="https://arxiv.org/abs/1607.05447" ><span  
-class="cmtt-10">1607.05447</span></a>.
-          <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>: <a  
-href="http://rfsantacruz.github.io/files/pdfs/TR2016_argmin.pdf" class="url" ><span  
-class="cmtt-10">http://rfsantacruz.github.io/files/pdfs/TR2016_argmin.pdf</span></a>.</dd></dl>
-<!--l. 90--><p  class="indent" >   <a  
+          <!--l. 92--><p  class="noindent" ><a  
+ id="cite.6@bilevel_diff"></a>Stephen  Gould  et  al.  “On  Differentiating  Parameterized  Argmin
+          and Argmax Problems with Application to Bi-level Optimization”.
+          In:  CoRR  abs/1607.05447  (2016).  arXiv:  <a  
+href="https://arxiv.org/abs/1607.05447" >1607 . 05447</a>.  url:
+          <a  
+href="http://rfsantacruz.github.io/files/pdfs/TR2016_argmin.pdf" class="url" >http://rfsantacruz.github.io/files/pdfs/TR2016_argmin.pdf</a>.</dd></dl>
+<!--l. 92--><p  class="noindent" ><a  
  id="refsection:7"></a></div>
-<!--l. 90--><p  class="indent" >
-<!--l. 91--><p  class="indent" >   <a  
- id="refsection:8"></a></div>
-<!--l. 91--><p  class="indent" >   <a  
+<!--l. 92--><p  class="noindent" >
+<!--l. 93--><p  class="noindent" ><a  
+ id="refsection:8"></a>
+<a  
  id="refsection:9"></a><a  
  id="x1-12rdoc"></a><a  
  id="x1-15r5"></a>
-   <div  class="newtheorem">
-<!--l. 92--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<span  class="head">
 <a  
  id="g87jzem_"></a>
-<span  
-class="cmbx-10">Definition – </span>Closed Convex Proper<br  
+Definition – Closed Convex Proper<br  
 class="newline" /> </span><a  
  id="x1-17"></a><a  
- id="g87jzem_"></a>A collective term for functions which are closed, convex
-and proper. This family includes most function encountered in application and excludes
-special cases found in analysis.
-                                                                            
-                                                                            
-<!--l. 94--><p  class="indent" >   <a  
- id="refsection:10"></a></div>
-<!--l. 94--><p  class="indent" >   <a  
+ id="g87jzem_"></a>A collective term for functions which are
+closed, convex and proper. This family includes most function encountered in
+application and excludes special cases found in analysis.
+<!--l. 96--><p  class="noindent" ><a  
+ id="refsection:10"></a>
+<a  
  id="refsection:11"></a><a  
  id="x1-16rdoc"></a><a  
  id="x1-18r6"></a>
-   <div  class="newtheorem">
-<!--l. 95--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<span  class="head">
 <a  
  id="5nalj3hx"></a>
-<span  
-class="cmbx-10">Definition – </span>Lipschitz Regularity<br  
+Definition – Lipschitz Regularity<br  
 class="newline" /> </span><a  
  id="x1-20"></a><a  
- id="5nalj3hx"></a>For <!--l. 96--><math  
+ id="5nalj3hx"></a>For <!--l. 98--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->L</mi> <mo  
-class="MathClass-rel" stretchy="false">&#x003E;</mo> <mn>0</mn></mrow></math>,
-we say that a mapping <!--l. 96--><math  
+>L &#x003E; 0</mrow></math>,
+we say that a mapping <!--l. 98--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle><mo  
-class="MathClass-punc" stretchy="false">:</mo> <msup><mrow  
-><mi  
->ℝ</mi></mrow><mrow  
-><mi  
->n</mi></mrow></msup 
-> <mo  
-class="MathClass-rel" stretchy="false">→</mo> <msup><mrow  
-><mi  
->ℝ</mi></mrow><mrow  
-><mi  
->m</mi></mrow></msup 
+mathvariant="script">T</mstyle>: <msup><mrow  
+>ℝ</mrow><mrow  
+>n</mrow></msup 
+> → <msup><mrow  
+>ℝ</mrow><mrow  
+>m</mrow></msup 
 ></mrow></math>
 is L-Lipschitz if globally <table  class="equation-star"><tr><td>
-<!--l. 97--><math  
+<!--l. 99--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-                      <mo  
-class="MathClass-rel" stretchy="false">∥</mo><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">−</mo><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->y</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-rel" stretchy="false">∥</mo><mo  
-class="MathClass-rel" stretchy="false">≤</mo> <mi  
->L</mi><mo  
-class="MathClass-rel" stretchy="false">∥</mo><mi  
->x</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->y</mi><mo  
-class="MathClass-rel" stretchy="false">∥</mo><mspace  width="2em" class="qquad"/><mi  
-class="MathClass-op">∀</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo><mi  
->x</mi><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->y</mi> <mo  
-class="MathClass-rel" stretchy="false">∈</mo> <msup><mrow  
-><mi  
->ℝ</mi></mrow><mrow  
-><mi  
->n</mi></mrow></msup 
-><mo  
-class="MathClass-punc" stretchy="false">.</mo>
+                 ∥<mstyle  
+mathvariant="script">T</mstyle>(x) −<mstyle  
+mathvariant="script">T</mstyle>(y)∥≤ L∥x − y∥<mspace  width="2em" class="qquad"/>∀x,y ∈ <msup><mrow  
+>ℝ</mrow><mrow  
+>n</mrow></msup 
+>.
 </math></td></tr></table>
-<!--l. 100--><p  class="indent" >   If a mapping is Lipschitz, it is a continuous mapping because for every <!--l. 101--><math  
+<!--l. 102--><p  class="noindent" >If  a  mapping  is  Lipschitz,  it  is  a  continuous  mapping  because  for  every
+<!--l. 103--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo><mi  
->x</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->y</mi><mo  
-class="MathClass-rel" stretchy="false">∥</mo> <mo  
-class="MathClass-rel" stretchy="false">&#x003C;</mo> <mi  
->δ</mi></mrow></math>
-exists <!--l. 101--><math  
+>∥x − y∥ &#x003C; δ</mrow></math>
+exists <!--l. 103--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->𝜖</mi> <mo  
-class="MathClass-rel" stretchy="false">&#x003C;</mo> <mi  
->L</mi><mi  
->δ</mi></mrow></math>.
-The composition of <!--l. 101--><math  
+>𝜖 &#x003C; Lδ</mrow></math>.
+The composition of <!--l. 103--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle></mrow><mrow  
-><mn>1</mn></mrow></msub 
+mathvariant="script">T</mstyle></mrow><mrow  
+>1</mrow></msub 
 ></mrow></math>
-and <!--l. 101--><math  
+and <!--l. 103--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle></mrow><mrow  
-><mn>2</mn></mrow></msub 
+mathvariant="script">T</mstyle></mrow><mrow  
+>2</mrow></msub 
 ></mrow></math>,
-<!--l. 102--><math  
+<!--l. 104--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle></mrow><mrow  
-><mn>1</mn></mrow></msub 
-> <mo  
-class="MathClass-bin" stretchy="false">∘</mo><msub><mrow  
+mathvariant="script">T</mstyle></mrow><mrow  
+>1</mrow></msub 
+> ∘<msub><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle></mrow><mrow  
-><mn>2</mn></mrow></msub 
+mathvariant="script">T</mstyle></mrow><mrow  
+>2</mrow></msub 
 ></mrow></math>,
-is <!--l. 102--><math  
+is <!--l. 104--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
-><mi  
->L</mi></mrow><mrow  
-><mn>1</mn></mrow></msub 
+>L</mrow><mrow  
+>1</mrow></msub 
 ><msub><mrow  
-><mi  
->L</mi></mrow><mrow  
-><mn>2</mn></mrow></msub 
+>L</mrow><mrow  
+>2</mrow></msub 
 ></mrow></math>-Lipschitz
-(<span  
-class="cmti-10">hint </span>apply Lipschitz inequality twice). The sum of two mappings, <!--l. 103--><math  
+(hint   apply   Lipschitz   inequality   twice).   The   sum   of   two   mappings,
+<!--l. 105--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
-><mi  
->α</mi></mrow><mrow  
-><mn>1</mn></mrow></msub 
+>α</mrow><mrow  
+>1</mrow></msub 
 ><msub><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle></mrow><mrow  
-><mn>1</mn></mrow></msub 
-> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <msub><mrow  
-><mi  
->α</mi></mrow><mrow  
-><mn>2</mn></mrow></msub 
+mathvariant="script">T</mstyle></mrow><mrow  
+>1</mrow></msub 
+> + <msub><mrow  
+>α</mrow><mrow  
+>2</mrow></msub 
 ><msub><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle></mrow><mrow  
-><mn>2</mn></mrow></msub 
+mathvariant="script">T</mstyle></mrow><mrow  
+>2</mrow></msub 
 ></mrow></math>
-is <!--l. 103--><math  
+is <!--l. 105--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mo  
-class="MathClass-rel" stretchy="false">|</mo><msub><mrow  
-><mi  
->α</mi></mrow><mrow  
-><mn>1</mn></mrow></msub 
-><mo  
-class="MathClass-rel" stretchy="false">|</mo><msub><mrow  
-><mi  
->L</mi></mrow><mrow  
-><mn>1</mn></mrow></msub 
-> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <mo  
-class="MathClass-rel" stretchy="false">|</mo><msub><mrow  
-><mi  
->α</mi></mrow><mrow  
-><mn>2</mn></mrow></msub 
-><mo  
-class="MathClass-rel" stretchy="false">|</mo><msub><mrow  
-><mi  
->L</mi></mrow><mrow  
-><mn>2</mn></mrow></msub 
-><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>-Lipschitz.
-<!--l. 105--><p  class="indent" >   <a  
+>(|<msub><mrow  
+>α</mrow><mrow  
+>1</mrow></msub 
+>|<msub><mrow  
+>L</mrow><mrow  
+>1</mrow></msub 
+> + |<msub><mrow  
+>α</mrow><mrow  
+>2</mrow></msub 
+>|<msub><mrow  
+>L</mrow><mrow  
+>2</mrow></msub 
+>)</mrow></math>-Lipschitz.
+<!--l. 107--><p  class="noindent" ><a  
  id="refsection:12"></a><a  
  id="x1-21r7"></a>
-   <div  class="newtheorem">
-<!--l. 105--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<!--l. 107--><p  class="noindent" ><span  class="head">
 <a  
  id="17vzrkyq"></a>
-<span  
-class="cmbx-10">Beispiel – </span>Affine Function<br  
+Beispiel – Affine Function<br  
 class="newline" /> </span><a  
  id="x1-23"></a><a  
- id="17vzrkyq"></a>An affine function <!--l. 106--><math  
+ id="17vzrkyq"></a>An affine function <!--l. 108--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->F</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mi  
->A</mi><mi  
->x</mi> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <mi  
->b</mi></mrow></math>
-has Lipschitz constant <!--l. 106--><math  
+>F(x) = Ax + b</mrow></math>
+has Lipschitz constant <!--l. 108--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->L</mi> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mo  
-class="MathClass-rel" stretchy="false">∥</mo><mi  
->A</mi><msub><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow><mrow  
-><mn>2</mn></mrow></msub 
+>L = ∥A<msub><mrow  
+>∥</mrow><mrow  
+>2</mrow></msub 
 ></mrow></math>,
-the spectral norm or maximum singular value of <!--l. 107--><math  
+the       spectral       norm       or       maximum       singular       value       of
+<!--l. 109--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->A</mi></mrow></math>.
-<!--l. 108--><p  class="indent" >   <a  
+>A</mrow></math>.
+<!--l. 110--><p  class="noindent" ><a  
  id="refsection:13"></a></div>
-<!--l. 108--><p  class="indent" >
-<!--l. 110--><p  class="indent" >   <a  
+<!--l. 110--><p  class="noindent" >
+<!--l. 112--><p  class="noindent" ><a  
  id="refsection:14"></a><a  
  id="x1-24r8"></a>
-   <div  class="newtheorem">
-<!--l. 110--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<!--l. 112--><p  class="noindent" ><span  class="head">
 <a  
  id="jydhwyqa"></a>
-<span  
-class="cmbx-10">Beispiel – </span>Differentiable Function<br  
+Beispiel – Differentiable Function<br  
 class="newline" /> </span><a  
  id="x1-26"></a><a  
- id="jydhwyqa"></a>Let <!--l. 111--><math  
+ id="jydhwyqa"></a>Let <!--l. 113--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle><mo  
-class="MathClass-punc" stretchy="false">:</mo><msup><mrow  
+mathvariant="script">T</mstyle>:<msup><mrow  
 > <mstyle  
-mathvariant="script"><mi  
->R</mi></mstyle></mrow><mrow  
-><mi  
->n</mi></mrow></msup 
-> <mo  
-class="MathClass-rel" stretchy="false">→</mo><msup><mrow  
+mathvariant="script">R</mstyle></mrow><mrow  
+>n</mrow></msup 
+> →<msup><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->R</mi></mstyle></mrow><mrow  
-><mi  
->n</mi></mrow></msup 
+mathvariant="script">R</mstyle></mrow><mrow  
+>n</mrow></msup 
 ></mrow></math>
 be a differentiable function, then <table  class="equation-star"><tr><td>
-<!--l. 112--><math  
+<!--l. 114--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-                          <mstyle  
-class="text"><mtext   >L-Lipschitz</mtext></mstyle><mspace  width="1em" class="quad"/> <mo  
-class="MathClass-rel" stretchy="false">↔</mo><mspace  width="1em" class="quad"/><mo  
-class="MathClass-rel" stretchy="false">∥</mo><mi  class="qopname">D</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><msub><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow><mrow  
-><mn>2</mn></mrow></msub 
-> <mo  
-class="MathClass-rel" stretchy="false">≤</mo> <mi  
->L</mi>
+                     <mstyle  
+class="text"><mtext   >L-Lipschitz</mtext></mstyle><mspace  width="1em" class="quad"/> ↔<mspace  width="1em" class="quad"/>∥<mi  class="qopname">D</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits-->f(x)<msub><mrow  
+>∥</mrow><mrow  
+>2</mrow></msub 
+> ≤ L
 </math></td></tr></table>
-   <div  class="tabular"> <table  id="TBL-1" class="tabular" 
+<div  class="tabular"> <table  id="TBL-1" class="tabular" 
  
 ><colgroup  id="TBL-1-1g"><col  
 id="TBL-1-1"><col  
 id="TBL-1-2"></colgroup><tr   
  style="vertical-align:baseline;" id="TBL-1-1-"><td   style="text-align:right; white-space:nowrap;" id="TBL-1-1-1"  
 class="td11">For a proof</td><td   style="text-align:left; white-space:nowrap;" id="TBL-1-1-2"  
-class="td11">(<!--l. 117--><math  
+class="td11">(<!--l. 119--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mspace  width="0.28em" class="thickpace"/><mo  
-class="MathClass-rel" stretchy="false">⟹</mo><mspace  width="0.28em" class="thickpace"/></mrow></math>) bound definition of differentials                                        </td>
+><mspace  width="0.28em" class="thickpace"/>⟹<mspace  width="0.28em" class="thickpace"/></mrow></math>) bound definition of differentials                                        </td>
 </tr><tr   
  style="vertical-align:baseline;" id="TBL-1-2-"><td   style="text-align:right; white-space:nowrap;" id="TBL-1-2-1"  
 class="td11">          </td><td   style="text-align:left; white-space:nowrap;" id="TBL-1-2-2"  
-class="td11">(<!--l. 118--><math  
+class="td11">(<!--l. 120--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mspace  width="0.28em" class="thickpace"/><mo  
-class="MathClass-rel" stretchy="false">⟸</mo><mspace  width="0.28em" class="thickpace"/></mrow></math>) apply mean value theorem and Cauchy-Schwartz inequality to</td>
+><mspace  width="0.28em" class="thickpace"/>⟸<mspace  width="0.28em" class="thickpace"/></mrow></math>) apply mean value theorem and Cauchy-Schwartz inequality to</td>
 </tr><tr   
  style="vertical-align:baseline;" id="TBL-1-3-"><td   style="text-align:right; white-space:nowrap;" id="TBL-1-3-1"  
 class="td11">          </td><td   style="text-align:left; white-space:nowrap;" id="TBL-1-3-2"  
-class="td11">  <!--l. 120--><math  
+class="td11">  <!--l. 122--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->g</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->t</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <msup><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle><mi  
->x</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle><mi  
->y</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow><mrow  
-><mi  
->T</mi></mrow></msup 
+>g(t) = (<mstyle  
+mathvariant="script">T</mstyle>x −<mstyle  
+mathvariant="script">T</mstyle>y<msup><mrow  
+>)</mrow><mrow  
+>T</mrow></msup 
 ><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->t</mi><mi  
->x</mi> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <mo  
-class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->t</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mi  
->y</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>                                                                                  </td>
+mathvariant="script">T</mstyle>(tx + (1 − t)y)</mrow></math>                                                                                  </td>
 </tr><tr   
  style="vertical-align:baseline;" id="TBL-1-4-"><td   style="text-align:right; white-space:nowrap;" id="TBL-1-4-1"  
 class="td11">          </td><td   style="text-align:left; white-space:nowrap;" id="TBL-1-4-2"  
-class="td11">  (with <!--l. 121--><math  
+class="td11">  (with <!--l. 123--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle><mi  
->x</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo><mstyle  
-mathvariant="script"><mi  
->T</mi></mstyle><mi  
->y</mi><msubsup><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow><mrow  
-><mn>2</mn></mrow><mrow  
-><mn>2</mn></mrow></msubsup 
-> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mi  
->g</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->g</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mn>0</mn><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>)                                                                         </td> </tr></table></div>
-<!--l. 123--><p  class="indent" >   <a  
+>∥<mstyle  
+mathvariant="script">T</mstyle>x −<mstyle  
+mathvariant="script">T</mstyle>y<msubsup><mrow  
+>∥</mrow><mrow  
+>2</mrow><mrow  
+>2</mrow></msubsup 
+> = g(1) − g(0)</mrow></math>)                                                                         </td></tr></table></div>
+<!--l. 125--><p  class="noindent" ><a  
  id="refsection:15"></a></div>
-<!--l. 123--><p  class="indent" >
-<!--l. 125--><p  class="indent" >   <a  
+<!--l. 125--><p  class="noindent" >
+<!--l. 127--><p  class="noindent" ><a  
  id="refsection:16"></a><a  
  id="x1-27r9"></a>
-   <div  class="newtheorem">
-<!--l. 125--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<!--l. 127--><p  class="noindent" ><span  class="head">
 <a  
  id="5pxh2ufj"></a>
-<span  
-class="cmbx-10">Beispiel – </span>Projections<br  
+Beispiel – Projections<br  
 class="newline" /> </span><a  
  id="x1-29"></a><a  
- id="5pxh2ufj"></a>The projection of <!--l. 126--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mrow  
-><mi  
->x</mi></mrow></math>
-onto a non-empty closed convex set <!--l. 126--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mrow  
-><mstyle  
-mathvariant="script"><mi  
->C</mi></mstyle></mrow></math>
-is defined as <table  class="equation-star"><tr><td>
+ id="5pxh2ufj"></a>The projection of
 <!--l. 128--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+>x</mrow></math> onto a non-empty
+closed convex set <!--l. 128--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+><mstyle  
+mathvariant="script">C</mstyle></mrow></math>
+is defined as <table  class="equation-star"><tr><td>
+<!--l. 130--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-                   <msub><mrow  
+              <msub><mrow  
 ><mi  class="qopname"><mi  mathvariant="normal">Π</mi></mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->C</mi></mstyle></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->z</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo><munder  class="msub"><mrow  
+mathvariant="script">C</mstyle></mrow></msub 
+>(z) =<munder  class="msub"><mrow  
 ><mi  class="qopname"> argmin</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo></mrow><mrow  
-><mi  
->x</mi><mo  
-class="MathClass-rel" stretchy="false">∈</mo><mstyle  
-mathvariant="script"><mi  
->C</mi></mstyle></mrow></munder 
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo><mi  
->z</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->x</mi><msub><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow><mrow  
-><mn>2</mn></mrow></msub 
-> <mo  
-class="MathClass-rel" stretchy="false">=</mo><msub><mrow  
+>x∈<mstyle  
+mathvariant="script">C</mstyle></mrow></munder 
+>∥z − x<msub><mrow  
+>∥</mrow><mrow  
+>2</mrow></msub 
+> =<msub><mrow  
 ><mi  class="qopname"> prox</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
-><mi  class="qopname">I</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-rel" stretchy="false">∈</mo><mstyle  
-mathvariant="script"><mi  
->C</mi></mstyle><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->z</mi><mo  
-class="MathClass-close" stretchy="false">)</mo>
+><mi  class="qopname">I</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits-->(x∈<mstyle  
+mathvariant="script">C</mstyle>)</mrow></msub 
+>(z)
 </math></td></tr></table>
-<!--l. 132--><p  class="indent" >   and a <a  
-href="#2s6tfa1j">non-expansive</a> operator with unique closest point in <!--l. 133--><math  
+<!--l. 134--><p  class="noindent" >and    a    <a  
+href="#2s6tfa1j">non-expansive</a>    operator    with    unique    closest    point    in
+<!--l. 135--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->C</mi></mstyle></mrow></math>.
-<!--l. 135--><p  class="indent" >   For a proof see that the closest projection of <!--l. 135--><math  
+mathvariant="script">C</mstyle></mrow></math>.
+<!--l. 137--><p  class="noindent" >For       a       proof       see       that       the       closest       projection       of
+<!--l. 137--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->x</mi></mrow></math>
-is a fixed-point <!--l. 136--><math  
+>x</mrow></math>
+is a fixed-point <!--l. 138--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
 ><mi  class="qopname"><mi  mathvariant="normal">Π</mi></mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->C</mi></mstyle></mrow></msub 
-><mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo></mrow></math>
-and the differential <!--l. 137--><math  
+mathvariant="script">C</mstyle></mrow></msub 
+>x∙ = x∙</mrow></math>
+and the differential <!--l. 139--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
 ><mi  class="qopname">d</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
-><mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo></mrow></msub 
+>x∙</mrow></msub 
 ><msub><mrow  
 ><mi  class="qopname"><mi  mathvariant="normal">Π</mi></mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->C</mi></mstyle></mrow></msub 
-><mi  
->x</mi> <mo  
-class="MathClass-rel" stretchy="false">=</mo><msub><mrow  
+mathvariant="script">C</mstyle></mrow></msub 
+>x =<msub><mrow  
 ><mi  class="qopname"> d</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
-><mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo><msub><mrow  
+>x∙</mrow></msub 
+>(x −<msub><mrow  
 ><mi  class="qopname"> dist</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->C</mi></mstyle></mrow></msub 
-><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mo  
-class="MathClass-open" stretchy="false">(</mo><msub><mrow  
+mathvariant="script">C</mstyle></mrow></msub 
+>x) = (<msub><mrow  
 ><mi  class="qopname"><mi  mathvariant="normal">Π</mi></mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->C</mi></mstyle></mrow></msub 
-><mi  
->x</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo><mo  
-class="MathClass-close" stretchy="false">)</mo><mi  class="qopname">d</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--><mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo></mrow></math>.
+mathvariant="script">C</mstyle></mrow></msub 
+>x − x∙)<mi  class="qopname">d</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits-->x∙</mrow></math>.
 Apply the optimality condition
-<!--l. 142--><p  class="indent" >
-<!--tex4ht:inline--><!--l. 145--><math  
+<!--l. 144--><p  class="noindent" >
+<!--tex4ht:inline--><!--l. 147--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" ><mtable  
 displaystyle="true" columnalign="left" class="alignat-star">
-                            <mtr><mtd  
-columnalign="right" class="align-odd"><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  class="qopname">D</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--><msub><mrow  
+                       <mtr><mtd  
+columnalign="right" class="align-odd">(<mi  class="qopname">D</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--><msub><mrow  
 ><mi  class="qopname"><mi  mathvariant="normal">Π</mi></mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->C</mi></mstyle></mrow></msub 
-><mo  
-class="MathClass-close" stretchy="false">)</mo><msup><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo>
-  <mo  
-class="MathClass-close" stretchy="false">)</mo></mrow><mrow  
-><mi  
->T</mi></mrow></msup 
-></mtd>                            <mtd  
-class="align-even"><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->y</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo>
-  <mo  
-class="MathClass-close" stretchy="false">)</mo><mspace  width="2em"/></mtd>                               <mtd  
-columnalign="right" class="align-odd"></mtd>                            <mtd  
-class="align-even"> <mo  
-class="MathClass-rel" stretchy="false">≥</mo> <mn>0</mn><mspace  width="2em"/></mtd>                            <mtd  
-columnalign="right" class="align-label"></mtd>                            <mtd  
-class="align-label"><mspace  width="2em"/></mtd>                            <mtd  
-columnalign="right" class="align-label"></mtd>                            <mtd  
+mathvariant="script">C</mstyle></mrow></msub 
+>)(x∙
+  <msup><mrow  
+>)</mrow><mrow  
+>T</mrow></msup 
+></mtd>                       <mtd  
+class="align-even">(y − x∙
+  )<mspace  width="2em"/></mtd>                          <mtd  
+columnalign="right" class="align-odd"></mtd>                       <mtd  
+class="align-even"> ≥ 0<mspace  width="2em"/></mtd>                       <mtd  
+columnalign="right" class="align-label"></mtd>                       <mtd  
+class="align-label"><mspace  width="2em"/></mtd>                       <mtd  
+columnalign="right" class="align-label"></mtd>                       <mtd  
 class="align-label">
-                            <mspace  width="2em"/></mtd></mtr><mtr><mtd  
-columnalign="right" class="align-odd"><msup><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><msub><mrow  
+                       <mspace  width="2em"/></mtd></mtr><mtr><mtd  
+columnalign="right" class="align-odd">(<msub><mrow  
 ><mi  class="qopname"><mi  mathvariant="normal">Π</mi></mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->C</mi></mstyle></mrow></msub 
-><mi  
->u</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->u</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow><mrow  
-><mi  
->T</mi></mrow></msup 
-></mtd>                            <mtd  
-class="align-even"><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->y</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo><msub><mrow  
+mathvariant="script">C</mstyle></mrow></msub 
+>u − u<msup><mrow  
+>)</mrow><mrow  
+>T</mrow></msup 
+></mtd>                       <mtd  
+class="align-even">(y −<msub><mrow  
 ><mi  class="qopname"><mi  mathvariant="normal">Π</mi></mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
 ><mstyle  
 mathvariant="script">
-<mi  
->C</mi></mstyle></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->u</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-close" stretchy="false">)</mo><mspace  width="2em"/></mtd>                            <mtd  
-columnalign="right" class="align-odd"></mtd>                            <mtd  
-class="align-even"> <mo  
-class="MathClass-rel" stretchy="false">≥</mo> <mn>0</mn><mspace  width="2em"/></mtd>                            <mtd  
-columnalign="right" class="align-label"></mtd>                            <mtd  
-class="align-label"><mspace  width="2em"/></mtd>                            <mtd  
-columnalign="right" class="align-label"></mtd>                            <mtd  
+C</mstyle></mrow></msub 
+>(u))<mspace  width="2em"/></mtd>                       <mtd  
+columnalign="right" class="align-odd"></mtd>                       <mtd  
+class="align-even"> ≥ 0<mspace  width="2em"/></mtd>                       <mtd  
+columnalign="right" class="align-label"></mtd>                       <mtd  
+class="align-label"><mspace  width="2em"/></mtd>                       <mtd  
+columnalign="right" class="align-label"></mtd>                       <mtd  
 class="align-label">
-   <mspace  width="2em"/></mtd></mtr></mtable></math>
-at two points <!--l. 146--><math  
+<mspace  width="2em"/></mtd></mtr></mtable></math>
+at two points <!--l. 148--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->x</mi><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->y</mi> <mo  
-class="MathClass-rel" stretchy="false">∈</mo> <msup><mrow  
-><mi  
->ℝ</mi></mrow><mrow  
-><mi  
->n</mi></mrow></msup 
+>x,y ∈ <msup><mrow  
+>ℝ</mrow><mrow  
+>n</mrow></msup 
 ></mrow></math>.
 Adding both, apply Cauchy-Schwartz inequality to conclude <table  class="equation-star"><tr><td>
-                                                                            
-                                                                            
-<!--l. 148--><math  
+<!--l. 150--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-                           <mo  
-class="MathClass-rel" stretchy="false">∥</mo><msub><mrow  
+                      ∥<msub><mrow  
 ><mi  class="qopname"><mi  mathvariant="normal">Π</mi></mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->C</mi></mstyle></mrow></msub 
-><mi  
->x</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo><msub><mrow  
+mathvariant="script">C</mstyle></mrow></msub 
+>x −<msub><mrow  
 ><mi  class="qopname"><mi  mathvariant="normal">Π</mi></mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--></mrow><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->C</mi></mstyle></mrow></msub 
-><mi  
->y</mi><msub><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow><mrow  
-><mn>2</mn></mrow></msub 
-> <mo  
-class="MathClass-rel" stretchy="false">≤</mo><mo  
-class="MathClass-rel" stretchy="false">∥</mo><mi  
->x</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->y</mi><msub><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow><mrow  
-><mn>2</mn></mrow></msub 
-><mo  
-class="MathClass-punc" stretchy="false">.</mo>
+mathvariant="script">C</mstyle></mrow></msub 
+>y<msub><mrow  
+>∥</mrow><mrow  
+>2</mrow></msub 
+> ≤∥x − y<msub><mrow  
+>∥</mrow><mrow  
+>2</mrow></msub 
+>.
 </math></td></tr></table>
-   <a  
+<a  
  id="refsection:17"></a></div>
-<!--l. 152--><p  class="indent" >
-<!--l. 154--><p  class="indent" >   <a  
+<!--l. 154--><p  class="noindent" >
+<!--l. 156--><p  class="noindent" ><a  
  id="refsection:18"></a><a  
  id="x1-30r10"></a>
-   <div  class="newtheorem">
-<!--l. 154--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<!--l. 156--><p  class="noindent" ><span  class="head">
 <a  
  id="2s6tfa1j"></a>
-<span  
-class="cmbx-10">Remark – </span>Nonexpansive and Contractive Mappings<br  
+Remark – Nonexpansive and Contractive Mappings<br  
 class="newline" /> </span><a  
  id="x1-32"></a><a  
- id="2s6tfa1j"></a>A mapping is called nonexpansive for
-<!--l. 155--><math  
+ id="2s6tfa1j"></a>A    mapping    is    called
+nonexpansive for <!--l. 157--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->L</mi> <mo  
-class="MathClass-rel" stretchy="false">≤</mo> <mn>1</mn></mrow></math>,
-contractive for <!--l. 156--><math  
+>L ≤ 1</mrow></math>,
+contractive for <!--l. 158--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->L</mi> <mo  
-class="MathClass-rel" stretchy="false">&#x003C;</mo> <mn>1</mn></mrow></math>.
-<!--l. 157--><p  class="indent" >   <a  
+>L &#x003C; 1</mrow></math>.
+<!--l. 159--><p  class="noindent" ><a  
  id="refsection:19"></a></div>
-<!--l. 157--><p  class="indent" >
-<!--l. 158--><p  class="indent" >   <a  
- id="refsection:20"></a></div>
-<!--l. 158--><p  class="indent" >   <a  
+<!--l. 159--><p  class="noindent" >
+<!--l. 160--><p  class="noindent" ><a  
+ id="refsection:20"></a>
+<a  
  id="refsection:21"></a><a  
  id="x1-31rdoc"></a><a  
  id="x1-33r11"></a>
-   <div  class="newtheorem">
-<!--l. 159--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<span  class="head">
 <a  
  id="ceh4aors"></a>
-<span  
-class="cmbx-10">Definition – </span>L-Smooth (<span  
-class="cmti-10">o</span>r L-Lipschitz Continuous Gradient)<br  
+Definition – L-Smooth (or L-Lipschitz Continuous Gradient)<br  
 class="newline" /> </span><a  
  id="x1-35"></a><a  
- id="ceh4aors"></a>Lipschitz regularity for the gradient
-of a function is called a L-Lipschitz continuous gradient (or L-smooth) function with
-<!--l. 161--><math  
+ id="ceh4aors"></a>Lipschitz regularity for the
+gradient of a function is called a L-Lipschitz continuous gradient (or L-smooth) function
+with <!--l. 163--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->L</mi> <mo  
-class="MathClass-rel" stretchy="false">&#x003E;</mo> <mn>0</mn></mrow></math>
+>L &#x003E; 0</mrow></math>
 <table  class="equation-star"><tr><td>
-<!--l. 162--><math  
+<!--l. 164--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-                         <mo  
-class="MathClass-rel" stretchy="false">∥</mo><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">−</mo><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->y</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-rel" stretchy="false">∥</mo><mo  
-class="MathClass-rel" stretchy="false">≤</mo> <mi  
->L</mi><mo  
-class="MathClass-rel" stretchy="false">∥</mo><mi  
->x</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->y</mi><mo  
-class="MathClass-rel" stretchy="false">∥</mo><mo  
-class="MathClass-punc" stretchy="false">.</mo>
+                    ∥∇f(x) −∇f(y)∥≤ L∥x − y∥.
 </math></td></tr></table>
-<!--l. 166--><p  class="indent" >   <a  
+<!--l. 168--><p  class="noindent" ><a  
  id="refsection:22"></a><a  
  id="x1-36r12"></a>
-   <div  class="newtheorem">
-<!--l. 166--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<!--l. 168--><p  class="noindent" ><span  class="head">
 <a  
  id="5vsiv5i2"></a>
-<span  
-class="cmbx-10">Remark – </span>Cocoerciveness of L-Smooth functions<br  
+Remark – Cocoerciveness of L-Smooth functions<br  
 class="newline" /> </span><a  
  id="x1-38"></a><a  
- id="5vsiv5i2"></a>For  a  convex  function  (L-Smootheness
-<!--l. 167--><math  
+ id="5vsiv5i2"></a>For    a    convex    function
+(L-Smootheness
+<!--l. 169--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">⟺</mo></mrow></math>
+>⟺</mrow></math>
 1/L-cocoerciveness of gradients).
-<!--l. 170--><p  class="indent" >   <span  
-class="cmti-10">Proof sketch </span>Use inequality <!--l. 170--><math  
+<!--l. 172--><p  class="noindent" >Proof sketch Use inequality <!--l. 172--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->y</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">−</mo><mrow><mo  fence="true" form="prefix"> ⟨</mo><mrow><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-rel" stretchy="false">|</mo><mi  
->y</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->x</mi></mrow><mo  fence="true" form="postfix">⟩</mo></mrow> <mo  
-class="MathClass-rel" stretchy="false">≤</mo> <mfrac><mrow  
-><mn>1</mn></mrow> 
+>f(y) − f(x) −<mrow><mo  fence="true" form="prefix"> ⟨</mo><mrow>∇f(x)|y − x</mrow><mo  fence="true" form="postfix">⟩</mo></mrow> ≤ <mfrac><mrow  
+>1</mrow> 
 <mrow  
-><mn>2</mn><mi  
->L</mi></mrow></mfrac><mo  
-class="MathClass-rel" stretchy="false">∥</mo><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">−</mo><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->y</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><msup><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow><mrow  
-><mn>2</mn></mrow></msup 
+>2L</mrow></mfrac>∥∇f(x) −∇f(y)<msup><mrow  
+>∥</mrow><mrow  
+>2</mrow></msup 
 ></mrow></math>
-(which is implied by L-smootheness when function convex). Evaluate function at two points
-<table  class="equation-star"><tr><td>
-<!--l. 174--><math  
+(which is implied by L-smootheness when function convex). Evaluate function at two
+points <table  class="equation-star"><tr><td>
+<!--l. 176--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-                <msub><mrow  
-><mi  
->f</mi></mrow><mrow  
-><mi  
->x</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->z</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->z</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">−</mo><mrow><mo  fence="true" form="prefix"> ⟨</mo><mrow><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-rel" stretchy="false">|</mo><mi  
->z</mi></mrow><mo  fence="true" form="postfix">⟩</mo></mrow><mspace  width="1em" class="quad"/><mstyle  
+           <msub><mrow  
+>f</mrow><mrow  
+>x</mrow></msub 
+>(z) = f(z) −<mrow><mo  fence="true" form="prefix"> ⟨</mo><mrow>∇f(x)|z</mrow><mo  fence="true" form="postfix">⟩</mo></mrow><mspace  width="1em" class="quad"/><mstyle  
 class="text"><mtext   >and</mtext></mstyle><mspace  width="1em" class="quad"/><msub><mrow  
-><mi  
->f</mi></mrow><mrow  
-><mi  
->y</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->z</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->z</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">−</mo><mrow><mo  fence="true" form="prefix"> ⟨</mo><mrow><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->y</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-rel" stretchy="false">|</mo><mi  
->z</mi></mrow><mo  fence="true" form="postfix">⟩</mo></mrow>
+>f</mrow><mrow  
+>y</mrow></msub 
+>(z) = f(z) −<mrow><mo  fence="true" form="prefix"> ⟨</mo><mrow>∇f(y)|z</mrow><mo  fence="true" form="postfix">⟩</mo></mrow>
 </math></td></tr></table>
-<!--l. 178--><p  class="indent" >   and
-combine both inequalities to show co-coerciveness. This can also be seen from the relation
-<!--l. 179--><math  
+<!--l. 180--><p  class="noindent" >and combine both inequalities to show co-coerciveness. This can also be seen
+from                                          the                                          relation
+<!--l. 181--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><msup><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->∂</mi><mi  
->f</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup 
-> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mi  
->∂</mi><msup><mrow  
-><mi  
->f</mi></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">⋆</mo></mrow></msup 
+>(∂f<msup><mrow  
+>)</mrow><mrow  
+>−1</mrow></msup 
+> = ∂<msup><mrow  
+>f</mrow><mrow  
+>⋆</mrow></msup 
 ></mrow></math>
 for CCP functions.
-<!--l. 181--><p  class="indent" >   <a  
+<!--l. 183--><p  class="noindent" ><a  
  id="refsection:23"></a></div>
-<!--l. 181--><p  class="indent" >
-<!--l. 183--><p  class="indent" >   <a  
+<!--l. 183--><p  class="noindent" >
+<!--l. 185--><p  class="noindent" ><a  
  id="refsection:24"></a><a  
  id="x1-39r13"></a>
-   <div  class="newtheorem">
-<!--l. 183--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<!--l. 185--><p  class="noindent" ><span  class="head">
 <a  
  id="2tz2l_0t"></a>
-<span  
-class="cmbx-10">Literature –</span><br  
+Literature –<br  
 class="newline" /> </span><a  
  id="x1-41"></a><a  
- id="2tz2l_0t"></a>A good overview of continuous gradient under various conditions can be found
-at the blog post [<a  
+ id="2tz2l_0t"></a>A good overview of continuous gradient under various conditions
+can be found at the blog post [<a  
  id="x1-42"></a><a  
 href="#cite.24@zhou_continuous_gradient">Zho</a>], also see [<a  
  id="x1-43"></a> <a  
 href="#cite.24@acceleration_methods">dST21</a>,  <a  
 href="https://arxiv.org/pdf/2101.09545.pdf#theorem.A.1.1" >Appendix A</a> ]. Further [<a  
- id="x1-44"></a> <a  
+ id="x1-44"></a>
+<a  
 href="#cite.24@structured_nonconvex_functions">GSL21</a>,  <a  
-href="https://arxiv.org/pdf/2006.10311.pdf#theorem.3.4" >connections</a> ] of
-smoothness to [ <a  
+href="https://arxiv.org/pdf/2006.10311.pdf#theorem.3.4" >connections</a> ] of smoothness to [ <a  
 href="#cite.24@structured_nonconvex_functions">GSL21</a>,  <a  
-href="https://arxiv.org/pdf/2006.10311.pdf#equation.3.13" >expected-smoothness</a> ] and [ <a  
+href="https://arxiv.org/pdf/2006.10311.pdf#equation.3.13" >expected-smoothness</a> ] and [
+<a  
 href="#cite.24@structured_nonconvex_functions">GSL21</a>,  <a  
-href="https://arxiv.org/pdf/2006.10311.pdf#assumption.3.1" >expected residual</a> ] exist. Also
-the [<a  
+href="https://arxiv.org/pdf/2006.10311.pdf#assumption.3.1" >expected residual</a> ] exist. Also the [<a  
  id="x1-45"></a> <a  
 href="#cite.24@garrigos2023handbook">GG23</a>,  <a  
-href="https://arxiv.org/pdf/2301.11235.pdf#subsection.2.5" >Section 2.5</a> ] lists a number of compact proofs for smoothness and smoothness
-under convexity.
+href="https://arxiv.org/pdf/2301.11235.pdf#subsection.2.5" >Section 2.5</a> ] lists a number
+of compact proofs for smoothness and smoothness under convexity.
           <dl  class="thebibliography"><dt  id="X24-acceleration_methods" class="thebibliography">
 [dST21]   </dt><dd  
 id="bib-2" class="thebibliography">
-          <!--l. 186--><p  class="noindent" ><a  
- id="cite.24@acceleration_methods"></a>Alexandre d’Aspremont, Damien Scieur, and Adrien B. Taylor. “Acceleration
-          Methods”.  In:  <span  
-class="cmti-10">CoRR  </span>abs/2101.09545  (2021).  arXiv:  <a  
-href="https://arxiv.org/abs/2101.09545" ><span  
-class="cmtt-10">2101 . 09545</span></a>.  <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>:
+          <!--l. 188--><p  class="noindent" ><a  
+ id="cite.24@acceleration_methods"></a>Alexandre  d’Aspremont,  Damien  Scieur,  and  Adrien  B.  Taylor.
+          “Acceleration Methods”. In: CoRR abs/2101.09545 (2021). arXiv:
           <a  
-href="https://arxiv.org/pdf/2101.09545.pdf" class="url" ><span  
-class="cmtt-10">https://arxiv.org/pdf/2101.09545.pdf</span></a>.
+href="https://arxiv.org/abs/2101.09545" >2101.09545</a>. url: <a  
+href="https://arxiv.org/pdf/2101.09545.pdf" class="url" >https://arxiv.org/pdf/2101.09545.pdf</a>.
           </dd><dt  id="X24-garrigos2023handbook" class="thebibliography">
 [GG23]    </dt><dd  
 id="bib-3" class="thebibliography">
-          <!--l. 186--><p  class="noindent" ><a  
- id="cite.24@garrigos2023handbook"></a>Guillaume Garrigos and Robert M. Gower. <span  
-class="cmti-10">Handbook of Convergence Theorems</span>
-          <span  
-class="cmti-10">for (Stochastic) Gradient Methods</span>. 2023. arXiv: <a  
-href="https://arxiv.org/abs/2301.11235" ><span  
-class="cmtt-10">2301.11235 [math.OC]</span></a>. <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>:
+          <!--l. 188--><p  class="noindent" ><a  
+ id="cite.24@garrigos2023handbook"></a>Guillaume                Garrigos                and                Robert
+          M.  Gower.  Handbook  of  Convergence  Theorems  for  (Stochastic)
+          Gradient  Methods.  2023.  arXiv:  <a  
+href="https://arxiv.org/abs/2301.11235" >2301 . 11235 [math.OC]</a>.  url:
           <a  
-href="https://arxiv.org/pdf/2301.11235.pdf" class="url" ><span  
-class="cmtt-10">https://arxiv.org/pdf/2301.11235.pdf</span></a>.
+href="https://arxiv.org/pdf/2301.11235.pdf" class="url" >https://arxiv.org/pdf/2301.11235.pdf</a>.
           </dd><dt  id="X24-structured_nonconvex_functions" class="thebibliography">
 [GSL21]   </dt><dd  
 id="bib-4" class="thebibliography">
-          <!--l. 186--><p  class="noindent" ><a  
- id="cite.24@structured_nonconvex_functions"></a>Robert M. Gower, Othmane Sebbouh, and Nicolas Loizou. “SGD for Structured
-          Nonconvex Functions: Learning Rates, Minibatching and Interpolation”. In: <span  
-class="cmti-10">The</span>
-          <span  
-class="cmti-10">24th International Conference on Artificial Intelligence and Statistics, AISTATS</span>
-          <span  
-class="cmti-10">2021, April 13-15, 2021, Virtual Event</span>. Ed. by Arindam Banerjee and Kenji
-          Fukumizu. Vol. 130. Proceedings of Machine Learning Research. PMLR, 2021,
-          pp. 1315–1323. <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>: <a  
-href="https://arxiv.org/pdf/2006.10311.pdf" class="url" ><span  
-class="cmtt-10">https://arxiv.org/pdf/2006.10311.pdf</span></a>.
+          <!--l. 188--><p  class="noindent" ><a  
+ id="cite.24@structured_nonconvex_functions"></a>Robert M. Gower, Othmane Sebbouh, and Nicolas Loizou. “SGD for
+          Structured Nonconvex Functions: Learning Rates, Minibatching and
+          Interpolation”. In: The 24th International Conference on Artificial
+          Intelligence  and  Statistics,  AISTATS  2021,  April  13-15,  2021,
+          Virtual  Event.  Ed.  by  Arindam  Banerjee  and  Kenji  Fukumizu.
+          Vol. 130. Proceedings of Machine Learning Research. PMLR, 2021,
+          pp. 1315–1323. url: <a  
+href="https://arxiv.org/pdf/2006.10311.pdf" class="url" >https://arxiv.org/pdf/2006.10311.pdf</a>.
           </dd><dt  id="X24-zhou_continuous_gradient" class="thebibliography">
 [Zho]      </dt><dd  
 id="bib-5" class="thebibliography">
-          <!--l. 186--><p  class="noindent" ><a  
- id="cite.24@zhou_continuous_gradient"></a>Xingyu         Zhou.         <span  
-class="cmti-10">Lipschitz        continuous        gradient</span>.         <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>:
+          <!--l. 188--><p  class="noindent" ><a  
+ id="cite.24@zhou_continuous_gradient"></a>Xingyu      Zhou.      Lipschitz     continuous     gradient.      url:
           <a  
-href="https://xingyuzhou.org/blog/notes/Lipschitz-gradient" class="url" ><span  
-class="cmtt-10">https://xingyuzhou.org/blog/notes/Lipschitz-gradient</span></a>.</dd></dl>
-<!--l. 186--><p  class="indent" >   <a  
+href="https://xingyuzhou.org/blog/notes/Lipschitz-gradient" class="url" >https://xingyuzhou.org/blog/notes/Lipschitz-gradient</a>.</dd></dl>
+<!--l. 188--><p  class="noindent" ><a  
  id="refsection:25"></a></div>
-<!--l. 186--><p  class="indent" >
-                                                                            
-                                                                            
-<!--l. 187--><p  class="indent" >   <a  
- id="refsection:26"></a></div>
-<!--l. 187--><p  class="indent" >   <a  
+<!--l. 188--><p  class="noindent" >
+<!--l. 189--><p  class="noindent" ><a  
+ id="refsection:26"></a>
+<a  
  id="refsection:27"></a><a  
  id="x1-40rdoc"></a><a  
  id="x1-46r14"></a>
-   <div  class="newtheorem">
-<!--l. 188--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<span  class="head">
 <a  
  id="3m5jm_az"></a>
-<span  
-class="cmbx-10">Definition – </span>Quasar Convex<br  
+Definition – Quasar Convex<br  
 class="newline" /> </span><a  
  id="x1-48"></a><a  
- id="3m5jm_az"></a>Let <!--l. 189--><math  
+ id="3m5jm_az"></a>Let <!--l. 191--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->ζ</mi> <mo  
-class="MathClass-rel" stretchy="false">∈</mo> <mo  
-class="MathClass-open" stretchy="false">(</mo><mn>0</mn><mo  
-class="MathClass-punc" stretchy="false">,</mo><mn>1</mn><mo  
-class="MathClass-close" stretchy="false">]</mo></mrow></math>
-and <!--l. 189--><math  
+>ζ ∈ (0,1]</mrow></math>
+and <!--l. 191--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">⋆</mo></mrow></msup 
-> <mo  
-class="MathClass-rel" stretchy="false">∈</mo><msup><mrow  
+>x</mrow><mrow  
+>⋆</mrow></msup 
+> ∈<msup><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->X</mi></mstyle></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">⋆</mo></mrow></msup 
+mathvariant="script">X</mstyle></mrow><mrow  
+>⋆</mrow></msup 
 ></mrow></math>. We
-say that <!--l. 189--><math  
+say that <!--l. 191--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->f</mi></mrow></math>
-<!--l. 189--><math  
+>f</mrow></math>
+<!--l. 191--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->ζ</mi></mrow></math>-quasar-convex
-with respect to <!--l. 189--><math  
+>ζ</mrow></math>-quasar-convex
+with respect to <!--l. 191--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">⋆</mo></mrow></msup 
+>x</mrow><mrow  
+>⋆</mrow></msup 
 ></mrow></math>
-if for all <!--l. 189--><math  
+if for all <!--l. 191--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->x</mi> <mo  
-class="MathClass-rel" stretchy="false">∈</mo> <msup><mrow  
-><mi  
->ℝ</mi></mrow><mrow  
-><mi  
->n</mi></mrow></msup 
+>x ∈ <msup><mrow  
+>ℝ</mrow><mrow  
+>n</mrow></msup 
 ></mrow></math>,
 <table  class="equation-star"><tr><td>
-<!--l. 190--><math  
+<!--l. 192--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-                        <mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">⋆</mo></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">≥</mo> <mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow  
-><mn>1</mn></mrow> 
+                   f(<msup><mrow  
+>x</mrow><mrow  
+>⋆</mrow></msup 
+>) ≥ f(x) + <mfrac><mrow  
+>1</mrow> 
 <mrow  
-><mi  
->ζ</mi></mrow></mfrac> <mrow><mo  fence="true" form="prefix"> ⟨</mo><mrow><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-rel" stretchy="false">|</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">⋆</mo></mrow></msup 
-> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->x</mi></mrow><mo  fence="true" form="postfix">⟩</mo></mrow><mo  
-class="MathClass-punc" stretchy="false">.</mo>
+>ζ</mrow></mfrac> <mrow><mo  fence="true" form="prefix"> ⟨</mo><mrow>∇f(x)|<msup><mrow  
+>x</mrow><mrow  
+>⋆</mrow></msup 
+> − x</mrow><mo  fence="true" form="postfix">⟩</mo></mrow>.
 </math></td></tr></table>
-<!--l. 194--><p  class="indent" >   <a  
+<!--l. 196--><p  class="noindent" ><a  
  id="refsection:28"></a><a  
  id="x1-49r15"></a>
-   <div  class="newtheorem">
-<!--l. 194--><p  class="noindent" ><span  class="head">
+<div  class="newtheorem">
+<!--l. 196--><p  class="noindent" ><span  class="head">
 <a  
  id="c9swuw97"></a>
-<span  
-class="cmbx-10">Literature –</span><br  
+Literature –<br  
 class="newline" /> </span><a  
  id="x1-51"></a><a  
- id="c9swuw97"></a>Convergence analysis of quasar-convex functions exists with [<a  
- id="x1-52"></a> <a  
-href="#cite.28@structured_nonconvex_functions">GSL21</a>, <a  
-href="https://arxiv.org/pdf/2006.10311.pdf#subsection.4.1" >constant
-and decreasing</a> ] step-sizes. Evaluation of star-convexity for NMF can be found in [<a  
- id="x1-53"></a><a  
-href="#cite.28@star_convexity_nmf">BGW20</a>].
-For variance transfer under non-convexity see [<a  
- id="x1-54"></a> <a  
+ id="c9swuw97"></a>Convergence  analysis  of  quasar-convex  functions  exists  with  [
+<a  
+href="#cite.28@structured_nonconvex_functions">GSL21</a>,  <a  
+href="https://arxiv.org/pdf/2006.10311.pdf#subsection.4.1" >constant and decreasing</a> ] step-sizes. Evaluation of star-convexity for
+NMF can be found in [<a  
+ id="x1-52"></a><a  
+href="#cite.28@star_convexity_nmf">BGW20</a>]. For variance transfer under non-convexity see
+[<a  
+ id="x1-53"></a> <a  
 href="#cite.28@sgd_arbitrary_sampling">Qia+19</a>,  <a  
 href="http://proceedings.mlr.press/v97/qian19b.html#example.2.2" >Example 2.2</a> ].
           <dl  class="thebibliography"><dt  id="X28-star_convexity_nmf" class="thebibliography">
 [BGW20]  </dt><dd  
 id="bib-6" class="thebibliography">
-          <!--l. 196--><p  class="noindent" ><a  
- id="cite.28@star_convexity_nmf"></a>Johan                Bjorck,                Carla                Gomes,                and
-          Kilian Weinberger. <span  
-class="cmti-10">Star-Convexity in Non-Negative Matrix Factorization</span>. 2020.
-          <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>: <a  
-href="https://openreview.net/pdf?id=BylKwnEYvS" class="url" ><span  
-class="cmtt-10">https://openreview.net/pdf?id=BylKwnEYvS</span></a>.
+          <!--l. 198--><p  class="noindent" ><a  
+ id="cite.28@star_convexity_nmf"></a>Johan Bjorck, Carla Gomes, and Kilian Weinberger. Star-Convexity
+          in     Non-Negative     Matrix     Factorization.      2020.      url:
+          <a  
+href="https://openreview.net/pdf?id=BylKwnEYvS" class="url" >https://openreview.net/pdf?id=BylKwnEYvS</a>.
           </dd><dt  id="X28-structured_nonconvex_functions" class="thebibliography">
 [GSL21]   </dt><dd  
 id="bib-7" class="thebibliography">
-          <!--l. 196--><p  class="noindent" ><a  
- id="cite.28@structured_nonconvex_functions"></a>Robert M. Gower, Othmane Sebbouh, and Nicolas Loizou. “SGD for Structured
-          Nonconvex Functions: Learning Rates, Minibatching and Interpolation”. In: <span  
-class="cmti-10">The</span>
-          <span  
-class="cmti-10">24th International Conference on Artificial Intelligence and Statistics, AISTATS</span>
-          <span  
-class="cmti-10">2021, April 13-15, 2021, Virtual Event</span>. Ed. by Arindam Banerjee and Kenji
-          Fukumizu. Vol. 130. Proceedings of Machine Learning Research. PMLR, 2021,
-          pp. 1315–1323. <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>: <a  
-href="https://arxiv.org/pdf/2006.10311.pdf" class="url" ><span  
-class="cmtt-10">https://arxiv.org/pdf/2006.10311.pdf</span></a>.
+          <!--l. 198--><p  class="noindent" ><a  
+ id="cite.28@structured_nonconvex_functions"></a>Robert M. Gower, Othmane Sebbouh, and Nicolas Loizou. “SGD for
+          Structured Nonconvex Functions: Learning Rates, Minibatching and
+          Interpolation”. In: The 24th International Conference on Artificial
+          Intelligence  and  Statistics,  AISTATS  2021,  April  13-15,  2021,
+          Virtual  Event.  Ed.  by  Arindam  Banerjee  and  Kenji  Fukumizu.
+          Vol. 130. Proceedings of Machine Learning Research. PMLR, 2021,
+          pp. 1315–1323. url: <a  
+href="https://arxiv.org/pdf/2006.10311.pdf" class="url" >https://arxiv.org/pdf/2006.10311.pdf</a>.
           </dd><dt  id="X28-sgd_arbitrary_sampling" class="thebibliography">
 [Qia+19]  </dt><dd  
 id="bib-8" class="thebibliography">
-          <!--l. 196--><p  class="noindent" ><a  
- id="cite.28@sgd_arbitrary_sampling"></a>Xun  Qian  et  al.  “SGD  with  Arbitrary  Sampling:  General  Analysis  and
-          Improved  Rates”.  In:  <span  
-class="cmti-10">Proceedings  of  the  36th  International  Conference  on</span>
-          <span  
-class="cmti-10">Machine  Learning,  ICML  2019,  9-15  June  2019,  Long  Beach,  California,</span>
-          <span  
-class="cmti-10">USA</span>.  Ed.  by  Kamalika  Chaudhuri  and  Ruslan  Salakhutdinov.  Vol. 97.
-          Proceedings of Machine Learning Research. PMLR, 2019, pp. 5200–5209. <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>:
+          <!--l. 198--><p  class="noindent" ><a  
+ id="cite.28@sgd_arbitrary_sampling"></a>Xun   Qian   et   al.   “SGD   with   Arbitrary   Sampling:   General
+          Analysis  and  Improved  Rates”.  In:  Proceedings  of  the  36th
+          International Conference on Machine Learning, ICML 2019, 9-15
+          June  2019,  Long  Beach,  California,  USA.  Ed.  by  Kamalika
+          Chaudhuri  and  Ruslan  Salakhutdinov.  Vol. 97.  Proceedings  of
+          Machine  Learning  Research.  PMLR,  2019,  pp. 5200–5209.  url:
           <a  
-href="http://proceedings.mlr.press/v97/qian19b.html" class="url" ><span  
-class="cmtt-10">http://proceedings.mlr.press/v97/qian19b.html</span></a>.</dd></dl>
-<!--l. 196--><p  class="indent" >   <a  
+href="http://proceedings.mlr.press/v97/qian19b.html" class="url" >http://proceedings.mlr.press/v97/qian19b.html</a>.</dd></dl>
+<!--l. 198--><p  class="noindent" ><a  
  id="refsection:29"></a></div>
-<!--l. 196--><p  class="indent" >
-<!--l. 197--><p  class="indent" >   <a  
- id="refsection:30"></a></div>
-<!--l. 197--><p  class="indent" >   <a  
+<!--l. 198--><p  class="noindent" >
+<!--l. 199--><p  class="noindent" ><a  
+ id="refsection:30"></a>
+<a  
  id="refsection:31"></a><a  
  id="x1-50rdoc"></a><a  
- id="x1-55r16"></a>
-   <div  class="newtheorem">
-<!--l. 198--><p  class="noindent" ><span  class="head">
+ id="x1-54r16"></a>
+<div  class="newtheorem">
+<span  class="head">
 <a  
  id="v_o4l6wn"></a>
-<span  
-class="cmbx-10">Definition – </span>Asymptotic Convergence Rates<br  
+Definition – Asymptotic Convergence Rates<br  
 class="newline" /> </span><a  
- id="x1-57"></a><a  
- id="v_o4l6wn"></a>Notions of sub-linear, linear and super-linear
-(esp.  quadratic)  convergence  rates  are  important  taxonomy  to  discuss  the  efficiency  of
-optimization algorithms.
-<!--l. 201--><p  class="indent" >   A sequence of vectors <!--l. 201--><math  
+ id="x1-56"></a><a  
+ id="v_o4l6wn"></a>Notions of sub-linear, linear and
+super-linear  (esp.  quadratic)  convergence  rates  are  important  taxonomy  to
+discuss the efficiency of optimization algorithms.
+<!--l. 203--><p  class="noindent" >A sequence of vectors <!--l. 203--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mo  
-class="MathClass-open" stretchy="false">{</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->t</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">}</mo></mrow></math> is said
-to converge to a limit point <!--l. 201--><math  
+>{<msup><mrow  
+>x</mrow><mrow  
+>(t)</mrow></msup 
+>}</mrow></math> is said
+to converge to a limit point <!--l. 203--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo></mrow></math>
+>x∙</mrow></math>
      <ul  class="itemize1">
      <li  class="itemize">
-     <!--l. 203--><p  class="noindent" ><span  
-class="cmti-10">sub-linear </span>if for some <!--l. 203--><math  
+     <!--l. 205--><p  class="noindent" >sub-linear if for some <!--l. 205--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->p</mi> <mo  
-class="MathClass-rel" stretchy="false">&#x003C;</mo> <mn>1</mn></mrow></math>
-     we have <!--l. 203--><math  
+>p &#x003C; 1</mrow></math>
+     we have <!--l. 205--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msup><mrow  
-><mi  
->Γ</mi></mrow><mrow  
-><mi  
->p</mi></mrow></msup 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mo  
-class="MathClass-open" stretchy="false">{</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->t</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">}</mo><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">&#x003C;</mo> <mi  
->∞</mi></mrow></math>,
-     each new correct digit takes approximately the same amount of total work already
-     done for previous digits
+>Γ</mrow><mrow  
+>p</mrow></msup 
+>({<msup><mrow  
+>x</mrow><mrow  
+>(t)</mrow></msup 
+>}) &#x003C; ∞</mrow></math>,
+     each  new  correct  digit  takes  approximately  the  same  amount  of  total
+     work already done for previous digits
      </li>
      <li  class="itemize">
-     <!--l. 204--><p  class="noindent" ><span  
-class="cmti-10">linearly </span>if for some <!--l. 204--><math  
+     <!--l. 206--><p  class="noindent" >linearly if for some <!--l. 206--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mn>0</mn> <mo  
-class="MathClass-rel" stretchy="false">&#x003C;</mo> <mi  
->ρ</mi> <mo  
-class="MathClass-rel" stretchy="false">&#x003C;</mo> <mn>1</mn></mrow></math>
-     we have <!--l. 204--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mrow  
-><msup><mrow  
-><mi  
->Γ</mi></mrow><mrow  
-><mn>1</mn></mrow></msup 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mo  
-class="MathClass-open" stretchy="false">{</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->t</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">}</mo><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">→</mo> <mi  
->ρ</mi></mrow></math>,
-     each new correct digit takes the <span  
-class="cmti-10">same amount </span>of time
-     </li>
-     <li  class="itemize">
-     <!--l. 205--><p  class="noindent" ><span  
-class="cmti-10">super-linear </span>if <!--l. 205--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mrow  
-><msup><mrow  
-><mi  
->Γ</mi></mrow><mrow  
-><mn>1</mn></mrow></msup 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mo  
-class="MathClass-open" stretchy="false">{</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->t</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">}</mo><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">→</mo> <mn>0</mn></mrow></math>
-     </li>
-     <li  class="itemize">
-     <!--l. 206--><p  class="noindent" ><span  
-class="cmti-10">quadratic </span>if for some <!--l. 206--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mrow  
-><mn>0</mn> <mo  
-class="MathClass-rel" stretchy="false">&#x003C;</mo> <mi  
->ρ</mi> <mo  
-class="MathClass-rel" stretchy="false">&#x003C;</mo> <mn>1</mn></mrow></math>
+>0 &#x003C; ρ &#x003C; 1</mrow></math>
      we have <!--l. 206--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msup><mrow  
-><mi  
->Γ</mi></mrow><mrow  
-><mn>2</mn></mrow></msup 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mo  
-class="MathClass-open" stretchy="false">{</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->t</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">}</mo><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">→</mo> <mi  
->ρ</mi></mrow></math>,
-     every iteration the correct number of digits approximately doubles
+>Γ</mrow><mrow  
+>1</mrow></msup 
+>({<msup><mrow  
+>x</mrow><mrow  
+>(t)</mrow></msup 
+>}) → ρ</mrow></math>,
+     each new correct digit takes the same amount of time
      </li>
      <li  class="itemize">
-     <!--l. 207--><p  class="noindent" ><span  
-class="cmti-10">linear-quadratic </span>if for some <!--l. 207--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mrow  
-><mn>0</mn> <mo  
-class="MathClass-rel" stretchy="false">&#x003C;</mo> <msub><mrow  
-><mi  
->ρ</mi></mrow><mrow  
-><mn>1</mn></mrow></msub 
-> <mo  
-class="MathClass-rel" stretchy="false">&#x003C;</mo> <mn>1</mn></mrow></math>
-     and <!--l. 207--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mrow  
-><mn>0</mn> <mo  
-class="MathClass-rel" stretchy="false">&#x003C;</mo> <msub><mrow  
-><mi  
->ρ</mi></mrow><mrow  
-><mn>2</mn></mrow></msub 
-></mrow></math>
-     the inequality holds: <table  class="equation-star"><tr><td>
-     <!--l. 208--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="block" class="equation">
-                                <mo  
-class="MathClass-rel" stretchy="false">∥</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->t</mi><mo  
-class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow></msup 
-> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo>
-  <mo  
-class="MathClass-rel" stretchy="false">∥</mo><mo  
-class="MathClass-rel" stretchy="false">≤</mo> <msub><mrow  
-><mi  
->ρ</mi></mrow><mrow  
-><mn>1</mn></mrow></msub 
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->t</mi></mrow></msup 
-> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo><mo  
-class="MathClass-rel" stretchy="false">∥</mo> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <msub><mrow  
-><mi  
->ρ</mi></mrow><mrow  
->
-<mn>2</mn></mrow></msub 
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->t</mi></mrow></msup 
-> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo><msup><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow><mrow  
-><mn>2</mn></mrow></msup 
->
-</math></td></tr></table>
-     </li></ul>
-                                                                            
-                                                                            
-<!--l. 212--><p  class="noindent" >where we define the rate of convergence as <table  class="equation-star"><tr><td>
-<!--l. 213--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="block" class="equation">
-                      <msup><mrow  
-><mi  
->Γ</mi></mrow><mrow  
-><mi  
->p</mi></mrow></msup 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mo  
-class="MathClass-open" stretchy="false">{</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->t</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">}</mo><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo><munder  class="msub"><mrow  
-><mi  class="qopname"> lim</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo></mrow><mrow  
->
-<mi  
->t</mi><mo  
-class="MathClass-rel" stretchy="false">→</mo><mi  
->∞</mi></mrow></munder 
-><mi  class="qopname">sup</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo> <mfrac><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->t</mi><mo  
-class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow></msup 
-> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow> 
-<mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->t</mi></mrow></msup 
-> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo><msup><mrow  
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow><mrow  
-><mi  
->p</mi></mrow></msup 
-></mrow></mfrac> <mo  
-class="MathClass-punc" stretchy="false">.</mo>
-</math></td></tr></table>
-<!--l. 217--><p  class="indent" >   Clearly quadratic convergence is an instance of super-linear convergence.
-<!--l. 219--><p  class="indent" >   <a  
- id="refsection:32"></a><a  
- id="x1-58r17"></a>
-   <div  class="newtheorem">
-<!--l. 219--><p  class="noindent" ><span  class="head">
-<a  
- id="ok2t_031"></a>
-<span  
-class="cmbx-10">Beispiel – </span>Sublinear Convergence in First-Order Methods<br  
-class="newline" /> </span><a  
- id="x1-60"></a><a  
- id="ok2t_031"></a>Asymptotic  rates  discusses  the
-case when <!--l. 220--><math  
+     <!--l. 207--><p  class="noindent" >super-linear if <!--l. 207--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->t</mi></mrow></msup 
-></mrow></math>
-approaches <!--l. 220--><math  
+>Γ</mrow><mrow  
+>1</mrow></msup 
+>({<msup><mrow  
+>x</mrow><mrow  
+>(t)</mrow></msup 
+>}) → 0</mrow></math>
+     </li>
+     <li  class="itemize">
+     <!--l. 208--><p  class="noindent" >quadratic if for some <!--l. 208--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->x</mi><mo  
-class="MathClass-bin" stretchy="false">∙</mo></mrow></math>.
-For many first-order methods, this is not really relevant, as only a small number of iterations
-are possible [<a  
- id="x1-61"></a><a  
+>0 &#x003C; ρ &#x003C; 1</mrow></math>
+     we have <!--l. 208--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+><msup><mrow  
+>Γ</mrow><mrow  
+>2</mrow></msup 
+>({<msup><mrow  
+>x</mrow><mrow  
+>(t)</mrow></msup 
+>}) → ρ</mrow></math>,
+     every iteration the correct number of digits approximately doubles
+     </li>
+     <li  class="itemize">
+     <!--l. 209--><p  class="noindent" >linear-quadratic if for some <!--l. 209--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+>0 &#x003C; <msub><mrow  
+>ρ</mrow><mrow  
+>1</mrow></msub 
+> &#x003C; 1</mrow></math>
+     and <!--l. 209--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+>0 &#x003C; <msub><mrow  
+>ρ</mrow><mrow  
+>2</mrow></msub 
+></mrow></math>
+     the inequality holds: <table  class="equation-star"><tr><td>
+     <!--l. 210--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                        ∥<msup><mrow  
+>x</mrow><mrow  
+>t+1</mrow></msup 
+> − x∙
+  ∥≤ <msub><mrow  
+>ρ</mrow><mrow  
+>1</mrow></msub 
+>∥<msup><mrow  
+>x</mrow><mrow  
+>t</mrow></msup 
+> − x∙∥ + <msub><mrow  
+>ρ</mrow><mrow  
+>
+2</mrow></msub 
+>∥<msup><mrow  
+>x</mrow><mrow  
+>t</mrow></msup 
+> − x∙<msup><mrow  
+>∥</mrow><mrow  
+>2</mrow></msup 
+>
+</math></td></tr></table>
+     </li></ul>
+<!--l. 214--><p  class="noindent" >where we define the rate of convergence as <table  class="equation-star"><tr><td>
+<!--l. 215--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                 <msup><mrow  
+>Γ</mrow><mrow  
+>p</mrow></msup 
+>({<msup><mrow  
+>x</mrow><mrow  
+>(t)</mrow></msup 
+>}) =<munder  class="msub"><mrow  
+><mi  class="qopname"> lim</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo></mrow><mrow  
+>
+t→∞</mrow></munder 
+><mi  class="qopname">sup</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo> <mfrac><mrow  
+>∥<msup><mrow  
+>x</mrow><mrow  
+>t+1</mrow></msup 
+> − x∙∥</mrow> 
+<mrow  
+>∥<msup><mrow  
+>x</mrow><mrow  
+>t</mrow></msup 
+> − x∙<msup><mrow  
+>∥</mrow><mrow  
+>p</mrow></msup 
+></mrow></mfrac> .
+</math></td></tr></table>
+<!--l. 219--><p  class="noindent" >Clearly quadratic convergence is an instance of super-linear convergence.
+<!--l. 221--><p  class="noindent" ><a  
+ id="refsection:32"></a><a  
+ id="x1-57r17"></a>
+<div  class="newtheorem">
+<!--l. 221--><p  class="noindent" ><span  class="head">
+<a  
+ id="ok2t_031"></a>
+Beispiel – Sublinear Convergence in First-Order Methods<br  
+class="newline" />
+</span><a  
+ id="x1-59"></a><a  
+ id="ok2t_031"></a>Asymptotic           rates           discusses           the           case           when
+<!--l. 222--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+><msup><mrow  
+>x</mrow><mrow  
+>t</mrow></msup 
+></mrow></math>
+approaches <!--l. 222--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+>x∙</mrow></math>.
+For many first-order methods, this is not really relevant, as only a small number
+of iterations are possible [<a  
+ id="x1-60"></a><a  
 href="#cite.32@sublinear_rate">Bor23</a>].
           <dl  class="thebibliography"><dt  id="X32-sublinear_rate" class="thebibliography">
 [Bor23]    </dt><dd  
 id="bib-9" class="thebibliography">
-          <!--l. 221--><p  class="noindent" ><a  
- id="cite.32@sublinear_rate"></a>Brian          Borchers.          <span  
-class="cmti-10">Sublinear         rate         of         convergence</span>
-          <span  
-class="cmti-10">in mathematical optimization</span>. [Online; accessed 19. Dec. 2023]. Dec. 2023. <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>:
+          <!--l. 223--><p  class="noindent" ><a  
+ id="cite.32@sublinear_rate"></a>Brian  Borchers.  Sublinear  rate  of  convergence  in  mathematical
+          optimization.  [Online;  accessed  19.  Dec.  2023].  Dec.  2023.  url:
           <a  
-href="https://math.stackexchange.com/a/2615629" class="url" ><span  
-class="cmtt-10">https://math.stackexchange.com/a/2615629</span></a>.</dd></dl>
-<!--l. 221--><p  class="indent" >   <a  
+href="https://math.stackexchange.com/a/2615629" class="url" >https://math.stackexchange.com/a/2615629</a>.</dd></dl>
+<!--l. 223--><p  class="noindent" ><a  
  id="refsection:33"></a></div>
-<!--l. 221--><p  class="indent" >
-   <a  
- id="refsection:34"></a></div>
-<!--l. 223--><p  class="indent" >   <a  
+<!--l. 223--><p  class="noindent" >
+<a  
+ id="refsection:34"></a>
+<a  
  id="refsection:35"></a><a  
- id="x1-59rdoc"></a><a  
- id="x1-62r18"></a>
-   <div  class="newtheorem">
-<!--l. 224--><p  class="noindent" ><span  class="head">
+ id="x1-58rdoc"></a><a  
+ id="x1-61r18"></a>
+<div  class="newtheorem">
+<span  class="head">
 <a  
  id="h9xvj58r"></a>
-<span  
-class="cmbx-10">Definition – </span>Newton Method<br  
+Definition – Newton Method<br  
 class="newline" /> </span><a  
- id="x1-64"></a><a  
- id="h9xvj58r"></a>Consider the finite-sum minimization problem <table  class="equation-star"><tr><td>
-<!--l. 226--><math  
+ id="x1-63"></a><a  
+ id="h9xvj58r"></a>Consider the finite-sum minimization problem
+<table  class="equation-star"><tr><td>
+<!--l. 228--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-                        <munder  class="msub"><mrow  
+                   <munder  class="msub"><mrow  
 ><mi  class="qopname">min</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo></mrow><mrow  
-><mi  
->x</mi><mo  
-class="MathClass-rel" stretchy="false">∈</mo><msup><mrow  
-><mi  
->ℝ</mi></mrow><mrow  
-><mi  
->d</mi></mrow></msup 
+>x∈<msup><mrow  
+>ℝ</mrow><mrow  
+>d</mrow></msup 
 ></mrow></munder 
-><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-punc" stretchy="false">:</mo><mo  
-class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow  
-><mn>1</mn></mrow> 
+>f(x) := <mfrac><mrow  
+>1</mrow> 
 <mrow  
-><mi  
->n</mi></mrow></mfrac><munderover  accentunder="false" accent="false"><mrow   
+>n</mrow></mfrac><munderover  accentunder="false" accent="false"><mrow   
 ><mo   
 >∑</mo>
   </mrow><mrow  
-><mi  
->i</mi><mo  
-class="MathClass-rel" stretchy="false">=</mo><mn>1</mn></mrow><mrow  
-><mi  
->n</mi></mrow></munderover 
+>i=1</mrow><mrow  
+>n</mrow></munderover 
 ><msub><mrow  
-><mi  
->f</mi></mrow><mrow  
+>f</mrow><mrow  
 >
-<mi  
->i</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo>
+i</mrow></msub 
+>(x)
 </math></td></tr></table>
-<!--l. 229--><p  class="indent" >   applying Newton’s method to the zero inclusion problem of the monotone gradient operator
-yields the following update rule <table  class="equation-star"><tr><td>
-<!--l. 230--><math  
+<!--l. 231--><p  class="noindent" >applying Newton’s method to the zero inclusion problem of the monotone gradient
+operator yields the following update rule <table  class="equation-star"><tr><td>
+<!--l. 232--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-                        <msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi><mo  
-class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow></msup 
-> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <msup><mrow  
-><mo  
-class="MathClass-open" stretchy="false">[</mo><msup><mrow  
-><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo></mrow><mrow  
-><mn>2</mn></mrow></msup 
-><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-close" stretchy="false">]</mo></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup 
-><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">)</mo>
+                   <msup><mrow  
+>x</mrow><mrow  
+>k+1</mrow></msup 
+> = <msup><mrow  
+>x</mrow><mrow  
+>k</mrow></msup 
+> − [<msup><mrow  
+>∇</mrow><mrow  
+>2</mrow></msup 
+>f(<msup><mrow  
+>x</mrow><mrow  
+>k</mrow></msup 
+>)<msup><mrow  
+>]</mrow><mrow  
+>−1</mrow></msup 
+>∇f(<msup><mrow  
+>x</mrow><mrow  
+>k</mrow></msup 
+>)
 </math></td></tr></table>
-<!--l. 233--><p  class="indent" >   which is also a solution to the quadratic approximation <table  class="equation-star"><tr><td>
-<!--l. 234--><math  
+<!--l. 235--><p  class="noindent" >which is also a solution to the quadratic approximation <table  class="equation-star"><tr><td>
+<!--l. 236--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-             <mi  
->ϕ</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <mrow><mo  fence="true" form="prefix"> ⟨</mo><mrow><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-rel" stretchy="false">|</mo><mi  
->x</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-></mrow><mo  fence="true" form="postfix">⟩</mo></mrow> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow  
-><mn>1</mn></mrow> 
+        ϕ(x) = f(<msup><mrow  
+>x</mrow><mrow  
+>k</mrow></msup 
+>) + <mrow><mo  fence="true" form="prefix"> ⟨</mo><mrow>∇f(x)|x − <msup><mrow  
+>x</mrow><mrow  
+>k</mrow></msup 
+></mrow><mo  fence="true" form="postfix">⟩</mo></mrow> + <mfrac><mrow  
+>1</mrow> 
 <mrow  
-><mn>2</mn></mrow></mfrac> <mrow><mo  fence="true" form="prefix"> ⟨</mo><mrow><msup><mrow  
-><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo></mrow><mrow  
-><mn>2</mn></mrow></msup 
-><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-rel" stretchy="false">|</mo><mi  
->x</mi> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-></mrow><mo  fence="true" form="postfix">⟩</mo></mrow> <mo  
-class="MathClass-punc" stretchy="false">.</mo>
+>2</mrow></mfrac> <mrow><mo  fence="true" form="prefix"> ⟨</mo><mrow><msup><mrow  
+>∇</mrow><mrow  
+>2</mrow></msup 
+>f(<msup><mrow  
+>x</mrow><mrow  
+>k</mrow></msup 
+>)(x − <msup><mrow  
+>x</mrow><mrow  
+>k</mrow></msup 
+>)|x − <msup><mrow  
+>x</mrow><mrow  
+>k</mrow></msup 
+></mrow><mo  fence="true" form="postfix">⟩</mo></mrow> .
 </math></td></tr></table>
-<!--l. 238--><p  class="indent" >   A classical extension is the cubic-regularized Newton Method weighting by
-<!--l. 238--><math  
+<!--l. 240--><p  class="noindent" >A classical extension is the cubic-regularized Newton Method weighting by
+<!--l. 240--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msup><mrow  
-><mi  
->r</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mo  
-class="MathClass-rel" stretchy="false">∥</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi><mo  
-class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow></msup 
-> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-><mo  
-class="MathClass-rel" stretchy="false">∥</mo></mrow></math> a
+>r</mrow><mrow  
+>k</mrow></msup 
+> = ∥<msup><mrow  
+>x</mrow><mrow  
+>k+1</mrow></msup 
+> − <msup><mrow  
+>x</mrow><mrow  
+>k</mrow></msup 
+>∥</mrow></math> a
 regularization term <table  class="equation-star"><tr><td>
-<!--l. 239--><math  
+<!--l. 241--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-                     <msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi><mo  
-class="MathClass-bin" stretchy="false">+</mo><mn>1</mn></mrow></msup 
-> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <msup><mrow  
-><mo  
-class="MathClass-open" stretchy="false">[</mo><msup><mrow  
-><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo></mrow><mrow  
-><mn>2</mn></mrow></msup 
-><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <msub><mrow  
-><mi  
->L</mi></mrow><mrow  
+                <msup><mrow  
+>x</mrow><mrow  
+>k+1</mrow></msup 
+> = <msup><mrow  
+>x</mrow><mrow  
+>k</mrow></msup 
+> − [<msup><mrow  
+>∇</mrow><mrow  
+>2</mrow></msup 
+>f(<msup><mrow  
+>x</mrow><mrow  
+>k</mrow></msup 
+>) + <msub><mrow  
+>L</mrow><mrow  
 >
-<mn>2</mn></mrow></msub 
+2</mrow></msub 
 ><msup><mrow  
-><mi  
->r</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">]</mo></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup 
-><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-punc" stretchy="false">.</mo>
+>r</mrow><mrow  
+>k</mrow></msup 
+><msup><mrow  
+>]</mrow><mrow  
+>−1</mrow></msup 
+>∇f(<msup><mrow  
+>x</mrow><mrow  
+>k</mrow></msup 
+>).
 </math></td></tr></table>
-<!--l. 243--><p  class="indent" >   Choosing the right method depends crucially on the amount of data used and their
-dimensionality (i.e., on the parameters <!--l. 243--><math  
+<!--l. 245--><p  class="noindent" >Choosing    the    right    method    depends    crucially    on    the    amount
+of    data    used    and    their    dimensionality    (i.e.,    on    the    parameters
+<!--l. 245--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->n</mi></mrow></math>
-and <!--l. 243--><math  
+>n</mrow></math>
+and <!--l. 245--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->p</mi></mrow></math>).
-Newton Methods are important in the regime of intermediate <!--l. 243--><math  
+>p</mrow></math>).
+Newton    Methods    are    important    in    the    regime    of    intermediate
+<!--l. 245--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->p</mi></mrow></math>
-and <!--l. 243--><math  
+>p</mrow></math>
+and <!--l. 245--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->n</mi></mrow></math>.
-Approximative methods are important where evaluating the whole Hessian <!--l. 243--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mrow  
-><mstyle  
-mathvariant="script"><mi  
->O</mi></mstyle><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->n</mi><msup><mrow  
-><mi  
->p</mi></mrow><mrow  
-><mn>2</mn></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>
-and evaluating its (pseudo-)inverse <!--l. 243--><math  
+>n</mrow></math>.
+Approximative  methods  are  important  where  evaluating  the  whole  Hessian
+<!--l. 245--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><mstyle  
-mathvariant="script"><mi  
->O</mi></mstyle><mo  
-class="MathClass-open" stretchy="false">(</mo><msup><mrow  
-><mi  
->p</mi></mrow><mrow  
-><mn>3</mn></mrow></msup 
-><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>
+mathvariant="script">O</mstyle>(n<msup><mrow  
+>p</mrow><mrow  
+>2</mrow></msup 
+>)</mrow></math>
+and evaluating its (pseudo-)inverse <!--l. 245--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+><mstyle  
+mathvariant="script">O</mstyle>(<msup><mrow  
+>p</mrow><mrow  
+>3</mrow></msup 
+>)</mrow></math>
 is infeasible.
-<!--l. 245--><p  class="indent" >   <a  
+<!--l. 247--><p  class="noindent" ><a  
  id="refsection:36"></a><a  
- id="x1-65r19"></a>
-   <div  class="newtheorem">
-<!--l. 245--><p  class="noindent" ><span  class="head">
+ id="x1-64r19"></a>
+<div  class="newtheorem">
+<!--l. 247--><p  class="noindent" ><span  class="head">
 <a  
  id="pd12rq4h"></a>
-                                                                            
-                                                                            
-<span  
-class="cmbx-10">Definition – </span>Approximate Newton Methods<br  
+Definition – Approximate Newton Methods<br  
 class="newline" /> </span><a  
- id="x1-67"></a><a  
- id="pd12rq4h"></a>Methods constructing approximation of the Hessian at a
-point <!--l. 246--><math  
+ id="x1-66"></a><a  
+ id="pd12rq4h"></a>Methods constructing approximation of the Hessian
+at a point <!--l. 248--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->x</mi></mrow></math>
+>x</mrow></math>
 satisfying the inequality <table  class="equation-star"><tr><td>
-<!--l. 247--><math  
+<!--l. 249--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-                   <mo  
-class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->𝜖</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><msup><mrow  
-><mi  
->H</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
-> <mo  
-class="MathClass-rel" stretchy="false">≼</mo><msup><mrow  
-><mi  
-class="MathClass-op">∇</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo></mrow><mrow  
-><mn>2</mn></mrow></msup 
-><mi  
->f</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">≼</mo> <mo  
-class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <mi  
->𝜖</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><msup><mrow  
-><mi  
->H</mi></mrow><mrow  
-><mi  
->k</mi></mrow></msup 
+              (1 − 𝜖)<msup><mrow  
+>H</mrow><mrow  
+>k</mrow></msup 
+> ≼<msup><mrow  
+>∇</mrow><mrow  
+>2</mrow></msup 
+>f(x) ≼ (1 + 𝜖)<msup><mrow  
+>H</mrow><mrow  
+>k</mrow></msup 
 ><mspace  width="1em" class="quad"/><mstyle  
-class="text"><mtext   >with</mtext></mstyle><mspace  width="1em" class="quad"/><mi  
->𝜖</mi> <mo  
-class="MathClass-rel" stretchy="false">∈</mo> <mo  
-class="MathClass-open" stretchy="false">[</mo><mn>0</mn><mo  
-class="MathClass-punc" stretchy="false">,</mo><mn>1</mn><mo  
-class="MathClass-close" stretchy="false">)</mo>
+class="text"><mtext   >with</mtext></mstyle><mspace  width="1em" class="quad"/>𝜖 ∈ [0,1)
 </math></td></tr></table>
-<!--l. 250--><p  class="indent" >   are called <span  
-class="cmti-10">approximative newton methods</span>. They exhibit a <a  
-href="#v_o4l6wn">linear-quadratic</a> rate of convergence
-and include Hessian subsampling and sketching. <a  
+<!--l. 252--><p  class="noindent" >are called approximative newton methods. They exhibit a <a  
+href="#v_o4l6wn">linear-quadratic</a> rate of
+convergence and include Hessian subsampling and sketching. <a  
  id="refsection:37"></a><a  
- id="x1-68r20"></a>
-   <div  class="newtheorem">
-<!--l. 251--><p  class="noindent" ><span  class="head">
+ id="x1-67r20"></a>
+<div  class="newtheorem">
+<!--l. 253--><p  class="noindent" ><span  class="head">
 <a  
  id="vx9hm059"></a>
-<span  
-class="cmbx-10">Beispiel – </span>NewSamp<br  
+Beispiel – NewSamp<br  
 class="newline" /> </span><a  
- id="x1-70"></a><a  
+ id="x1-69"></a><a  
  id="vx9hm059"></a>See [<a  
- id="x1-71"></a><a  
+ id="x1-70"></a><a  
 href="#cite.37@newsamp">EM15</a>]
           <dl  class="thebibliography"><dt  id="X37-newsamp" class="thebibliography">
 [EM15]    </dt><dd  
 id="bib-10" class="thebibliography">
-          <!--l. 253--><p  class="noindent" ><a  
- id="cite.37@newsamp"></a>Murat A. Erdogdu and Andrea Montanari. “Convergence rates of sub-sampled
-          Newton methods”. In: <span  
-class="cmti-10">Advances in Neural Information Processing Systems 28:</span>
-          <span  
-class="cmti-10">Annual Conference on Neural Information Processing Systems 2015, December</span>
-          <span  
-class="cmti-10">7-12,  2015,  Montreal,  Quebec,  Canada</span>.  Ed.  by  Corinna  Cortes  et  al.  2015,
-          pp. 3052–3060. <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>: <a  
-href="https://proceedings.neurips.cc/paper/2015/hash/404dcc91b2aeaa7caa47487d1483e48a-Abstract.html" class="url" ><span  
-class="cmtt-10">https://proceedings.neurips.cc/paper/2015/hash/404dcc91b2aeaa7caa47487d1483e48a-Abstract.html</span></a>.</dd></dl>
-<!--l. 253--><p  class="indent" >   <a  
+          <!--l. 255--><p  class="noindent" ><a  
+ id="cite.37@newsamp"></a>Murat A. Erdogdu and Andrea Montanari. “Convergence rates of
+          sub-sampled Newton methods”. In: Advances in Neural Information
+          Processing Systems 28: Annual Conference on Neural Information
+          Processing Systems 2015, December 7-12, 2015, Montreal, Quebec,
+          Canada. Ed. by Corinna Cortes et al. 2015, pp. 3052–3060. url:
+          <a  
+href="https://proceedings.neurips.cc/paper/2015/hash/404dcc91b2aeaa7caa47487d1483e48a-Abstract.html" class="url" >https://proceedings.neurips.cc/paper/2015/hash/404dcc91b2aeaa7caa47487d1483e48a-Abstract.html</a>.</dd></dl>
+<!--l. 255--><p  class="noindent" ><a  
  id="refsection:38"></a></div>
-<!--l. 253--><p  class="indent" >
-<!--l. 255--><p  class="indent" >   <a  
+<!--l. 255--><p  class="noindent" >
+<!--l. 257--><p  class="noindent" ><a  
  id="refsection:39"></a><a  
- id="x1-72r21"></a>
-   <div  class="newtheorem">
-<!--l. 255--><p  class="noindent" ><span  class="head">
+ id="x1-71r21"></a>
+<div  class="newtheorem">
+<!--l. 257--><p  class="noindent" ><span  class="head">
 <a  
  id="zcwoa_s7"></a>
-<span  
-class="cmbx-10">Literature – </span>Unified Analysis Framework<br  
+Literature – Unified Analysis Framework<br  
 class="newline" /> </span><a  
+ id="x1-73"></a><a  
+ id="zcwoa_s7"></a>See                                [<a  
  id="x1-74"></a><a  
- id="zcwoa_s7"></a>See [<a  
+href="#cite.39@approximate_newton_method">YLZ21</a>]
+for a unifying framework of global and local convergence behaviour. Also see
+[<a  
  id="x1-75"></a><a  
-href="#cite.39@approximate_newton_method">YLZ21</a>] for a unifying framework of global
-and local convergence behaviour. Also see [<a  
+href="#cite.39@unified_convergence_cubic_newton">CDJ23</a>] for analysis of Cubic Newton Method. A short overview can be found
+at [<a  
  id="x1-76"></a><a  
-href="#cite.39@unified_convergence_cubic_newton">CDJ23</a>] for analysis of Cubic Newton Method.
-A short overview can be found at [<a  
- id="x1-77"></a><a  
 href="#cite.39@approximate_newton_liu">Liu23</a>].
           <dl  class="thebibliography"><dt  id="X39-unified_convergence_cubic_newton" class="thebibliography">
 [CDJ23]   </dt><dd  
 id="bib-11" class="thebibliography">
-          <!--l. 257--><p  class="noindent" ><a  
- id="cite.39@unified_convergence_cubic_newton"></a>El  Mahdi  Chayti,  Nikita  Doikov,  and  Martin  Jaggi.  “Unified  Convergence
-          Theory of Stochastic and Variance-Reduced Cubic Newton Methods”. In: <span  
-class="cmti-10">CoRR</span>
-          abs/2302.11962 (2023). <span  
-class="cmcsc-10"><span  
-class="small-caps">d</span><span  
-class="small-caps">o</span><span  
-class="small-caps">i</span></span>: <a  
-href="https://doi.org/10.48550/ARXIV.2302.11962" ><span  
-class="cmtt-10">10.48550/ARXIV.2302.11962</span></a>. arXiv: <a  
-href="https://arxiv.org/abs/2302.11962" ><span  
-class="cmtt-10">2302.11962</span></a>.
-          <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>: <a  
-href="https://doi.org/10.48550/arXiv.2302.11962" class="url" ><span  
-class="cmtt-10">https://doi.org/10.48550/arXiv.2302.11962</span></a>.
+          <!--l. 259--><p  class="noindent" ><a  
+ id="cite.39@unified_convergence_cubic_newton"></a>El  Mahdi  Chayti,  Nikita  Doikov,  and  Martin  Jaggi.  “Unified
+          Convergence  Theory  of  Stochastic  and  Variance-Reduced  Cubic
+          Newton  Methods”.  In:  CoRR  abs/2302.11962  (2023).  doi:  <a  
+href="https://doi.org/10.48550/ARXIV.2302.11962" >10.
+          48550 / ARXIV . 2302 . 11962</a>.   arXiv:   <a  
+href="https://arxiv.org/abs/2302.11962" >2302 . 11962</a>.   url:
+          <a  
+href="https://doi.org/10.48550/arXiv.2302.11962" class="url" >https://doi.org/10.48550/arXiv.2302.11962</a>.
           </dd><dt  id="X39-approximate_newton_liu" class="thebibliography">
 [Liu23]    </dt><dd  
 id="bib-12" class="thebibliography">
-          <!--l. 257--><p  class="noindent" ><a  
- id="cite.39@approximate_newton_liu"></a>Chengchang  Liu.  <span  
-class="cmti-10">A  Note  for  Approximate  Second-order  Methods</span>.  [Online;
-          accessed 19. Dec. 2023]. Dec. 2023. <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>: <a  
-href="https://github.com/7CCLiu/7CCLiu.github.io/blob/82c48aafacea01bb432a8d0b789ecf65130a4817/Note_approximate_Newton.pdf" class="url" ><span  
-class="cmtt-10">https://github.com/7CCLiu/7CCLiu.github.io/blob/82c48aafacea01bb432a8d0b789ecf65130a4817/Note_approximate_Newton.pdf</span></a>.
+          <!--l. 259--><p  class="noindent" ><a  
+ id="cite.39@approximate_newton_liu"></a>Chengchang    Liu.    A   Note   for   Approximate   Second-order
+          Methods.  [Online;  accessed  19.  Dec.  2023].  Dec.  2023.  url:
+          <a  
+href="https://github.com/7CCLiu/7CCLiu.github.io/blob/82c48aafacea01bb432a8d0b789ecf65130a4817/Note_approximate_Newton.pdf" class="url" >https://github.com/7CCLiu/7CCLiu.github.io/blob/82c48aafacea01bb432a8d0b789ecf65130a4817/Note_approximate_Newton.pdf</a>.
           </dd><dt  id="X39-approximate_newton_method" class="thebibliography">
 [YLZ21]   </dt><dd  
 id="bib-13" class="thebibliography">
-          <!--l. 257--><p  class="noindent" ><a  
- id="cite.39@approximate_newton_method"></a>Haishan                          Ye,                          Luo                          Luo,
-          and Zhihua Zhang. “Approximate Newton Methods”. In: <span  
-class="cmti-10">J. Mach. Learn. Res.</span>
-          22 (2021), 66:1–66:41. <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>: <a  
-href="http://jmlr.org/papers/v22/19-870.html" class="url" ><span  
-class="cmtt-10">http://jmlr.org/papers/v22/19-870.html</span></a>.</dd></dl>
-<!--l. 257--><p  class="indent" >   <a  
+          <!--l. 259--><p  class="noindent" ><a  
+ id="cite.39@approximate_newton_method"></a>Haishan Ye, Luo Luo, and Zhihua Zhang. “Approximate Newton
+          Methods”. In: J. Mach. Learn. Res. 22 (2021), 66:1–66:41. url:
+          <a  
+href="http://jmlr.org/papers/v22/19-870.html" class="url" >http://jmlr.org/papers/v22/19-870.html</a>.</dd></dl>
+<!--l. 259--><p  class="noindent" ><a  
  id="refsection:40"></a></div>
-<!--l. 257--><p  class="indent" >
-<!--l. 258--><p  class="indent" >   <a  
+<!--l. 259--><p  class="noindent" >
+<!--l. 260--><p  class="noindent" ><a  
  id="refsection:41"></a></div>
-<!--l. 258--><p  class="indent" >
-<!--l. 259--><p  class="indent" >   <a  
- id="refsection:42"></a></div>
-<!--l. 259--><p  class="indent" >   <a  
+<!--l. 260--><p  class="noindent" >
+<!--l. 261--><p  class="noindent" ><a  
+ id="refsection:42"></a>
+<a  
  id="refsection:43"></a><a  
- id="x1-73rdoc"></a><a  
- id="x1-78r22"></a>
-   <div  class="newtheorem">
-<!--l. 260--><p  class="noindent" ><span  class="head">
+ id="x1-72rdoc"></a><a  
+ id="x1-77r22"></a>
+<div  class="newtheorem">
+<span  class="head">
 <a  
  id="18x0c7vo"></a>
-<span  
-class="cmbx-10">Definition – </span>Orthogonal Polynomials<br  
+Definition – Orthogonal Polynomials<br  
 class="newline" /> </span><a  
- id="x1-80"></a><a  
- id="18x0c7vo"></a>An        orthonormal        set        of        functions
-<!--l. 261--><math  
+ id="x1-79"></a><a  
+ id="18x0c7vo"></a>An    orthonormal    set    of    functions
+<!--l. 263--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
-><mi  
->ϕ</mi></mrow><mrow  
-><mn>0</mn></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-punc" stretchy="false">,</mo><msub><mrow  
-><mi  
->ϕ</mi></mrow><mrow  
-><mn>1</mn></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->…</mi><mo  
-class="MathClass-punc" stretchy="false">,</mo><msub><mrow  
-><mi  
->ϕ</mi></mrow><mrow  
-><mi  
->n</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>
+>ϕ</mrow><mrow  
+>0</mrow></msub 
+>(x),<msub><mrow  
+>ϕ</mrow><mrow  
+>1</mrow></msub 
+>(x),…,<msub><mrow  
+>ϕ</mrow><mrow  
+>n</mrow></msub 
+>(x)</mrow></math>
 with
-<!--l. 262--><math  
+<!--l. 264--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->n</mi></mrow></math>
+>n</mrow></math>
 finite or infinite, is characterized by the relations
-   <table  class="equation-star"><tr><td>
-<!--l. 265--><math  
+<table  class="equation-star"><tr><td>
+<!--l. 267--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-                     <mrow><mo  fence="true" form="prefix"> ⟨</mo><mrow><msub><mrow  
-><mi  
->ϕ</mi></mrow><mrow  
-><mi  
->n</mi></mrow></msub 
-><mo  
-class="MathClass-rel" stretchy="false">|</mo><msub><mrow  
-><mi  
->ϕ</mi></mrow><mrow  
-><mi  
->m</mi></mrow></msub 
-></mrow><mo  fence="true" form="postfix">⟩</mo></mrow> <mo  
-class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow  
+                <mrow><mo  fence="true" form="prefix"> ⟨</mo><mrow><msub><mrow  
+>ϕ</mrow><mrow  
+>n</mrow></msub 
+>|<msub><mrow  
+>ϕ</mrow><mrow  
+>m</mrow></msub 
+></mrow><mo  fence="true" form="postfix">⟩</mo></mrow> =<msubsup><mrow  
 ><mo   
 > ∫
  <!--nolimits--></mo><!--nolimits--></mrow><mrow  
-><mi  
->a</mi></mrow><mrow  
-><mi  
->b</mi></mrow></msubsup 
+>a</mrow><mrow  
+>b</mrow></msubsup 
 ><msub><mrow  
-><mi  
->ϕ</mi></mrow><mrow  
+>ϕ</mrow><mrow  
 >
-<mi  
->n</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><msub><mrow  
-><mi  
->ϕ</mi></mrow><mrow  
-><mi  
->m</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mi  class="qopname">d</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits--><mi  
->α</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <msub><mrow  
-><mi  
->δ</mi></mrow><mrow  
-><mi  
->n</mi><mi  
->m</mi></mrow></msub 
+n</mrow></msub 
+>(x)<msub><mrow  
+>ϕ</mrow><mrow  
+>m</mrow></msub 
+>(x)<mi  class="qopname">d</mi><mo> ⁡<!--FUNCTION APPLICATION--> </mo><!--nolimits-->α(x) = <msub><mrow  
+>δ</mrow><mrow  
+>nm</mrow></msub 
 >
 </math></td></tr></table>
-<!--l. 270--><p  class="indent" >   If the support <!--l. 270--><math  
+<!--l. 272--><p  class="noindent" >If the support <!--l. 272--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->τ</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>
-only has a finite number <!--l. 270--><math  
+>τ(x)</mrow></math>
+only has a finite number <!--l. 272--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->N</mi></mrow></math>
-of points of increase, <!--l. 271--><math  
+>N</mrow></math>
+of points of increase, <!--l. 273--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->l</mi></mrow></math>
-is necessary finite and <!--l. 271--><math  
+>l</mrow></math>
+is necessary finite and <!--l. 273--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->l</mi> <mo  
-class="MathClass-rel" stretchy="false">≤</mo> <mi  
->N</mi></mrow></math>.
+>l ≤ N</mrow></math>.
 Furthermore functions of this kind are necessarily linearly independent.
-<!--l. 274--><p  class="indent" >   <a  
+<!--l. 276--><p  class="noindent" ><a  
  id="refsection:44"></a><a  
- id="x1-81r23"></a>
-   <div  class="newtheorem">
-<!--l. 274--><p  class="noindent" ><span  class="head">
+ id="x1-80r23"></a>
+<div  class="newtheorem">
+<!--l. 276--><p  class="noindent" ><span  class="head">
 <a  
  id="g__9ue2i"></a>
-<span  
-class="cmbx-10">Satz – </span>Reparametrization<br  
+Satz – Reparametrization<br  
 class="newline" /> </span><a  
- id="x1-83"></a><a  
- id="g__9ue2i"></a>Let         the         set         of         real-valued         functions
-<!--l. 275--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mrow  
-><msub><mrow  
-><mi  
->f</mi></mrow><mrow  
-><mn>0</mn></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->…</mi><mo  
-class="MathClass-punc" stretchy="false">,</mo><msub><mrow  
-><mi  
->f</mi></mrow><mrow  
-><mi  
->n</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>
-be                                                      of                                                      class
-<!--l. 276--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mrow  
-><msubsup><mrow  
-><mi  
->𝕃</mi></mrow><mrow  
-><mi  
->α</mi></mrow><mrow  
-><mn>2</mn></mrow></msubsup 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->a</mi><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->b</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>
-and          linearly          independent.          Then          an          orthonormal          set
+ id="x1-82"></a><a  
+ id="g__9ue2i"></a>Let      the      set      of      real-valued      functions
 <!--l. 277--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
-><mi  
->ϕ</mi></mrow><mrow  
-><mn>0</mn></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->…</mi><mo  
-class="MathClass-punc" stretchy="false">,</mo><msub><mrow  
-><mi  
->ϕ</mi></mrow><mrow  
-><mi  
->n</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>
+>f</mrow><mrow  
+>0</mrow></msub 
+>(x),…,<msub><mrow  
+>f</mrow><mrow  
+>n</mrow></msub 
+>(x)</mrow></math>
+be                                              of                                              class
+<!--l. 278--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+><msubsup><mrow  
+>𝕃</mrow><mrow  
+>α</mrow><mrow  
+>2</mrow></msubsup 
+>(a,b)</mrow></math>
+and       linearly       independent.       Then       an       orthonormal       set
+<!--l. 279--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+><msub><mrow  
+>ϕ</mrow><mrow  
+>0</mrow></msub 
+>(x),…,<msub><mrow  
+>ϕ</mrow><mrow  
+>n</mrow></msub 
+>(x)</mrow></math>
 such that
-   <table  class="equation-star"><tr><td>
-                                                                            
-                                                                            
-<!--l. 280--><math  
+<table  class="equation-star"><tr><td>
+<!--l. 282--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-              <msub><mrow  
-><mi  
->ϕ</mi></mrow><mrow  
-><mi  
->n</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <msub><mrow  
-><mi  
->λ</mi></mrow><mrow  
-><mi  
->n</mi><mo  
-class="MathClass-punc" stretchy="false">,</mo><mn>0</mn></mrow></msub 
+         <msub><mrow  
+>ϕ</mrow><mrow  
+>n</mrow></msub 
+>(x) = <msub><mrow  
+>λ</mrow><mrow  
+>n,0</mrow></msub 
 ><msub><mrow  
-><mi  
->f</mi></mrow><mrow  
-><mn>0</mn></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <mo  
-class="MathClass-rel" stretchy="false">⋯</mo> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <msub><mrow  
-><mi  
->λ</mi></mrow><mrow  
-><mi  
->n</mi><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->n</mi></mrow></msub 
+>f</mrow><mrow  
+>0</mrow></msub 
+>(x) + ⋯ + <msub><mrow  
+>λ</mrow><mrow  
+>n,n</mrow></msub 
 ><msub><mrow  
-><mi  
->f</mi></mrow><mrow  
-><mi  
->n</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo><mspace  width="1em" class="quad"/><mi  
-class="MathClass-op">∀</mi><mo> ⁡<!--FUNCTION APPLICATION--></mo><mi  
->n</mi> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo  
-class="MathClass-punc" stretchy="false">,</mo><mn>1</mn><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->…</mi><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->l</mi><mspace  width="1em" class="quad"/><msub><mrow  
-><mi  
->λ</mi></mrow><mrow  
-><mi  
->n</mi><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->n</mi></mrow></msub 
-> <mo  
-class="MathClass-rel" stretchy="false">&#x003E;</mo> <mn>0</mn><mo  
-class="MathClass-punc" stretchy="false">.</mo>
+>f</mrow><mrow  
+>n</mrow></msub 
+>(x)<mspace  width="1em" class="quad"/>∀n = 0,1,…,l<mspace  width="1em" class="quad"/><msub><mrow  
+>λ</mrow><mrow  
+>n,n</mrow></msub 
+> &#x003E; 0.
 </math></td></tr></table>
-<!--l. 286--><p  class="indent" >   Furthermore this set is <span  
-class="cmti-10">uniquely determined</span>.
-<!--l. 287--><p  class="indent" >   <a  
+<!--l. 288--><p  class="noindent" >Furthermore this set is uniquely determined.
+<!--l. 289--><p  class="noindent" ><a  
  id="refsection:45"></a></div>
-<!--l. 287--><p  class="indent" >
-<!--l. 289--><p  class="indent" >   <a  
+<!--l. 289--><p  class="noindent" >
+<!--l. 291--><p  class="noindent" ><a  
  id="refsection:46"></a><a  
- id="x1-84r24"></a>
-   <div  class="newtheorem">
-<!--l. 289--><p  class="noindent" ><span  class="head">
+ id="x1-83r24"></a>
+<div  class="newtheorem">
+<!--l. 291--><p  class="noindent" ><span  class="head">
 <a  
  id="ckyn0xr9"></a>
-<span  
-class="cmbx-10">Literature – </span>Classical<br  
+Literature – Classical<br  
 class="newline" /> </span><a  
+ id="x1-85"></a><a  
+ id="ckyn0xr9"></a>The  classical  work  for  orthogonal  polynomials  is  the
+book [<a  
  id="x1-86"></a><a  
- id="ckyn0xr9"></a>The classical work for orthogonal polynomials is the book [<a  
+href="#cite.46@szeg1939orthogonal">Sze39</a>]. The fourth edition (published in 1975) contains the classical theory
+of orthogonal polynomials, special cases such as Jacobi, Laguerre and Hermite
+polynomials, inequalities and applications.
+<!--l. 298--><p  class="noindent" >Another classic is the book by Freud [<a  
  id="x1-87"></a><a  
-href="#cite.46@szeg1939orthogonal">Sze39</a>].
-The  fourth  edition  (published  in  1975)  contains  the  classical  theory  of  orthogonal
-polynomials, special cases such as Jacobi, Laguerre and Hermite polynomials, inequalities
-and applications.
-<!--l. 296--><p  class="indent" >   Another classic is the book by Freud [<a  
+href="#cite.46@freud2014orthogonal">Fre14</a>], which gives a more compact and
+specialized treatment of the topic.
+<!--l. 302--><p  class="noindent" >For a recent survey of orthogonal polynomials [<a  
  id="x1-88"></a><a  
-href="#cite.46@freud2014orthogonal">Fre14</a>], which gives a more compact and specialized
-treatment of the topic.
-<!--l. 300--><p  class="indent" >   For a recent survey of orthogonal polynomials [<a  
- id="x1-89"></a><a  
 href="#cite.46@totik2005orthogonal">Tot05</a>] discusses the [ <a  
-href="#cite.46@totik2005orthogonal">Tot05</a>,  <a  
-href="https://arxiv.org/pdf/math/0512424.pdf#search=Some" questions leading to >origin</a> ] and
-extended topics on them.
-<!--l. 304--><p  class="indent" >   A application oriented treatment of orthogonal polynomials is the book by Gautschi
-[<a  
- id="x1-90"></a><a  
+href="#cite.46@totik2005orthogonal">Tot05</a>,
+<a  
+href="https://arxiv.org/pdf/math/0512424.pdf#search=Some" questions leading to >origin</a> ] and extended topics on them.
+<!--l. 306--><p  class="noindent" >A  application  oriented  treatment  of  orthogonal  polynomials  is  the  book  by
+Gautschi [<a  
+ id="x1-89"></a><a  
 href="#cite.46@gautschi2004orthogonal">Gau04</a>], especially the [ <a  
-href="#cite.46@gautschi2004orthogonal">Gau04</a>,   <a  
+href="#cite.46@gautschi2004orthogonal">Gau04</a>, <a  
 href="https://csclub.uwaterloo.ca/~pbarfuss/Walter_Gautschi_-_Orthogonal_Polynomials_-_Computation_and_Approximation_(2004).pdf#search=2" Computational Methods >computational methods</a> ] and [ <a  
-href="#cite.46@gautschi2004orthogonal">Gau04</a>,   <a  
-href="https://csclub.uwaterloo.ca/~pbarfuss/Walter_Gautschi_-_Orthogonal_Polynomials_-_Computation_and_Approximation_(2004).pdf#search=3" Applications >application</a> ]
-chapters are interesting extension of the other material.
+href="#cite.46@gautschi2004orthogonal">Gau04</a>,
+<a  
+href="https://csclub.uwaterloo.ca/~pbarfuss/Walter_Gautschi_-_Orthogonal_Polynomials_-_Computation_and_Approximation_(2004).pdf#search=3" Applications >application</a> ] chapters are interesting extension of the other material.
           <dl  class="thebibliography"><dt  id="X46-freud2014orthogonal" class="thebibliography">
 [Fre14]    </dt><dd  
 id="bib-14" class="thebibliography">
-          <!--l. 308--><p  class="noindent" ><a  
- id="cite.46@freud2014orthogonal"></a>Géza Freud. <span  
-class="cmti-10">Orthogonal polynomials</span>. Elsevier, 2014.
+          <!--l. 310--><p  class="noindent" ><a  
+ id="cite.46@freud2014orthogonal"></a>Géza Freud. Orthogonal polynomials. Elsevier, 2014.
           </dd><dt  id="X46-gautschi2004orthogonal" class="thebibliography">
 [Gau04]   </dt><dd  
 id="bib-15" class="thebibliography">
-          <!--l. 308--><p  class="noindent" ><a  
- id="cite.46@gautschi2004orthogonal"></a>Walter Gautschi. <span  
-class="cmti-10">Orthogonal polynomials: computation and approximation</span>. OUP
-          Oxford, 2004. <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>: <a  
-href="https://csclub.uwaterloo.ca/~pbarfuss/Walter_Gautschi_-_Orthogonal_Polynomials_-_Computation_and_Approximation_(2004).pdf" class="url" ><span  
-class="cmtt-10">https://csclub.uwaterloo.ca/</span><span  
-class="cmtt-10">~</span><span  
-class="cmtt-10">pbarfuss/Walter_Gautschi_-_Orthogonal_Polynomials_-_Computation_and_Approximation_(2004).pdf</span></a>.
+          <!--l. 310--><p  class="noindent" ><a  
+ id="cite.46@gautschi2004orthogonal"></a>Walter     Gautschi.     Orthogonal     polynomials:     computation
+          and      approximation.       OUP       Oxford,       2004.       url:
+          <a  
+href="https://csclub.uwaterloo.ca/~pbarfuss/Walter_Gautschi_-_Orthogonal_Polynomials_-_Computation_and_Approximation_(2004).pdf" class="url" >https://csclub.uwaterloo.ca/~pbarfuss/Walter_Gautschi_-_Orthogonal_Polynomials_-_Computation_and_Approximation_(2004).pdf</a>.
           </dd><dt  id="X46-szeg1939orthogonal" class="thebibliography">
 [Sze39]    </dt><dd  
 id="bib-16" class="thebibliography">
-          <!--l. 308--><p  class="noindent" ><a  
- id="cite.46@szeg1939orthogonal"></a>Gabor  Szeg.  <span  
-class="cmti-10">Orthogonal polynomials</span>.  Vol. 23.  American  Mathematical  Soc.,
-          1939. <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>: <a  
-href="https://people.math.osu.edu/nevai.1/SZEGO/szego=szego1975=ops=OCR.pdf" class="url" ><span  
-class="cmtt-10">https://people.math.osu.edu/nevai.1/SZEGO/szego=szego1975=ops=OCR.pdf</span></a>.
+          <!--l. 310--><p  class="noindent" ><a  
+ id="cite.46@szeg1939orthogonal"></a>Gabor        Szeg.        Orthogonal       polynomials.        Vol. 23.
+          American          Mathematical          Soc.,          1939.          url:
+          <a  
+href="https://people.math.osu.edu/nevai.1/SZEGO/szego=szego1975=ops=OCR.pdf" class="url" >https://people.math.osu.edu/nevai.1/SZEGO/szego=szego1975=ops=OCR.pdf</a>.
           </dd><dt  id="X46-totik2005orthogonal" class="thebibliography">
 [Tot05]    </dt><dd  
 id="bib-17" class="thebibliography">
-          <!--l. 308--><p  class="noindent" ><a  
- id="cite.46@totik2005orthogonal"></a>Vilmos  Totik.  “Orthogonal  polynomials”.  In:  <span  
-class="cmti-10">arXiv  preprint  math/0512424</span>
-          (2005). <span  
-class="cmcsc-10"><span  
-class="small-caps">u</span><span  
-class="small-caps">r</span><span  
-class="small-caps">l</span></span>: <a  
-href="https://arxiv.org/pdf/math/0512424.pdf" class="url" ><span  
-class="cmtt-10">https://arxiv.org/pdf/math/0512424.pdf</span></a>.</dd></dl>
-<!--l. 308--><p  class="indent" >   <a  
+          <!--l. 310--><p  class="noindent" ><a  
+ id="cite.46@totik2005orthogonal"></a>Vilmos
+          Totik. “Orthogonal polynomials”. In: arXiv preprint math/0512424
+          (2005). url: <a  
+href="https://arxiv.org/pdf/math/0512424.pdf" class="url" >https://arxiv.org/pdf/math/0512424.pdf</a>.</dd></dl>
+<!--l. 310--><p  class="noindent" ><a  
  id="refsection:47"></a></div>
-<!--l. 308--><p  class="indent" >
-<!--l. 310--><p  class="indent" >   <a  
+<!--l. 310--><p  class="noindent" >
+<!--l. 312--><p  class="noindent" ><a  
  id="refsection:48"></a><a  
- id="x1-91r25"></a>
-   <div  class="newtheorem">
-<!--l. 310--><p  class="noindent" ><span  class="head">
+ id="x1-90r25"></a>
+<div  class="newtheorem">
+<!--l. 312--><p  class="noindent" ><span  class="head">
 <a  
  id="m8pnoa7d"></a>
-<span  
-class="cmbx-10">Beispiel – </span>Classical Polynomials<br  
+Beispiel – Classical Polynomials<br  
 class="newline" /> </span><a  
- id="x1-93"></a><a  
+ id="x1-92"></a><a  
  id="m8pnoa7d"></a>Classical orthogonal polynomials are
      <ul  class="itemize1">
      <li  class="itemize">
-     <!--l. 314--><p  class="noindent" >For <!--l. 314--><math  
+     <!--l. 316--><p  class="noindent" >For <!--l. 316--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->w</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <msup><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo  
-class="MathClass-bin" stretchy="false">−</mo> <mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow><mrow  
-><mi  
->α</mi></mrow></msup 
-><msup><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo  
-class="MathClass-bin" stretchy="false">+</mo> <mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow><mrow  
-><mi  
->β</mi></mrow></msup 
+>w(x) = (1 − x<msup><mrow  
+>)</mrow><mrow  
+>α</mrow></msup 
+>(1 + x<msup><mrow  
+>)</mrow><mrow  
+>β</mrow></msup 
 ></mrow></math>
-     in the domain <!--l. 314--><math  
+     in the domain <!--l. 316--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->x</mi> <mo  
-class="MathClass-rel" stretchy="false">∈</mo> <mo  
-class="MathClass-open" stretchy="false">[</mo><mo  
-class="MathClass-bin" stretchy="false">−</mo><mn>1</mn><mo  
-class="MathClass-punc" stretchy="false">,</mo><mn>1</mn><mo  
-class="MathClass-close" stretchy="false">]</mo></mrow></math>
-     and <!--l. 315--><math  
+>x ∈ [−1,1]</mrow></math>
+     and <!--l. 317--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->α</mi> <mo  
-class="MathClass-rel" stretchy="false">&#x003E;</mo> <mo  
-class="MathClass-bin" stretchy="false">−</mo><mn>1</mn><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->β</mi> <mo  
-class="MathClass-rel" stretchy="false">&#x003E;</mo> <mo  
-class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></math>
-     orthogonal polynomials <!--l. 316--><math  
+>α &#x003E; −1,β &#x003E; −1</mrow></math>
+     orthogonal polynomials <!--l. 318--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
-><mi  
->p</mi></mrow><mrow  
-><mi  
->n</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>
-     are called Jacobi polynomials <!--l. 317--><math  
+>p</mrow><mrow  
+>n</mrow></msub 
+>(x)</mrow></math>
+     are called Jacobi polynomials <!--l. 319--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msubsup><mrow  
-><mi  
->P</mi></mrow><mrow  
-><mi  
->n</mi></mrow><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->α</mi><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->β</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></msubsup 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>.
-     Special cases are <span  
-class="cmti-10">ultraspherical </span>(<!--l. 319--><math  
+>P</mrow><mrow  
+>n</mrow><mrow  
+>(α,β)</mrow></msubsup 
+>(x)</mrow></math>.
+     Special cases are ultraspherical (<!--l. 321--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->α</mi> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mi  
->β</mi></mrow></math>),
-     <span  
-class="cmti-10">Chebyshev first-kind </span>(<!--l. 320--><math  
+>α = β</mrow></math>),
+     Chebyshev first-kind (<!--l. 322--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->α</mi> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mi  
->β</mi> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mo  
-class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn></mrow></math>),
-     <span  
-class="cmti-10">Chebyshev second-kind </span>(<!--l. 321--><math  
+>α = β = 1∕2</mrow></math>),
+     Chebyshev second-kind (<!--l. 323--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->α</mi> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mi  
->β</mi> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mo  
-class="MathClass-bin" stretchy="false">−</mo><mn>1</mn><mo  
-class="MathClass-bin" stretchy="false">∕</mo><mn>2</mn></mrow></math>)
-     and Legendre (<!--l. 322--><math  
+>α = β = −1∕2</mrow></math>)
+     and Legendre (<!--l. 324--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->α</mi> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mi  
->β</mi> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mrow></math>)
+>α = β = 0</mrow></math>)
      </li>
      <li  class="itemize">
-     <!--l. 323--><p  class="noindent" >For <!--l. 323--><math  
+     <!--l. 325--><p  class="noindent" >For <!--l. 325--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->w</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <msup><mrow  
-><mi  
->e</mi></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">−</mo><mi  
->x</mi></mrow></msup 
+>w(x) = <msup><mrow  
+>e</mrow><mrow  
+>−x</mrow></msup 
 ><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mi  
->α</mi></mrow></msup 
-></mrow></math>
-     in domain <!--l. 324--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mrow  
-><mi  
->x</mi> <mo  
-class="MathClass-rel" stretchy="false">∈</mo> <mo  
-class="MathClass-open" stretchy="false">[</mo><mn>0</mn><mo  
-class="MathClass-punc" stretchy="false">,</mo><mi  
->∞</mi><mo  
-class="MathClass-close" stretchy="false">]</mo></mrow></math>
-     and <!--l. 324--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mrow  
-><mi  
->α</mi> <mo  
-class="MathClass-rel" stretchy="false">&#x003E;</mo> <mo  
-class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></math>
-     are called Laguerre polynomials <!--l. 325--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mrow  
-><msubsup><mrow  
-><mi  
->L</mi></mrow><mrow  
-><mi  
->n</mi></mrow><mrow  
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->α</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></msubsup 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>
-     </li>
-     <li  class="itemize">
-     <!--l. 326--><p  class="noindent" >For <!--l. 326--><math  
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mrow  
-><mi  
->w</mi><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo> <mo  
-class="MathClass-rel" stretchy="false">=</mo> <msup><mrow  
-><mi  
->e</mi></mrow><mrow  
-><mo  
-class="MathClass-bin" stretchy="false">−</mo><msup><mrow  
-><mi  
->x</mi></mrow><mrow  
-><mn>2</mn></mrow></msup 
->
-      </mrow></msup 
+>x</mrow><mrow  
+>α</mrow></msup 
 ></mrow></math>
      in domain <!--l. 326--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
-><mi  
->x</mi> <mo  
-class="MathClass-rel" stretchy="false">∈</mo> <mi  
->ℝ</mi></mrow></math>
-     the polynomials <!--l. 327--><math  
+>x ∈ [0,∞]</mrow></math>
+     and <!--l. 326--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+>α &#x003E; −1</mrow></math>
+     are called Laguerre polynomials <!--l. 327--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+><msubsup><mrow  
+>L</mrow><mrow  
+>n</mrow><mrow  
+>(α)</mrow></msubsup 
+>(x)</mrow></math>
+     </li>
+     <li  class="itemize">
+     <!--l. 328--><p  class="noindent" >For <!--l. 328--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+>w(x) = <msup><mrow  
+>e</mrow><mrow  
+>−<msup><mrow  
+>x</mrow><mrow  
+>2</mrow></msup 
+>
+      </mrow></msup 
+></mrow></math>
+     in domain <!--l. 328--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+>x ∈ ℝ</mrow></math>
+     the polynomials <!--l. 329--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
-><mi  
->p</mi></mrow><mrow  
-><mi  
->n</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>
-     are called Hermite <!--l. 328--><math  
+>p</mrow><mrow  
+>n</mrow></msub 
+>(x)</mrow></math>
+     are called Hermite <!--l. 330--><math  
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow  
 ><msub><mrow  
-><mi  
->H</mi></mrow><mrow  
-><mi  
->n</mi></mrow></msub 
-><mo  
-class="MathClass-open" stretchy="false">(</mo><mi  
->x</mi><mo  
-class="MathClass-close" stretchy="false">)</mo></mrow></math>.</li></ul>
+>H</mrow><mrow  
+>n</mrow></msub 
+>(x)</mrow></math>.</li></ul>
 <a  
  id="refsection:49"></a></div>
-<!--l. 330--><p  class="indent" >
-<!--l. 331--><p  class="indent" >   <a  
- id="refsection:50"></a></div>
-<!--l. 331--><p  class="indent" >
-    
-</body> 
-</html>
-                                                                            
+<!--l. 332--><p  class="noindent" >
+<!--l. 333--><p  class="noindent" ><a  
+ id="refsection:50"></a>
+<a  
+ id="refsection:51"></a><a  
+ id="x1-91rdoc"></a><a  
+ id="x1-93r26"></a>
+<div  class="newtheorem">
+<span  class="head">
+<a  
+ id="p1f9h5bp"></a>
+Definition – Structured Matrices<br  
+class="newline" /> </span><a  
+ id="x1-95"></a><a  
+ id="p1f9h5bp"></a>A  structured  matrix  represents  a  linear
+operation
+<!--l. 336--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+>T : <msup><mrow  
+>ℝ</mrow><mrow  
+>n</mrow></msup 
+> → <msup><mrow  
+>ℝ</mrow><mrow  
+>m</mrow></msup 
+></mrow></math>
+without     the     required     operation     and     parameter     count     of
+<!--l. 337--><math  
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mrow  
+>mn</mrow></math>
+for storage and matrix-vector multiplication.
+<!--l. 340--><p  class="noindent" ><a  
+ id="refsection:52"></a><a  
+ id="x1-96r27"></a>
+<div  class="newtheorem">
+<!--l. 340--><p  class="noindent" ><span  class="head">
+<a  
+ id="9v_h8bhy"></a>
+Beispiel – Low Rank<br  
+class="newline" /> </span><a  
+ id="x1-98"></a><a  
+ id="9v_h8bhy"></a>
+<!--l. 341--><p  class="noindent" ><a  
+ id="refsection:53"></a></div>
+<!--l. 341--><p  class="noindent" >
+<!--l. 342--><p  class="noindent" ><a  
+ id="refsection:54"></a>
 
 
