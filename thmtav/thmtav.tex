@@ -331,14 +331,37 @@
 		\end{itemize}
 	\end{example}
 \end{definition}
+\begin{theorem}[label=o6y_7uuw, name=Projectors convex sets]
+	For a nonempty, closed, convex subset \(\mathcal C \in \mathcal H\) the projector
+	\(\proj_{\mathcal{C}}\) is firmly non-expansive. \\
 
-\begin{definition}[label=p1f9h5bp, name=Structured Matrices]
-	A structured matrix represents a linear operation \( T: \mathbb R^n \to \mathbb R^m\)
-	without the required operation and parameter count of \( mn \) for
-	storage and matrix-vector multiplication.
+	\textit{Proof sketch} Fix \( x, y \in \mathcal H\). Observe that \( \innerp{\proj_{\mathcal{C}}y - \proj_{\mathcal{C}}x}{x-\proj_{\mathcal{C}}y} \leq 0\) 
+	follows from the \hyperref[e251pck0]{projection theorem} due to \(\mathcal C\) being nonempty, closed,
+	convex. Then adding both inequalities yields \hyperref[bsrdg9do]{bounded distance}
+	and implies firmly non-expansiveness of \(\proj_C\).
+\end{theorem}
 
-	\begin{example}[label=9v_h8bhy, name=Low Rank]
-	\end{example}
+\begin{theorem}[label=e251pck0, name=Projection theorem]
+	For a nonempty, closed, convex subset \( \mathcal C\in\mathcal H\) the
+	following relation holds for every \(x\) and \(p\) in \(C\)
+	\[
+		p=\proj_{\mathcal{C}}x \quad\Leftrightarrow\quad [\,p\in
+		C\;\text{and}\;(\forall y\in C)\quad\innerp{y-p}{x-p}\leq 0\,].
+	\]
+\end{theorem}
+
+\begin{definition}[label=bsrdg9do, name=Firmly nonexpansive]
+	Let \(T:\, \mathcal{H}\to\mathcal{H}\), then the following are
+	equivalent
+	\begin{itemize}
+		\item firmly non-expansive if
+		\[
+			(\forall x\in\mathcal{H})(\forall y\in\mathcal{H})\quad\lVert Tx-Ty\rVert^2 + \lVert (I-T)x - (I-T)y\rVert^2 \leq \lVert x-y\rVert^2
+		\]
+		\item bounded distance of projection
+		\[
+			(\forall x\in\mathcal{H})(\forall y\in\mathcal{H})\quad \lVert Tx-Ty\rVert^2\leq\innerp{x-y}{Tx-Ty}
+		\]
+	\end{itemize}
 \end{definition}
-
 \end{document}
